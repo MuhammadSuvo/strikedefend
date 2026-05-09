@@ -1,0 +1,129 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  password  String
+  role      String   @default("ADMIN")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SiteSettings {
+  id           String   @id @default(cuid())
+  siteName     String   @default("StrikeDefend")
+  tagline      String   @default("Cybersecurity, Performance, Automation")
+  logoUrl      String?
+  faviconUrl   String?
+  primaryColor String   @default("#06b6d4")
+  accentColor  String   @default("#0ea5e9")
+  email        String   @default("contact@strikedefend.com")
+  phone        String   @default("+1 555 000 0000")
+  address      String   @default("Remote, Worldwide")
+  footerText   String   @default("© StrikeDefend. All rights reserved.")
+  twitterUrl   String?
+  linkedinUrl  String?
+  githubUrl    String?
+  updatedAt    DateTime @updatedAt
+}
+
+model HomeContent {
+  id               String   @id @default(cuid())
+  heroHeadline     String   @default("Secure, Test, and Automate Your Web Platform")
+  heroSubtitle     String   @default("We provide penetration testing, load testing, and Playwright AI automation services to help businesses stay secure, scalable, and efficient.")
+  heroImageUrl     String?
+  primaryCtaText   String   @default("Get a Free Consultation")
+  primaryCtaLink   String   @default("/contact")
+  secondaryCtaText String   @default("Explore Services")
+  secondaryCtaLink String   @default("/services")
+  whyTitle         String   @default("Why teams choose StrikeDefend")
+  whySubtitle      String   @default("A focused team that combines offensive security, performance engineering, and modern test automation.")
+  whyItems         Json     @default("[]")
+  processTitle     String   @default("How we work")
+  processSteps     Json     @default("[]")
+  ctaHeadline      String   @default("Ready to harden your platform?")
+  ctaSubtitle      String   @default("Book a free 30-minute consultation with our team.")
+  videoEnabled     Boolean  @default(false)
+  videoTitle       String   @default("See StrikeDefend in action")
+  videoSubtitle    String   @default("A short walkthrough of how we approach an engagement.")
+  videoUrl         String?
+  updatedAt        DateTime @updatedAt
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  shortText   String
+  description String
+  icon        String?
+  imageUrl    String?
+  features    Json     @default("[]")
+  order       Int      @default(0)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  name      String
+  role      String?
+  company   String?
+  quote     String
+  avatarUrl String?
+  rating    Int      @default(5)
+  order     Int      @default(0)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model FAQ {
+  id        String   @id @default(cuid())
+  question  String
+  answer    String
+  order     Int      @default(0)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BlogPost {
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  title       String
+  excerpt     String
+  content     String
+  coverImage  String?
+  author      String    @default("StrikeDefend Team")
+  tags        String    @default("")
+  published   Boolean   @default(false)
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([published, publishedAt])
+}
+
+model Lead {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  company   String?
+  service   String?
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}

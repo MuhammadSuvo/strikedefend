@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"d:\\\\Selise_testing file\\\\PenShield\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
+    ]
+  }
+}
