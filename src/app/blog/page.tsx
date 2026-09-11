@@ -1,19 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
-import { prisma } from "@/lib/prisma";
+import { notFound } from "next/navigation";
+import { getPublishedBlogPosts, getBlogPostBySlug } from "@/lib/data";
+import { isBlogPublished } from "@/lib/settings";
 
 export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Blog",
-  description: "Practical posts on security, performance, and automation."
+  description: "Practical posts on penetration testing and offensive security."
 };
 
 export default async function BlogPage() {
-  const posts = await prisma.blogPost.findMany({
-    where: { published: true },
-    orderBy: { publishedAt: "desc" }
-  });
+  if (!(await isBlogPublished())) return notFound();
+
+  const posts = await getPublishedBlogPosts();
 
   return (
     <>
@@ -22,7 +23,7 @@ export default async function BlogPage() {
           <span className="tag">Blog</span>
           <h1 className="mt-3 text-4xl font-bold md:text-5xl">Notes from the team</h1>
           <p className="mt-4 max-w-2xl text-white/70">
-            Short, practical writing on penetration testing, load testing, and web automation.
+            Short, practical writing on penetration testing and offensive security.
           </p>
         </div>
       </section>

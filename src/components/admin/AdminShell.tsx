@@ -12,6 +12,8 @@ import {
   FileText,
   Inbox,
   Settings,
+  DollarSign,
+  Info,
   LogOut,
   Shield
 } from "lucide-react";
@@ -19,7 +21,9 @@ import {
 const items = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { href: "/admin/home", label: "Home Content", icon: Home },
+  { href: "/admin/about", label: "About", icon: Info },
   { href: "/admin/services", label: "Services", icon: Wrench },
+  { href: "/admin/pricing", label: "Pricing", icon: DollarSign },
   { href: "/admin/testimonials", label: "Testimonials", icon: MessageSquareQuote },
   { href: "/admin/faq", label: "FAQ", icon: HelpCircle },
   { href: "/admin/blog", label: "Blog", icon: FileText },

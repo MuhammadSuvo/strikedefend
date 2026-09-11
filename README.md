@@ -1,145 +1,184 @@
 # StrikeDefend
 
-Full-stack Next.js website for a cybersecurity services company. The public site is fully editable from a built-in admin panel.
+Full-stack Next.js website for a cybersecurity / penetration testing company.  
+Public pages are fully editable from a built-in **admin panel**. Content is stored as **JSON files** in the project (no database required to run).
 
-**Services**
-- Penetration Testing
-- Load Testing
-- Web Automation (Playwright + AI)
+**Live features**
+- Service pages (Web, Mobile, API, Cloud, Network, Vulnerability Assessment, Continuous Monitoring)
+- About, Pricing, Contact, Blog (draft/publish toggle)
+- Admin CMS for all site content
+- Contact form → leads inbox
+- AI + Human penetration testing messaging across service pages
+
+---
 
 ## Stack
 
-- Next.js 14 (App Router) + TypeScript
-- Tailwind CSS
-- Prisma + PostgreSQL
-- NextAuth (credentials)
-- Cloudinary image uploads
+- **Next.js 14** (App Router) + TypeScript
+- **Tailwind CSS**
+- **JSON file storage** (`data/*.json`) — easy to migrate to a DB later
+- **NextAuth** (credentials / JWT)
+- Optional **Cloudinary** (or local) image uploads
 - Vercel-ready
 
-## Quick start (local)
+---
 
-1. **Install dependencies**
+## Quick start
 
-   ```bash
-   npm install
-   ```
+### 1. Install dependencies
 
-2. **Configure environment**
+```bash
+npm install
+```
 
-   Copy `.env.example` to `.env` and fill in:
-   - `DATABASE_URL` — PostgreSQL connection string (Neon, Supabase, Railway are all free-tier friendly)
-   - `NEXTAUTH_SECRET` — `openssl rand -base64 32` (or any long random string)
-   - `NEXTAUTH_URL` — `http://localhost:3000` for dev
-   - `CLOUDINARY_*` — from https://cloudinary.com/console
-   - `SEED_ADMIN_*` — used by the seed script for the first admin user
+### 2. Configure environment
 
-3. **Push schema and seed**
+Copy `.env.example` to `.env`:
 
-   ```bash
-   npm run db:push
-   npm run db:seed
-   ```
+```bash
+cp .env.example .env
+```
 
-4. **Run dev server**
+Minimum for local development:
 
-   ```bash
-   npm run dev
-   ```
+```env
+NEXTAUTH_SECRET="replace-me-with-a-long-random-string"
+NEXTAUTH_URL="http://localhost:3000"
+```
 
-5. **Sign in to admin** at `http://localhost:3000/admin/login` with the email/password you set in `.env`.
+Cloudinary vars are optional if you use local uploads.
+
+### 3. Run the dev server
+
+```bash
+npm run dev
+```
+
+Open **http://localhost:3000**
+
+### 4. Admin login
+
+| Field | Default |
+|-------|---------|
+| URL | http://localhost:3000/admin/login |
+| Email | `admin@strikedefend.com` |
+| Password | `ChangeMe123!` |
+
+> Change the admin password after first login (edit `data/users.json` bcrypt hash or re-seed your own user).
+
+---
 
 ## Project structure
 
 ```
-src/
-├─ app/
-│  ├─ (public pages: /, /services, /about, /blog, /contact)
-│  ├─ admin/        — admin dashboard (NextAuth-protected)
-│  └─ api/          — leads, upload, NextAuth
-├─ components/      — public + admin React components
-├─ lib/             — prisma, auth, cloudinary, settings helpers
-└─ middleware.ts    — protects /admin/*
-prisma/
-├─ schema.prisma
-└─ seed.ts
+├─ data/                 # All site content as JSON (source of truth)
+│  ├─ site-settings.json
+│  ├─ home.json
+│  ├─ about.json
+│  ├─ pricing.json
+│  ├─ services.json
+│  ├─ testimonials.json
+│  ├─ faqs.json
+│  ├─ blog-posts.json
+│  ├─ leads.json
+│  └─ users.json
+├─ public/images/        # Static images
+├─ src/
+│  ├─ app/               # Public pages + /admin + API routes
+│  ├─ components/        # UI (public + admin)
+│  └─ lib/               # data layer, auth, content helpers
+└─ prisma/               # Legacy schema/seed (optional / reference only)
 ```
+
+---
+
+## Data (JSON)
+
+Site content lives in `data/`. Edit via **Admin** (recommended) or edit the JSON files directly.
+
+| File | Contents |
+|------|----------|
+| `users.json` | Admin accounts |
+| `site-settings.json` | Brand, contact, footer, blog visibility |
+| `home.json` | Homepage hero & sections |
+| `about.json` | About Us page |
+| `pricing.json` | Pricing plans & comparison |
+| `services.json` | Service pages + longform content |
+| `testimonials.json` | Testimonials |
+| `faqs.json` | FAQs |
+| `blog-posts.json` | Blog posts |
+| `leads.json` | Contact form submissions |
+
+See `data/README.md` for more detail.
+
+---
 
 ## Admin features
 
 | Page | What you can do |
-|---|---|
+|------|-----------------|
 | `/admin` | Dashboard counts |
-| `/admin/home` | Edit hero text, image, CTAs, "Why choose us", process steps, CTA section |
-| `/admin/services` | Add / edit / delete / publish / unpublish services |
+| `/admin/home` | Homepage hero, CTAs, workflow, security section |
+| `/admin/about` | About Us content + hero image |
+| `/admin/pricing` | Plans & comparison table |
+| `/admin/services` | Add / edit / publish services (incl. longform) |
 | `/admin/testimonials` | CRUD + publish |
 | `/admin/faq` | CRUD + publish |
-| `/admin/blog` | CRUD + publish |
-| `/admin/leads` | Read contact form messages, mark read, delete |
-| `/admin/settings` | Logo, favicon, brand colors, contact info, footer text, social links |
+| `/admin/blog` | Posts + public Blog page on/off |
+| `/admin/leads` | Contact submissions |
+| `/admin/settings` | Logo, colors, email, phone, social links |
 
-All image uploads go through `/api/upload` (admin-only) and are stored in Cloudinary.
+---
 
-## Deploy to Vercel (free plan)
-
-1. **Push the repo to GitHub.**
-
-2. **Provision a free PostgreSQL database** at one of:
-   - [Neon](https://neon.tech) (recommended, generous free tier)
-   - [Supabase](https://supabase.com) → use the connection-pooled URL
-   - [Railway](https://railway.app)
-
-3. **Create the Cloudinary account** at https://cloudinary.com (free tier is plenty).
-
-4. **Import the project on Vercel** and set these env vars in *Project Settings → Environment Variables*:
-
-   ```
-   DATABASE_URL
-   NEXTAUTH_SECRET
-   NEXTAUTH_URL=https://your-domain.vercel.app
-   CLOUDINARY_CLOUD_NAME
-   CLOUDINARY_API_KEY
-   CLOUDINARY_API_SECRET
-   SEED_ADMIN_EMAIL
-   SEED_ADMIN_PASSWORD
-   SEED_ADMIN_NAME
-   ```
-
-5. **First deploy** — Vercel will run `npm run build`, which runs `prisma generate` automatically.
-
-6. **Run the seed once** (locally, pointing at the production `DATABASE_URL`):
-
-   ```bash
-   DATABASE_URL="<prod-url>" npm run db:push
-   DATABASE_URL="<prod-url>" npm run db:seed
-   ```
-
-   On Windows PowerShell:
-
-   ```powershell
-   $env:DATABASE_URL="<prod-url>"; npm run db:push
-   $env:DATABASE_URL="<prod-url>"; npm run db:seed
-   ```
-
-7. Visit `/admin/login` on your live site and sign in.
-
-## Common scripts
+## Scripts
 
 ```bash
-npm run dev          # local dev
-npm run build        # production build (runs prisma generate)
-npm run start        # run built app
-npm run db:push      # apply schema without migrations
-npm run db:migrate   # create a migration (dev only)
-npm run db:seed      # seed admin + sample content
-npm run db:studio    # open Prisma Studio
+npm run dev          # local development
+npm run build        # production build
+npm run start        # run production build
+npm run lint         # ESLint
+npm run data:export  # (optional) export old SQLite DB → data/*.json
 ```
 
-## Notes & limits
+---
 
-- Single admin role — extend the `User.role` field if you need editor/viewer.
-- Blog posts use plain text / soft Markdown. Swap in `react-markdown` for full Markdown rendering when needed.
-- "Why choose us" and "process steps" are stored as JSON arrays. The admin UI uses a simple `title | text` (or `step | title | text`) line format.
-- Email delivery is **not** wired in by default — leads are stored in the DB and shown in `/admin/leads`. Add Resend or SMTP if you want email notifications.
+## Deploy (e.g. Vercel)
+
+1. Push this repo to GitHub.
+2. Import the project on [Vercel](https://vercel.com).
+3. Set environment variables:
+
+   ```
+   NEXTAUTH_SECRET
+   NEXTAUTH_URL=https://your-domain.vercel.app
+   CLOUDINARY_CLOUD_NAME   # optional
+   CLOUDINARY_API_KEY      # optional
+   CLOUDINARY_API_SECRET   # optional
+   ```
+
+4. Deploy. Content ships with the `data/` folder in the repo.
+
+**Note:** On serverless hosts, writes to `data/` (admin edits, new leads) may not persist across deploys. For production CMS/leads, migrate JSON → PostgreSQL (or similar) later. The JSON format maps cleanly to the old Prisma schema under `prisma/`.
+
+---
+
+## Migrating JSON → database later
+
+When you are ready for a real database:
+
+1. Use `prisma/schema.prisma` as the target schema.
+2. Import each `data/*.json` file into matching tables.
+3. Point the app’s data layer (`src/lib/data.ts`) at Prisma again.
+
+---
+
+## Security notes
+
+- Never commit a real `.env` (already in `.gitignore`).
+- Change the default admin password before going public.
+- Leads may contain personal contact info — treat `data/leads.json` carefully.
+
+---
 
 ## License
 

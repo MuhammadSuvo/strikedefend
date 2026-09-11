@@ -1,18 +1,25 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { createLead } from "@/lib/data";
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const name = String(body.name ?? "").trim();
+    const firstName = String(body.firstName ?? "").trim();
+    const lastName = String(body.lastName ?? "").trim();
+    const name =
+      [firstName, lastName].filter(Boolean).join(" ") ||
+      String(body.name ?? "").trim();
     const email = String(body.email ?? "").trim().toLowerCase();
     const message = String(body.message ?? "").trim();
     const phone = String(body.phone ?? "").trim() || null;
     const company = String(body.company ?? "").trim() || null;
     const service = String(body.service ?? "").trim() || null;
 
-    if (!name || !email || !message) {
-      return NextResponse.json({ error: "Name, email, and message are required." }, { status: 400 });
+    if (!firstName || !lastName || !email || !message) {
+      return NextResponse.json(
+        { error: "First name, last name, email, and message are required." },
+        { status: 400 }
+      );
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Please provide a valid email." }, { status: 400 });
@@ -21,9 +28,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Input too long." }, { status: 400 });
     }
 
-    await prisma.lead.create({
-      data: { name, email, phone, company, service, message }
-    });
+    await createLead({ name, email, phone, company, service, message, read: false });
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("/api/leads error", err);

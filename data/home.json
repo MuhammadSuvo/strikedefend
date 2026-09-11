@@ -1,0 +1,210 @@
+{
+  "id": "cmshozlex000298mhn4k1xtef",
+  "heroHeadline": "Find Vulnerabilities Before Attackers Do",
+  "heroSubtitle": "Web, mobile, cloud penetration testing and continuous security monitoring — delivered by senior engineers with reports you can act on.",
+  "heroImageUrl": null,
+  "primaryCtaText": "Get a Free Consultation",
+  "primaryCtaLink": "/contact",
+  "secondaryCtaText": "Explore Services",
+  "secondaryCtaLink": "/services",
+  "whyTitle": "Why teams choose StrikeDefend",
+  "whySubtitle": "A focused offensive security team that tests like attackers and reports like engineers.",
+  "whyItems": [
+    {
+      "title": "Offensive security mindset",
+      "text": "We think like attackers so your defenses hold up."
+    },
+    {
+      "title": "Engineering-led delivery",
+      "text": "Senior engineers, not checklists. Reports you can act on."
+    },
+    {
+      "title": "Manual depth, not scanners",
+      "text": "We go beyond automated scans to find business-logic flaws."
+    },
+    {
+      "title": "Clear, fixed pricing",
+      "text": "Scoped engagements with predictable outcomes."
+    }
+  ],
+  "processTitle": "How we work",
+  "processSteps": [
+    {
+      "step": "01",
+      "title": "Discover",
+      "text": "We map your stack, threats, and goals in a kickoff call."
+    },
+    {
+      "step": "02",
+      "title": "Test",
+      "text": "Hands-on penetration testing with manual depth and targeted tooling."
+    },
+    {
+      "step": "03",
+      "title": "Report",
+      "text": "Actionable findings with severity, evidence, and reproduction."
+    },
+    {
+      "step": "04",
+      "title": "Retest",
+      "text": "Free follow-up retest to verify your fixes hold."
+    }
+  ],
+  "ctaHeadline": "Ready to harden your platform?",
+  "ctaSubtitle": "Book a free 30-minute consultation with our team.",
+  "videoEnabled": false,
+  "videoTitle": "See StrikeDefend in action",
+  "videoSubtitle": "A short walkthrough of how we approach an engagement.",
+  "videoUrl": null,
+  "securityEnabled": true,
+  "securityTag": "End-to-End Security Testing",
+  "securityTitle": "We test your entire attack surface — not just the homepage.",
+  "securitySubtitle": "From authentication and APIs to business logic and cloud misconfigurations, our penetration testing covers every layer attackers actually target.",
+  "securityCapabilities": [
+    {
+      "icon": "globe",
+      "color": "cyan",
+      "title": "Web Application Testing",
+      "text": "OWASP Top 10, XSS, SQLi, CSRF, and session handling."
+    },
+    {
+      "icon": "network",
+      "color": "violet",
+      "title": "API & GraphQL Security",
+      "text": "Broken auth, excessive data exposure, and injection flaws."
+    },
+    {
+      "icon": "key",
+      "color": "amber",
+      "title": "Authentication & Access",
+      "text": "IDOR, privilege escalation, and MFA bypass attempts."
+    },
+    {
+      "icon": "workflow",
+      "color": "rose",
+      "title": "Business Logic Flaws",
+      "text": "Workflow abuse, payment tampering, and race conditions."
+    },
+    {
+      "icon": "cloud",
+      "color": "emerald",
+      "title": "Cloud & Infrastructure",
+      "text": "Misconfigs, exposed secrets, and IAM weaknesses."
+    },
+    {
+      "icon": "file",
+      "color": "sky",
+      "title": "Actionable Reporting",
+      "text": "Severity-rated findings, PoC steps, and a free retest."
+    }
+  ],
+  "securityHotspots": [
+    {
+      "label": "Web App",
+      "color": "cyan",
+      "x": "18%",
+      "y": "22%"
+    },
+    {
+      "label": "API",
+      "color": "violet",
+      "x": "78%",
+      "y": "28%"
+    },
+    {
+      "label": "Auth",
+      "color": "amber",
+      "x": "82%",
+      "y": "58%"
+    },
+    {
+      "label": "Logic",
+      "color": "rose",
+      "x": "62%",
+      "y": "78%"
+    },
+    {
+      "label": "Cloud",
+      "color": "emerald",
+      "x": "22%",
+      "y": "72%"
+    },
+    {
+      "label": "Report",
+      "color": "sky",
+      "x": "48%",
+      "y": "12%"
+    }
+  ],
+  "securityStats": [
+    {
+      "value": "6",
+      "label": "layers tested"
+    },
+    {
+      "value": "OWASP",
+      "label": "aligned"
+    },
+    {
+      "value": "Free",
+      "label": "retest included"
+    }
+  ],
+  "securityTerminal": [
+    {
+      "status": "+",
+      "text": "Auth bypass........... tested"
+    },
+    {
+      "status": "!",
+      "text": "IDOR on /api/users.... critical"
+    },
+    {
+      "status": "+",
+      "text": "Cloud IAM review...... passed"
+    }
+  ],
+  "securityCtaText": "See our testing scope",
+  "securityCtaLink": "/services/web-application-pentesting",
+  "workflowEnabled": true,
+  "workflowTitle": "Pentest Agent Workflow",
+  "workflowSubtitle": "A manager agent coordinates specialist agents in parallel, then validates, evidences, and scores findings before a human reviews the report.",
+  "workflowManager": "Pentest Manager Agent",
+  "workflowSpecialists": [
+    {
+      "title": "Recon Agent",
+      "text": "Maps assets, endpoints, identities, and the full attack surface."
+    },
+    {
+      "title": "Authentication Agent",
+      "text": "Tests login flows, sessions, MFA, privilege boundaries, and access paths."
+    },
+    {
+      "title": "API Security Agent",
+      "text": "Assesses APIs, authz, data exposure, and business-logic weaknesses."
+    }
+  ],
+  "workflowPipeline": [
+    {
+      "title": "Validation Agent",
+      "text": "Confirms each finding is real, reproducible, and in scope."
+    },
+    {
+      "title": "Evidence Agent",
+      "text": "Collects proof, screenshots, logs, and reproduction notes."
+    },
+    {
+      "title": "Severity Agent",
+      "text": "Rates impact and likelihood using CVSS and business context."
+    },
+    {
+      "title": "Reporting Agent",
+      "text": "Turns findings into a developer-ready report with fix guidance."
+    },
+    {
+      "title": "Human Review",
+      "text": "A senior engineer reviews every finding before delivery."
+    }
+  ],
+  "updatedAt": "2026-08-17T07:57:00.617Z"
+}

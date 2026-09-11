@@ -1,0 +1,16 @@
+[
+  {
+    "id": "cmshozm4u000d98mhphk3z7vk",
+    "slug": "welcome-to-strikedefend",
+    "title": "Welcome to StrikeDefend",
+    "excerpt": "Why we started StrikeDefend and what to expect from our blog.",
+    "content": "StrikeDefend exists because most teams need senior penetration testing without a six-month enterprise procurement cycle.\n\nIn this blog we'll share short, practical posts on offensive security and web application testing — the kind of writing we wish existed when we started.",
+    "coverImage": null,
+    "author": "StrikeDefend Team",
+    "tags": "company,intro",
+    "published": true,
+    "publishedAt": "2026-08-06T15:50:12.936Z",
+    "createdAt": "2026-08-06T15:50:12.942Z",
+    "updatedAt": "2026-08-17T07:57:01.879Z"
+  }
+]

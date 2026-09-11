@@ -1,0 +1,41 @@
+[
+  {
+    "id": "cmshozlof000698mhown95zth",
+    "name": "Sarah Chen",
+    "role": "CTO",
+    "company": "Northwind SaaS",
+    "quote": "StrikeDefend found a critical IDOR our previous vendor missed. The report read like a senior engineer wrote it — because they did.",
+    "avatarUrl": null,
+    "rating": 5,
+    "order": 1,
+    "published": true,
+    "createdAt": "2026-08-06T15:50:12.351Z",
+    "updatedAt": "2026-08-17T07:57:01.172Z"
+  },
+  {
+    "id": "cmshozlqp000798mhao5ucclg",
+    "name": "Marcus Reid",
+    "role": "Head of Engineering",
+    "company": "Atlas Logistics",
+    "quote": "They found an auth bypass that would have exposed customer data. The retest confirmed our fixes held.",
+    "avatarUrl": null,
+    "rating": 5,
+    "order": 2,
+    "published": true,
+    "createdAt": "2026-08-06T15:50:12.434Z",
+    "updatedAt": "2026-08-17T07:57:01.263Z"
+  },
+  {
+    "id": "cmshozlt1000898mh5v6860vu",
+    "name": "Priya Natarajan",
+    "role": "QA Lead",
+    "company": "Helio Health",
+    "quote": "The pentest report was the first one our developers actually used. Clear severity, reproduction, and next steps.",
+    "avatarUrl": null,
+    "rating": 5,
+    "order": 3,
+    "published": true,
+    "createdAt": "2026-08-06T15:50:12.518Z",
+    "updatedAt": "2026-08-17T07:57:01.340Z"
+  }
+]

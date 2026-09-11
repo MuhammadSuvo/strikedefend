@@ -1,7 +1,85 @@
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
+import {
+  DEFAULT_SECURITY_CAPABILITIES,
+  DEFAULT_SECURITY_HOTSPOTS,
+  DEFAULT_SECURITY_STATS,
+  DEFAULT_SECURITY_TERMINAL
+} from "../src/lib/security-capabilities";
+import { SERVICE_PAGES, type ServicePageContent } from "../src/lib/service-pages";
+import { CLOUD_SERVICE_EXTRAS, EMPTY_SERVICE_EXTRAS, HOME_AGENT_WORKFLOW, API_SERVICE_EXTRAS, MOBILE_SERVICE_EXTRAS, MONITORING_SERVICE_EXTRAS, NETWORK_SERVICE_EXTRAS, VULN_SERVICE_EXTRAS, WEB_SERVICE_EXTRAS } from "../src/lib/service-extras";
 
 const prisma = new PrismaClient();
+
+function pageToDbService(page: ServicePageContent, order: number) {
+  return {
+    slug: page.slug,
+    title: page.title,
+    shortTitle: page.shortTitle,
+    shortText: page.heroSubtitle.slice(0, 180),
+    metaDescription: page.metaDescription,
+    description: page.overviewText,
+    icon: page.icon,
+    visual: page.visual,
+    imageUrl:
+      page.slug === "cloud-penetration-testing"
+        ? "/images/cloud-penetration-testing.png"
+        : page.slug === "web-application-pentesting"
+          ? "/images/web-application-pentesting.png"
+          : page.slug === "continuous-security-monitoring"
+            ? "/images/continuous-security-monitoring.png"
+            : page.slug === "mobile-application-pentesting"
+              ? "/images/mobile-application-pentesting.png"
+              : page.slug === "api-security-testing"
+                ? "/images/api-security-testing.png"
+                : page.slug === "network-security-testing"
+                  ? "/images/network-security-testing.png"
+                  : page.slug === "vulnerability-assessment"
+                    ? "/images/vulnerability-assessment.png"
+                    : null,
+    published: true,
+    order,
+    heroBadge: page.heroBadge,
+    heroSubtitle: page.heroSubtitle,
+    heroPrimaryCta: page.heroPrimaryCta,
+    heroSecondaryCta: page.heroSecondaryCta,
+    whyTitle: page.whyTitle,
+    whyItems: JSON.stringify(page.whyItems),
+    overviewTitle: page.overviewTitle,
+    overviewText: page.overviewText,
+    overviewList: JSON.stringify(page.overviewList),
+    assessTitle: page.assessTitle,
+    assessItems: JSON.stringify(page.assessItems),
+    standards: JSON.stringify(page.standards),
+    processTitle: page.processTitle,
+    processSteps: JSON.stringify(page.processSteps),
+    tools: JSON.stringify(page.tools),
+    industries: JSON.stringify(page.industries),
+    deliverables: JSON.stringify(page.deliverables),
+    faqs: JSON.stringify(page.faqs),
+    ctaHeadline: page.ctaHeadline,
+    ctaSubtitle: page.ctaSubtitle,
+    ctaText: page.ctaText,
+    features: JSON.stringify(page.overviewList.slice(0, 4)),
+    extras: JSON.stringify(
+      page.slug === "cloud-penetration-testing"
+        ? CLOUD_SERVICE_EXTRAS
+        : page.slug === "web-application-pentesting"
+          ? WEB_SERVICE_EXTRAS
+          : page.slug === "continuous-security-monitoring"
+            ? MONITORING_SERVICE_EXTRAS
+            : page.slug === "mobile-application-pentesting"
+              ? MOBILE_SERVICE_EXTRAS
+              : page.slug === "api-security-testing"
+                ? API_SERVICE_EXTRAS
+                : page.slug === "network-security-testing"
+                  ? NETWORK_SERVICE_EXTRAS
+                  : page.slug === "vulnerability-assessment"
+                    ? VULN_SERVICE_EXTRAS
+                    : EMPTY_SERVICE_EXTRAS
+    )
+  };
+}
 
 async function main() {
   const email = process.env.SEED_ADMIN_EMAIL || "admin@strikedefend.com";
@@ -18,98 +96,87 @@ async function main() {
   console.log(`Admin user ready: ${user.email}`);
 
   const existingSettings = await prisma.siteSettings.findFirst();
-  if (!existingSettings) {
-    await prisma.siteSettings.create({
-      data: {
-        siteName: "StrikeDefend",
-        tagline: "Cybersecurity, Performance, Automation",
-        primaryColor: "#06b6d4",
-        accentColor: "#0ea5e9",
-        email: "contact@strikedefend.com",
-        phone: "+1 555 000 0000",
-        address: "Remote, Worldwide",
-        footerText: "© StrikeDefend. All rights reserved."
-      }
+  const settingsData = {
+    siteName: "StrikeDefend",
+    tagline: "Penetration Testing",
+    primaryColor: "#06b6d4",
+    accentColor: "#0ea5e9",
+    email: "contact@strikedefend.com",
+    phone: "+880 1748-801699",
+    address: "Remote, Worldwide",
+    footerText: "© StrikeDefend. All rights reserved."
+  };
+  if (existingSettings) {
+    await prisma.siteSettings.update({
+      where: { id: existingSettings.id },
+      data: { tagline: settingsData.tagline, phone: settingsData.phone }
     });
+  } else {
+    await prisma.siteSettings.create({ data: settingsData });
     console.log("Site settings created.");
   }
 
+  const whyItems = JSON.stringify([
+    { title: "Offensive security mindset", text: "We think like attackers so your defenses hold up." },
+    { title: "Engineering-led delivery", text: "Senior engineers, not checklists. Reports you can act on." },
+    { title: "Manual depth, not scanners", text: "We go beyond automated scans to find business-logic flaws." },
+    { title: "Clear, fixed pricing", text: "Scoped engagements with predictable outcomes." }
+  ]);
+  const processSteps = JSON.stringify([
+    { step: "01", title: "Discover", text: "We map your stack, threats, and goals in a kickoff call." },
+    { step: "02", title: "Test", text: "Hands-on penetration testing with manual depth and targeted tooling." },
+    { step: "03", title: "Report", text: "Actionable findings with severity, evidence, and reproduction." },
+    { step: "04", title: "Retest", text: "Free follow-up retest to verify your fixes hold." }
+  ]);
+  const homeData = {
+    heroHeadline: "Find Vulnerabilities Before Attackers Do",
+    heroSubtitle:
+      "Web, mobile, cloud penetration testing and continuous security monitoring — delivered by senior engineers with reports you can act on.",
+    whySubtitle: "A focused offensive security team that tests like attackers and reports like engineers.",
+    whyItems,
+    processSteps,
+    securityEnabled: true,
+    securityTag: "End-to-End Security Testing",
+    securityTitle: "We test your entire attack surface — not just the homepage.",
+    securitySubtitle:
+      "From authentication and APIs to business logic and cloud misconfigurations, our penetration testing covers every layer attackers actually target.",
+    securityCapabilities: JSON.stringify(DEFAULT_SECURITY_CAPABILITIES),
+    securityHotspots: JSON.stringify(DEFAULT_SECURITY_HOTSPOTS),
+    securityStats: JSON.stringify(DEFAULT_SECURITY_STATS),
+    securityTerminal: JSON.stringify(DEFAULT_SECURITY_TERMINAL),
+    securityCtaText: "See our testing scope",
+    securityCtaLink: "/services/web-application-pentesting"
+  };
+
   const existingHome = await prisma.homeContent.findFirst();
-  if (!existingHome) {
-    await prisma.homeContent.create({
-      data: {
-        heroHeadline: "Secure, Test, and Automate Your Web Platform",
-        heroSubtitle:
-          "We provide penetration testing, load testing, and Playwright AI automation services to help businesses stay secure, scalable, and efficient.",
-        whyItems: [
-          { title: "Offensive security mindset", text: "We think like attackers so your defenses hold up." },
-          { title: "Engineering-led delivery", text: "Senior engineers, not checklists. Reports you can act on." },
-          { title: "Modern automation", text: "Playwright + AI keeps your regression suite small and reliable." },
-          { title: "Clear, fixed pricing", text: "Scoped engagements with predictable outcomes." }
-        ],
-        processSteps: [
-          { step: "01", title: "Discover", text: "We map your stack, threats, and goals in a kickoff call." },
-          { step: "02", title: "Test", text: "Hands-on testing with manual depth and automated coverage." },
-          { step: "03", title: "Report", text: "Actionable findings with severity, evidence, and reproduction." },
-          { step: "04", title: "Retest", text: "Free follow-up retest to verify your fixes hold." }
-        ]
-      }
-    });
+  if (existingHome) {
+    await prisma.homeContent.update({ where: { id: existingHome.id }, data: homeData });
+  } else {
+    await prisma.homeContent.create({ data: homeData });
     console.log("Home content created.");
   }
-
-  const services = [
-    {
-      slug: "penetration-testing",
-      title: "Penetration Testing",
-      shortText: "Find vulnerabilities before attackers exploit them.",
-      description:
-        "Manual and automated penetration testing for web applications, APIs, and cloud infrastructure. Each engagement ends with a developer-friendly report, severity-rated findings, and a free retest.",
-      icon: "shield",
-      features: [
-        "OWASP Top 10 + business logic testing",
-        "Authenticated and unauthenticated coverage",
-        "API and GraphQL testing",
-        "Free retest after remediation"
-      ],
-      order: 1
-    },
-    {
-      slug: "load-testing",
-      title: "Load Testing",
-      shortText: "Validate your application under real-world traffic.",
-      description:
-        "Performance testing with k6 and JMeter to measure throughput, latency, and breakpoints. We model realistic user journeys and identify the exact bottleneck — not just a number.",
-      icon: "gauge",
-      features: [
-        "Realistic user journey modelling",
-        "Stress, soak, and spike testing",
-        "Database and infrastructure profiling",
-        "Capacity and cost recommendations"
-      ],
-      order: 2
-    },
-    {
-      slug: "web-automation",
-      title: "Web Automation",
-      shortText: "Automate browser workflows using Playwright and AI.",
-      description:
-        "Playwright-based automation for end-to-end testing, scraping, and repetitive workflows. We use AI to keep selectors stable, generate test data, and triage failures.",
-      icon: "bot",
-      features: [
-        "End-to-end Playwright suites",
-        "AI-assisted selector healing",
-        "CI/CD integration",
-        "Custom internal tooling"
-      ],
-      order: 3
-    }
-  ];
-
-  for (const s of services) {
-    await prisma.service.upsert({ where: { slug: s.slug }, update: {}, create: s });
+  const homeRow = await prisma.homeContent.findFirst();
+  if (homeRow) {
+    await prisma.$executeRaw`
+      UPDATE "HomeContent"
+      SET workflowEnabled = 1,
+          workflowTitle = ${HOME_AGENT_WORKFLOW.title},
+          workflowSubtitle = ${HOME_AGENT_WORKFLOW.subtitle},
+          workflowManager = ${HOME_AGENT_WORKFLOW.manager},
+          workflowSpecialists = ${JSON.stringify(HOME_AGENT_WORKFLOW.specialists)},
+          workflowPipeline = ${JSON.stringify(HOME_AGENT_WORKFLOW.pipeline)}
+      WHERE id = ${homeRow.id}
+    `;
   }
-  console.log(`Services seeded: ${services.length}`);
+
+  for (const [i, page] of SERVICE_PAGES.entries()) {
+    const data = pageToDbService(page, i + 1);
+    await prisma.service.upsert({ where: { slug: page.slug }, update: data, create: data });
+  }
+  const removed = await prisma.service.deleteMany({
+    where: { slug: { notIn: SERVICE_PAGES.map((p) => p.slug) } }
+  });
+  console.log(`Services seeded: ${SERVICE_PAGES.length} (removed ${removed.count} other services)`);
 
   const testimonials = [
     {
@@ -126,7 +193,7 @@ async function main() {
       role: "Head of Engineering",
       company: "Atlas Logistics",
       quote:
-        "Their load test pinpointed a database lock we'd been chasing for months. Saved us a re-platform.",
+        "They found an auth bypass that would have exposed customer data. The retest confirmed our fixes held.",
       rating: 5,
       order: 2
     },
@@ -135,14 +202,18 @@ async function main() {
       role: "QA Lead",
       company: "Helio Health",
       quote:
-        "The Playwright suite they built cut our regression cycle from two days to forty minutes.",
+        "The pentest report was the first one our developers actually used. Clear severity, reproduction, and next steps.",
       rating: 5,
       order: 3
     }
   ];
   for (const t of testimonials) {
     const existing = await prisma.testimonial.findFirst({ where: { name: t.name, company: t.company } });
-    if (!existing) await prisma.testimonial.create({ data: t });
+    if (existing) {
+      await prisma.testimonial.update({ where: { id: existing.id }, data: t });
+    } else {
+      await prisma.testimonial.create({ data: t });
+    }
   }
   console.log(`Testimonials seeded: ${testimonials.length}`);
 
@@ -165,35 +236,46 @@ async function main() {
       order: 3
     },
     {
-      question: "Can you work with our existing CI/CD?",
+      question: "Do you test APIs and cloud infrastructure?",
       answer:
-        "Yes. Our Playwright suites and load tests integrate with GitHub Actions, GitLab CI, CircleCI, and most modern pipelines.",
+        "Yes. Web apps, APIs (REST and GraphQL), and cloud environments are in scope when we agree them during kickoff.",
       order: 4
     }
   ];
+  await prisma.fAQ.deleteMany({
+    where: { question: "Can you work with our existing CI/CD?" }
+  });
   for (const f of faqs) {
     const existing = await prisma.fAQ.findFirst({ where: { question: f.question } });
-    if (!existing) await prisma.fAQ.create({ data: f });
+    if (existing) {
+      await prisma.fAQ.update({ where: { id: existing.id }, data: f });
+    } else {
+      await prisma.fAQ.create({ data: f });
+    }
   }
   console.log(`FAQs seeded: ${faqs.length}`);
 
-  const post = await prisma.blogPost.findUnique({ where: { slug: "welcome-to-strikedefend" } });
-  if (!post) {
-    await prisma.blogPost.create({
-      data: {
-        slug: "welcome-to-strikedefend",
-        title: "Welcome to StrikeDefend",
-        excerpt: "Why we started StrikeDefend and what to expect from our blog.",
-        content:
-          "StrikeDefend exists because most teams need senior security and performance work without a six-month enterprise procurement cycle.\n\nIn this blog we'll share short, practical posts on penetration testing, load testing, and web automation — the kind of writing we wish existed when we started.",
-        author: "StrikeDefend Team",
-        tags: "company,intro",
-        published: true,
-        publishedAt: new Date()
-      }
-    });
-    console.log("Sample blog post created.");
-  }
+  await prisma.blogPost.upsert({
+    where: { slug: "welcome-to-strikedefend" },
+    update: {
+      excerpt: "Why we started StrikeDefend and what to expect from our blog.",
+      content:
+        "StrikeDefend exists because most teams need senior penetration testing without a six-month enterprise procurement cycle.\n\nIn this blog we'll share short, practical posts on offensive security and web application testing — the kind of writing we wish existed when we started.",
+      tags: "company,intro"
+    },
+    create: {
+      slug: "welcome-to-strikedefend",
+      title: "Welcome to StrikeDefend",
+      excerpt: "Why we started StrikeDefend and what to expect from our blog.",
+      content:
+        "StrikeDefend exists because most teams need senior penetration testing without a six-month enterprise procurement cycle.\n\nIn this blog we'll share short, practical posts on offensive security and web application testing — the kind of writing we wish existed when we started.",
+      author: "StrikeDefend Team",
+      tags: "company,intro",
+      published: true,
+      publishedAt: new Date()
+    }
+  });
+  console.log("Sample blog post ready.");
 }
 
 main()

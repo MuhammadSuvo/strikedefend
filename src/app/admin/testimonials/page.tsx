@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { prisma } from "@/lib/prisma";
+import { getTestimonials } from "@/lib/data";
 import { Toolbar } from "@/components/admin/Toolbar";
 import { SubmitButton } from "@/components/admin/SubmitButton";
 import { deleteTestimonial, toggleTestimonialPublish } from "@/app/admin/actions";
@@ -8,7 +8,7 @@ import { Edit, Trash2 } from "lucide-react";
 export const dynamic = "force-dynamic";
 
 export default async function AdminTestimonials() {
-  const items = await prisma.testimonial.findMany({ orderBy: { order: "asc" } });
+  const items = await getTestimonials();
   return (
     <div>
       <Toolbar title="Testimonials" actionHref="/admin/testimonials/new" actionLabel="Add Testimonial" />

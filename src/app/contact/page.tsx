@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { getSiteSettings } from "@/lib/settings";
+import { getPublishedServices } from "@/lib/service-content";
 
 export const dynamic = "force-dynamic";
 
@@ -10,7 +11,8 @@ export const metadata = {
 };
 
 export default async function ContactPage() {
-  const s = await getSiteSettings();
+  const [s, serviceRows] = await Promise.all([getSiteSettings(), getPublishedServices()]);
+  const serviceOptions = [...serviceRows.map((r) => r.title), "Other"];
   return (
     <>
       <section className="border-b border-white/5">
@@ -30,7 +32,7 @@ export default async function ContactPage() {
             We'll review your message and get back to you with next steps.
           </p>
           <div className="mt-6">
-            <ContactForm />
+            <ContactForm services={serviceOptions} />
           </div>
         </div>
         <aside className="space-y-4">
@@ -44,7 +46,7 @@ export default async function ContactPage() {
           <div className="card">
             <Phone className="h-5 w-5 text-brand" />
             <div className="mt-3 text-sm font-semibold">Phone</div>
-            <a href={`tel:${s.phone}`} className="text-sm text-white/70 hover:text-white">
+            <a href={`tel:${s.phone.replace(/[^\d+]/g, "")}`} className="text-sm text-white/70 hover:text-white">
               {s.phone}
             </a>
           </div>

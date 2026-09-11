@@ -1,17 +1,24 @@
 import Link from "next/link";
-import { prisma } from "@/lib/prisma";
+import {
+  countBlogPosts,
+  countFaqs,
+  countLeads,
+  countServices,
+  countTestimonials,
+  countUnreadLeads
+} from "@/lib/data";
 import { Wrench, MessageSquareQuote, HelpCircle, FileText, Inbox } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminDashboard() {
   const [services, testimonials, faqs, posts, leads, unreadLeads] = await Promise.all([
-    prisma.service.count(),
-    prisma.testimonial.count(),
-    prisma.fAQ.count(),
-    prisma.blogPost.count(),
-    prisma.lead.count(),
-    prisma.lead.count({ where: { read: false } })
+    countServices(),
+    countTestimonials(),
+    countFaqs(),
+    countBlogPosts(),
+    countLeads(),
+    countUnreadLeads()
   ]);
 
   const stats = [

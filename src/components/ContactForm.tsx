@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
 
-const services = ["Penetration Testing", "Load Testing", "Web Automation", "Other"];
+const DEFAULT_SERVICES = ["Other"];
 
-export function ContactForm() {
+export function ContactForm({ services = DEFAULT_SERVICES }: { services?: string[] }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
 
@@ -46,32 +46,38 @@ export function ContactForm() {
     <form onSubmit={onSubmit} className="grid gap-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="label">Name</label>
-          <input name="name" required className="input" placeholder="Jane Doe" />
+          <label className="label">First Name</label>
+          <input name="firstName" required className="input" placeholder="Jane" autoComplete="given-name" />
         </div>
         <div>
-          <label className="label">Email</label>
-          <input name="email" type="email" required className="input" placeholder="jane@company.com" />
+          <label className="label">Last Name</label>
+          <input name="lastName" required className="input" placeholder="Doe" autoComplete="family-name" />
         </div>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="label">Phone</label>
-          <input name="phone" className="input" placeholder="+1 555 000 0000" />
+          <label className="label">Email</label>
+          <input name="email" type="email" required className="input" placeholder="jane@company.com" autoComplete="email" />
         </div>
         <div>
-          <label className="label">Company</label>
-          <input name="company" className="input" placeholder="Acme Inc." />
+          <label className="label">Phone</label>
+          <input name="phone" className="input" placeholder="+880 1748-801699" autoComplete="tel" />
         </div>
       </div>
-      <div>
-        <label className="label">Service</label>
-        <select name="service" defaultValue="" className="input">
-          <option value="" disabled>Select a service</option>
-          {services.map((s) => (
-            <option key={s} value={s}>{s}</option>
-          ))}
-        </select>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label className="label">Company</label>
+          <input name="company" className="input" placeholder="Acme Inc." autoComplete="organization" />
+        </div>
+        <div>
+          <label className="label">Service</label>
+          <select name="service" defaultValue="" className="input">
+            <option value="" disabled>Select a service</option>
+            {services.map((s) => (
+              <option key={s} value={s}>{s}</option>
+            ))}
+          </select>
+        </div>
       </div>
       <div>
         <label className="label">Message</label>

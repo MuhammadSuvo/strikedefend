@@ -1,0 +1,11 @@
+[
+  {
+    "id": "cmshozl9b000098mhuyc2x5pw",
+    "email": "admin@strikedefend.com",
+    "name": "Site Admin",
+    "password": "$2a$10$Tg2jh3cpkoCnbxq3UJwyJuhs9Ziql6h673m7Jvokli1Rjrg6MogLK",
+    "role": "ADMIN",
+    "createdAt": "2026-08-06T15:50:11.807Z",
+    "updatedAt": "2026-08-06T15:50:11.807Z"
+  }
+]

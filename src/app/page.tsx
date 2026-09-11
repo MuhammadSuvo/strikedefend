@@ -1,7 +1,9 @@
-import { prisma } from "@/lib/prisma";
+import { getPublishedTestimonials, getPublishedFaqs } from "@/lib/data";
 import { getHomeContent } from "@/lib/settings";
 import { Hero } from "@/components/Hero";
 import { ServicesSection } from "@/components/ServicesSection";
+import { SecurityCapabilities } from "@/components/SecurityCapabilities";
+import { AgentWorkflow } from "@/components/AgentWorkflow";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { Process } from "@/components/Process";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
@@ -13,11 +15,7 @@ export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   const home = await getHomeContent();
-  const [services, testimonials, faqs] = await Promise.all([
-    prisma.service.findMany({ where: { published: true }, orderBy: { order: "asc" } }),
-    prisma.testimonial.findMany({ where: { published: true }, orderBy: { order: "asc" } }),
-    prisma.fAQ.findMany({ where: { published: true }, orderBy: { order: "asc" } })
-  ]);
+  const [testimonials, faqs] = await Promise.all([getPublishedTestimonials(), getPublishedFaqs()]);
 
   return (
     <>
@@ -30,7 +28,28 @@ export default async function HomePage() {
         secondaryCtaText={home.secondaryCtaText}
         secondaryCtaLink={home.secondaryCtaLink}
       />
-      <ServicesSection services={services} />
+      <ServicesSection />
+      <SecurityCapabilities
+        enabled={home.securityEnabled}
+        tag={home.securityTag}
+        title={home.securityTitle}
+        subtitle={home.securitySubtitle}
+        capabilities={home.securityCapabilities}
+        hotspots={home.securityHotspots}
+        stats={home.securityStats}
+        terminal={home.securityTerminal}
+        ctaText={home.securityCtaText}
+        ctaLink={home.securityCtaLink}
+      />
+      {home.workflowEnabled && (
+        <AgentWorkflow
+          title={home.workflowTitle}
+          subtitle={home.workflowSubtitle}
+          manager={home.workflowManager}
+          specialists={home.workflowSpecialists}
+          pipeline={home.workflowPipeline}
+        />
+      )}
       <VideoSection
         enabled={home.videoEnabled}
         title={home.videoTitle}
@@ -40,11 +59,11 @@ export default async function HomePage() {
       <WhyChooseUs
         title={home.whyTitle}
         subtitle={home.whySubtitle}
-        items={(home.whyItems as { title: string; text: string }[]) || []}
+        items={home.whyItems}
       />
       <Process
         title={home.processTitle}
-        steps={(home.processSteps as { step: string; title: string; text: string }[]) || []}
+        steps={home.processSteps}
       />
       <TestimonialsSection testimonials={testimonials} />
       <FaqSection faqs={faqs} />

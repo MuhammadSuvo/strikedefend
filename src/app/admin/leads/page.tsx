@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { prisma } from "@/lib/prisma";
+import { getLeads } from "@/lib/data";
 import { Toolbar } from "@/components/admin/Toolbar";
 import { SubmitButton } from "@/components/admin/SubmitButton";
 import { deleteLead, markLeadRead } from "@/app/admin/actions";
@@ -8,7 +8,7 @@ import { Trash2, Mail, Phone, CheckCircle2, Circle, Edit } from "lucide-react";
 export const dynamic = "force-dynamic";
 
 export default async function AdminLeads() {
-  const leads = await prisma.lead.findMany({ orderBy: { createdAt: "desc" } });
+  const leads = await getLeads();
   return (
     <div>
       <Toolbar title="Leads" description="Contact form submissions from the public website." />

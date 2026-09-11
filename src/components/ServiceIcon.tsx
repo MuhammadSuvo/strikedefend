@@ -1,4 +1,4 @@
-import { Bot, Gauge, Shield, ShieldCheck, Cpu, Activity, Code2, Lock } from "lucide-react";
+import { Bot, Gauge, Shield, ShieldCheck, Cpu, Activity, Code2, Lock, Globe, Cloud, Network } from "lucide-react";
 
 const map = {
   shield: Shield,
@@ -8,7 +8,10 @@ const map = {
   cpu: Cpu,
   activity: Activity,
   code: Code2,
-  lock: Lock
+  lock: Lock,
+  globe: Globe,
+  cloud: Cloud,
+  network: Network
 } as const;
 
 export function ServiceIcon({ name, className }: { name?: string | null; className?: string }) {

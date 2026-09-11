@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { prisma } from "@/lib/prisma";
+import { getFaqs } from "@/lib/data";
 import { Toolbar } from "@/components/admin/Toolbar";
 import { SubmitButton } from "@/components/admin/SubmitButton";
 import { deleteFaq, toggleFaqPublish } from "@/app/admin/actions";
@@ -8,7 +8,7 @@ import { Edit, Trash2 } from "lucide-react";
 export const dynamic = "force-dynamic";
 
 export default async function AdminFaq() {
-  const items = await prisma.fAQ.findMany({ orderBy: { order: "asc" } });
+  const items = await getFaqs();
   return (
     <div>
       <Toolbar title="FAQs" actionHref="/admin/faq/new" actionLabel="Add FAQ" />

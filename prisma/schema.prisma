@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -20,13 +20,13 @@ model User {
 model SiteSettings {
   id           String   @id @default(cuid())
   siteName     String   @default("StrikeDefend")
-  tagline      String   @default("Cybersecurity, Performance, Automation")
+  tagline      String   @default("Penetration Testing")
   logoUrl      String?
   faviconUrl   String?
   primaryColor String   @default("#06b6d4")
   accentColor  String   @default("#0ea5e9")
   email        String   @default("contact@strikedefend.com")
-  phone        String   @default("+1 555 000 0000")
+  phone        String   @default("+880 1748-801699")
   address      String   @default("Remote, Worldwide")
   footerText   String   @default("© StrikeDefend. All rights reserved.")
   twitterUrl   String?
@@ -37,40 +37,81 @@ model SiteSettings {
 
 model HomeContent {
   id               String   @id @default(cuid())
-  heroHeadline     String   @default("Secure, Test, and Automate Your Web Platform")
-  heroSubtitle     String   @default("We provide penetration testing, load testing, and Playwright AI automation services to help businesses stay secure, scalable, and efficient.")
+  heroHeadline     String   @default("Find Vulnerabilities Before Attackers Do")
+  heroSubtitle     String   @default("We provide senior penetration testing for web applications, APIs, and cloud infrastructure — with reports you can actually act on.")
   heroImageUrl     String?
   primaryCtaText   String   @default("Get a Free Consultation")
   primaryCtaLink   String   @default("/contact")
   secondaryCtaText String   @default("Explore Services")
   secondaryCtaLink String   @default("/services")
   whyTitle         String   @default("Why teams choose StrikeDefend")
-  whySubtitle      String   @default("A focused team that combines offensive security, performance engineering, and modern test automation.")
-  whyItems         Json     @default("[]")
+  whySubtitle      String   @default("A focused offensive security team that tests like attackers and reports like engineers.")
+  whyItems         String   @default("[]")
   processTitle     String   @default("How we work")
-  processSteps     Json     @default("[]")
+  processSteps     String   @default("[]")
   ctaHeadline      String   @default("Ready to harden your platform?")
   ctaSubtitle      String   @default("Book a free 30-minute consultation with our team.")
   videoEnabled     Boolean  @default(false)
   videoTitle       String   @default("See StrikeDefend in action")
   videoSubtitle    String   @default("A short walkthrough of how we approach an engagement.")
   videoUrl         String?
+  securityEnabled  Boolean  @default(true)
+  securityTag      String   @default("End-to-End Security Testing")
+  securityTitle    String   @default("We test your entire attack surface — not just the homepage.")
+  securitySubtitle String   @default("From authentication and APIs to business logic and cloud misconfigurations, our penetration testing covers every layer attackers actually target.")
+  securityCapabilities String @default("[]")
+  securityHotspots     String @default("[]")
+  securityStats        String @default("[]")
+  securityTerminal     String @default("[]")
+  securityCtaText      String @default("See our testing scope")
+  securityCtaLink      String @default("/services#penetration-testing")
+  workflowEnabled      Boolean @default(true)
+  workflowTitle        String   @default("Pentest Agent Workflow")
+  workflowSubtitle     String   @default("A manager agent coordinates specialist agents in parallel, then validates, evidences, and scores findings before a human reviews the report.")
+  workflowManager      String   @default("Pentest Manager Agent")
+  workflowSpecialists  String   @default("[]")
+  workflowPipeline     String   @default("[]")
   updatedAt        DateTime @updatedAt
 }
 
 model Service {
-  id          String   @id @default(cuid())
-  slug        String   @unique
-  title       String
-  shortText   String
-  description String
-  icon        String?
-  imageUrl    String?
-  features    Json     @default("[]")
-  order       Int      @default(0)
-  published   Boolean  @default(true)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id               String   @id @default(cuid())
+  slug             String   @unique
+  title            String
+  shortTitle       String   @default("")
+  shortText        String
+  metaDescription  String   @default("")
+  description      String   @default("")
+  icon             String?
+  imageUrl         String?
+  visual           String   @default("web")
+  features         String   @default("[]")
+  order            Int      @default(0)
+  published        Boolean  @default(true)
+  heroBadge        String   @default("Trusted by Engineering Teams")
+  heroSubtitle     String   @default("")
+  heroPrimaryCta   String   @default("Get Free Consultation")
+  heroSecondaryCta String   @default("Contact with Us")
+  whyTitle         String   @default("Why Choose This Service?")
+  whyItems         String   @default("[]")
+  overviewTitle    String   @default("Overview")
+  overviewText     String   @default("")
+  overviewList     String   @default("[]")
+  assessTitle      String   @default("What We Assess")
+  assessItems      String   @default("[]")
+  standards        String   @default("[]")
+  processTitle     String   @default("Process")
+  processSteps     String   @default("[]")
+  tools            String   @default("[]")
+  industries       String   @default("[]")
+  deliverables     String   @default("[]")
+  faqs             String   @default("[]")
+  ctaHeadline      String   @default("Ready to get started?")
+  ctaSubtitle      String   @default("Contact us for a scoped engagement and clear next steps.")
+  ctaText          String   @default("Request Assessment")
+  extras           String   @default("{}")
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
 }
 
 model Testimonial {

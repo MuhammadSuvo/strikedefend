@@ -1,20 +1,23 @@
 import Link from "next/link";
-import { prisma } from "@/lib/prisma";
+import { getServices } from "@/lib/data";
 import { Toolbar } from "@/components/admin/Toolbar";
 import { SubmitButton } from "@/components/admin/SubmitButton";
 import { deleteService, toggleServicePublish } from "@/app/admin/actions";
+import { ensureServiceCatalog, ensureServiceDefaultsPersisted } from "@/lib/service-content";
 import { Edit, Trash2 } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminServices() {
-  const services = await prisma.service.findMany({ orderBy: { order: "asc" } });
+  await ensureServiceCatalog();
+  const services = await getServices();
+  await Promise.all(services.map((s) => ensureServiceDefaultsPersisted(s)));
 
   return (
     <div>
       <Toolbar
         title="Services"
-        description="Manage the three services shown on the website."
+        description="Manage each service page — hero image, longform layout, copy, process, publish/draft. Open a service to add or edit content anytime."
         actionHref="/admin/services/new"
         actionLabel="Add Service"
       />
@@ -49,6 +52,11 @@ export default async function AdminServices() {
                 </td>
                 <td className="px-4 py-3 text-right">
                   <div className="inline-flex items-center gap-2">
+                    {s.published && (
+                      <Link href={`/services/${s.slug}`} target="_blank" className="text-xs text-white/50 hover:text-brand">
+                        View
+                      </Link>
+                    )}
                     <Link href={`/admin/services/${s.id}`} className="text-white/70 hover:text-white">
                       <Edit className="h-4 w-4" />
                     </Link>
@@ -63,7 +71,11 @@ export default async function AdminServices() {
               </tr>
             ))}
             {services.length === 0 && (
-              <tr><td className="px-4 py-6 text-white/60" colSpan={5}>No services yet.</td></tr>
+              <tr>
+                <td className="px-4 py-6 text-white/60" colSpan={5}>
+                  No services yet.
+                </td>
+              </tr>
             )}
           </tbody>
         </table>

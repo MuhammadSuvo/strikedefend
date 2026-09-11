@@ -1,0 +1,3077 @@
+[
+  {
+    "id": "cmswwiyyb00018kkr1soej1dp",
+    "slug": "web-application-pentesting",
+    "title": "Web Application Penetration Testing",
+    "shortTitle": "Web App Pentesting",
+    "shortText": "Find critical vulnerabilities in your web applications before attackers do. We test authentication, APIs, business logic, and infrastructure with manual depth and actionable report",
+    "metaDescription": "Senior web application penetration testing for OWASP Top 10, business logic, APIs, and authentication flaws.",
+    "description": "Web application penetration testing simulates real-world attacks against your web apps, APIs, and supporting infrastructure. We identify vulnerabilities that automated tools miss — including authentication bypasses, IDOR, injection flaws, and business logic abuse — then deliver a report your team can act on immediately.",
+    "icon": "globe",
+    "imageUrl": "/images/web-application-pentesting.png",
+    "visual": "web",
+    "features": [
+      "Application & frontend review",
+      "REST & GraphQL API testing",
+      "Authentication & session management",
+      "Authorization & access control"
+    ],
+    "order": 1,
+    "published": true,
+    "heroBadge": "AI + Human Penetration Testing Platform",
+    "heroSubtitle": "Find Security Weaknesses Before Attackers Do",
+    "heroPrimaryCta": "Get Free Consultation",
+    "heroSecondaryCta": "View Sample Report",
+    "whyTitle": "Why Choose Web Application Pentesting?",
+    "whyItems": [
+      {
+        "title": "Risk Identification",
+        "text": "Discover hidden security weaknesses before they reach production."
+      },
+      {
+        "title": "OWASP Coverage",
+        "text": "Full testing aligned with OWASP Top 10 and WSTG methodologies."
+      },
+      {
+        "title": "Business Logic Testing",
+        "text": "Go beyond scanners to find workflow and authorization flaws."
+      },
+      {
+        "title": "Developer-Ready Reports",
+        "text": "Clear severity ratings, PoC steps, and remediation guidance."
+      }
+    ],
+    "overviewTitle": "What is Web Application Pentesting?",
+    "overviewText": "Web application penetration testing simulates real-world attacks against your web apps, APIs, and supporting infrastructure. We identify vulnerabilities that automated tools miss — including authentication bypasses, IDOR, injection flaws, and business logic abuse — then deliver a report your team can act on immediately.",
+    "overviewList": [
+      "Application & frontend review",
+      "REST & GraphQL API testing",
+      "Authentication & session management",
+      "Authorization & access control",
+      "Business logic & workflow abuse",
+      "Infrastructure & deployment review"
+    ],
+    "assessTitle": "What We Assess",
+    "assessItems": [
+      "Web Applications",
+      "REST APIs",
+      "GraphQL Endpoints",
+      "Authentication Flows",
+      "Authorization Controls",
+      "Session Management",
+      "Business Logic",
+      "Third-party Integrations"
+    ],
+    "standards": [
+      "OWASP Web Security Testing Guide",
+      "OWASP Top 10",
+      "OWASP API Security Top 10",
+      "CVSS-based risk assessment",
+      "Secure development best practices"
+    ],
+    "processTitle": "Testing Process",
+    "processSteps": [
+      {
+        "step": "01",
+        "title": "Discovery",
+        "text": "Confirm scope, access, and the testing window with your team."
+      },
+      {
+        "step": "02",
+        "title": "Reconnaissance",
+        "text": "Map applications, APIs, and the external attack surface."
+      },
+      {
+        "step": "03",
+        "title": "Vulnerability Analysis",
+        "text": "Manually test for OWASP issues, auth flaws, and business logic abuse."
+      },
+      {
+        "step": "04",
+        "title": "Exploitation & Validation",
+        "text": "Prove real impact safely and collect evidence for every finding."
+      },
+      {
+        "step": "05",
+        "title": "Reporting & Retest",
+        "text": "Deliver a developer-ready report, then retest after you remediate."
+      }
+    ],
+    "tools": [
+      "Burp Suite",
+      "OWASP ZAP",
+      "Nmap",
+      "SQLMap",
+      "Postman",
+      "FFUF",
+      "Nuclei",
+      "Playwright",
+      "Amass",
+      "Subfinder"
+    ],
+    "industries": [
+      "SaaS",
+      "FinTech",
+      "E-Commerce",
+      "Healthcare",
+      "Education",
+      "Government",
+      "Enterprise",
+      "Startups"
+    ],
+    "deliverables": [
+      {
+        "title": "Executive Summary",
+        "items": [
+          "Business overview",
+          "Risk summary",
+          "Security score"
+        ]
+      },
+      {
+        "title": "Technical Report",
+        "items": [
+          "CVSS scoring",
+          "Proof of concept",
+          "Screenshots",
+          "Evidence",
+          "Risk level",
+          "Recommendations"
+        ]
+      },
+      {
+        "title": "Remediation Guide",
+        "items": [
+          "Fix recommendations",
+          "Best practices",
+          "Developer notes"
+        ]
+      },
+      {
+        "title": "Retest Report",
+        "items": [
+          "Validation testing",
+          "Resolved issues",
+          "Updated report"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long does a web pentest take?",
+        "answer": "Typically 1–2 weeks depending on scope and application complexity."
+      },
+      {
+        "question": "Do you sign an NDA?",
+        "answer": "Yes. All engagements are confidential and we sign your NDA before scoping."
+      },
+      {
+        "question": "Will testing affect production?",
+        "answer": "Testing is carefully planned. We prefer staging but can test production safely when required."
+      },
+      {
+        "question": "Is a retest included?",
+        "answer": "Yes. Every engagement includes one free retest after remediation."
+      }
+    ],
+    "ctaHeadline": "Ready to Assess Your Application?",
+    "ctaSubtitle": "Start with a controlled, authorized security assessment and understand where your application is truly exposed.",
+    "ctaText": "Request a Penetration Test",
+    "extras": {
+      "workflowEnabled": false,
+      "workflowTitle": "Agent Workflow",
+      "workflowSubtitle": "",
+      "workflowManager": "Pentest Manager Agent",
+      "workflowSpecialists": [],
+      "workflowPipeline": [],
+      "howItWorksTitle": "How it works",
+      "howItWorksItems": [],
+      "benefitsTitle": "Benefits",
+      "benefitsItems": [],
+      "whyNeededTitle": "Why your applications need this",
+      "whyNeededText": "",
+      "whyNeededItems": [],
+      "visualLabel": "Web Application Scan",
+      "visualNodes": [
+        {
+          "text": "Frontend",
+          "color": "cyan",
+          "x": "15%",
+          "y": "20%"
+        },
+        {
+          "text": "API",
+          "color": "violet",
+          "x": "80%",
+          "y": "25%"
+        },
+        {
+          "text": "Auth",
+          "color": "amber",
+          "x": "78%",
+          "y": "65%"
+        },
+        {
+          "text": "Logic",
+          "color": "rose",
+          "x": "55%",
+          "y": "80%"
+        }
+      ],
+      "visualCommand": "$ strikedefend web-pentest --target app.example.com",
+      "visualLines": [
+        "[+] OWASP Top 10 scan........ done",
+        "[!] SQLi on /api/search...... critical",
+        "[+] Session mgmt review...... passed"
+      ],
+      "standardsTitle": "Built Around Industry Security Practices",
+      "standardsSubtitle": "Our web application testing methodology can align with established security guidance including:",
+      "processSubtitle": "",
+      "toolsTitle": "Tools & Technologies",
+      "longformEnabled": true,
+      "longform": {
+        "introHeadline": "Find Security Weaknesses Before Attackers Do",
+        "introParagraphs": [
+          "Modern web applications handle sensitive data, business-critical workflows, APIs, authentication, payments, and integrations. A single vulnerability can expose customer information, compromise accounts, or interrupt business operations.",
+          "Our **Web Application Penetration Testing** service simulates realistic attack scenarios to identify security weaknesses before they can be exploited.",
+          "We combine **automated security testing, manual penetration testing, business-logic analysis, and expert validation** to provide findings that your development and security teams can actually act on.",
+          "Powered by our AI + Human Penetration Testing Platform: machine-speed analysis guided by expert testers who prove real-world risk."
+        ],
+        "heroHighlights": [
+          {
+            "title": "AI + Human Platform",
+            "text": "AI-assisted coverage with expert validation."
+          },
+          {
+            "title": "Expert Security Testers",
+            "text": "Senior engineers, not scanners alone."
+          },
+          {
+            "title": "Real-World Attack Simulation",
+            "text": "We test the way attackers think."
+          },
+          {
+            "title": "Detailed Actionable Reports",
+            "text": "Evidence, impact, and fix guidance."
+          }
+        ],
+        "heroTags": [
+          "AI + Human",
+          "Authentication",
+          "API Security",
+          "SQL Injection",
+          "Access Control",
+          "XSS"
+        ],
+        "heroCta": "Request a Security Assessment",
+        "secondaryCta": "View Our Process",
+        "bottomCta": "Get Started Now",
+        "whatWeTestTitle": "What We Test",
+        "whatWeTestIntro": "Our assessment covers the major security areas of your web application.",
+        "testAreas": [
+          {
+            "title": "Authentication Security",
+            "intro": "We evaluate how securely users access your application. Testing can include:",
+            "items": [
+              "Login functionality",
+              "Password policies",
+              "MFA implementation",
+              "Password reset flows",
+              "Account enumeration",
+              "Brute-force protections",
+              "Authentication bypass scenarios"
+            ],
+            "goal": "Prevent unauthorized users from gaining access to accounts."
+          },
+          {
+            "title": "Authorization & Access Control",
+            "intro": "Authentication answers **“Who are you?”** Authorization answers **“What are you allowed to do?”** We test whether users can access data or functionality outside their assigned permissions. Examples include:",
+            "items": [
+              "IDOR / Broken Object Level Authorization",
+              "Role manipulation",
+              "Horizontal privilege escalation",
+              "Vertical privilege escalation",
+              "Unauthorized resource access",
+              "Admin functionality exposure"
+            ],
+            "goal": "Ensure users can only access the resources and actions they are authorized to use."
+          },
+          {
+            "title": "Input Validation & Injection Testing",
+            "intro": "Applications constantly process user-controlled input. We examine how securely that input is handled and test for vulnerabilities such as:",
+            "items": [
+              "Cross-Site Scripting (XSS)",
+              "SQL Injection",
+              "Command Injection",
+              "Server-Side Template Injection",
+              "Path Traversal",
+              "Parameter manipulation",
+              "Malicious file uploads"
+            ],
+            "goal": "Prevent user input from becoming executable commands, scripts, or database queries."
+          },
+          {
+            "title": "API Security Testing",
+            "intro": "Modern applications often depend heavily on APIs. We test APIs for weaknesses involving:",
+            "items": [
+              "Authentication",
+              "Authorization",
+              "Token handling",
+              "Object access",
+              "Parameter manipulation",
+              "Excessive data exposure",
+              "Rate limiting",
+              "Mass assignment",
+              "Business logic abuse"
+            ],
+            "goal": "Protect the services and data powering your web application. API testing is aligned with common OWASP API Security risks."
+          },
+          {
+            "title": "Session Management Testing",
+            "intro": "A secure login is not enough if the user session itself can be compromised. We review:",
+            "items": [
+              "Session cookies",
+              "Authentication tokens",
+              "Session expiration",
+              "Logout functionality",
+              "Token invalidation",
+              "Session fixation",
+              "Cookie security attributes"
+            ],
+            "goal": "Prevent stolen or manipulated sessions from being used to hijack user accounts."
+          },
+          {
+            "title": "Business Logic Testing",
+            "intro": "Some of the most serious vulnerabilities cannot be discovered by scanners. Our testers analyze how your application is intended to work and look for ways those workflows could be abused.",
+            "items": [
+              "Price manipulation",
+              "Workflow bypass",
+              "Coupon abuse",
+              "Payment manipulation",
+              "Quantity manipulation",
+              "Approval bypass",
+              "Unauthorized state changes"
+            ],
+            "goal": "Protect not only your application code, but also your business processes.",
+            "expectedTitle": "Expected workflow",
+            "expectedFlow": [
+              "User selects product",
+              "Price calculated",
+              "Payment completed",
+              "Order created"
+            ],
+            "abuseTitle": "Possible abuse scenario",
+            "abuseFlow": [
+              "User selects product",
+              "Request intercepted",
+              "Price / quantity manipulated",
+              "Server accepts modified request",
+              "Unexpected business impact"
+            ]
+          }
+        ],
+        "howTitle": "How Our Penetration Testing Works",
+        "howIntro": "Our testing process follows a structured security assessment lifecycle.",
+        "howFlow": [
+          "Scope & Authorization",
+          "Reconnaissance",
+          "Attack Surface Mapping",
+          "Security Testing",
+          "Manual Exploitation",
+          "Impact Validation",
+          "Risk Assessment",
+          "Detailed Reporting",
+          "Remediation",
+          "Retesting"
+        ],
+        "howSteps": [
+          {
+            "step": "01",
+            "title": "Scope & Authorization",
+            "intro": "Every engagement starts by defining exactly what can and cannot be tested. We establish:",
+            "items": [
+              "Target applications",
+              "Domains and APIs",
+              "Test environments",
+              "User roles",
+              "Allowed testing techniques",
+              "Testing windows",
+              "Restricted activities"
+            ],
+            "footer": "This ensures testing remains **controlled, authorized, and safe**.",
+            "mapItems": []
+          },
+          {
+            "step": "02",
+            "title": "Reconnaissance",
+            "intro": "We explore the application to understand its attack surface. We identify:",
+            "items": [
+              "Pages",
+              "APIs",
+              "Parameters",
+              "Authentication flows",
+              "User roles",
+              "Technologies",
+              "Third-party integrations",
+              "Sensitive functionality"
+            ],
+            "footer": "The objective is to understand the application the way an attacker might.",
+            "mapItems": []
+          },
+          {
+            "step": "03",
+            "title": "Attack Surface Mapping",
+            "intro": "Every discovered component becomes part of the security test map.",
+            "items": [],
+            "footer": "This helps ensure critical functionality is not overlooked.",
+            "mapTitle": "Web Application",
+            "mapItems": [
+              {
+                "label": "Login",
+                "children": []
+              },
+              {
+                "label": "Registration",
+                "children": []
+              },
+              {
+                "label": "User Profile",
+                "children": []
+              },
+              {
+                "label": "Admin Panel",
+                "children": []
+              },
+              {
+                "label": "File Upload",
+                "children": []
+              },
+              {
+                "label": "Search",
+                "children": []
+              },
+              {
+                "label": "Payments",
+                "children": []
+              },
+              {
+                "label": "APIs",
+                "children": [
+                  "Users",
+                  "Orders",
+                  "Products",
+                  "Payments"
+                ]
+              }
+            ]
+          },
+          {
+            "step": "04",
+            "title": "Security Testing",
+            "intro": "Testing is performed across multiple security areas. Automated tools help discover potential weaknesses, while manual testing validates whether they represent real security risks.",
+            "items": [],
+            "footer": "",
+            "mapTitle": "Application",
+            "mapItems": [
+              {
+                "label": "Authentication",
+                "children": []
+              },
+              {
+                "label": "Authorization",
+                "children": []
+              },
+              {
+                "label": "Session Management",
+                "children": []
+              },
+              {
+                "label": "Input Validation",
+                "children": []
+              },
+              {
+                "label": "API Security",
+                "children": []
+              },
+              {
+                "label": "Business Logic",
+                "children": []
+              },
+              {
+                "label": "Configuration",
+                "children": []
+              },
+              {
+                "label": "Client-Side Security",
+                "children": []
+              }
+            ]
+          },
+          {
+            "step": "05",
+            "title": "Exploitation & Validation",
+            "intro": "Potential vulnerabilities are carefully validated to determine whether they can actually be exploited. We focus on proving impact while minimizing risk to the environment. Each confirmed issue is supported by evidence such as:",
+            "items": [
+              "Request and response details",
+              "Reproduction steps",
+              "Screenshots",
+              "Technical explanation",
+              "Observed security impact"
+            ],
+            "footer": "",
+            "mapItems": []
+          },
+          {
+            "step": "06",
+            "title": "Risk Assessment",
+            "intro": "Not every vulnerability carries the same level of risk. We evaluate findings based on factors such as:",
+            "items": [
+              "Exploitability",
+              "Required privileges",
+              "Data exposure",
+              "Business impact",
+              "Technical impact",
+              "Attack complexity"
+            ],
+            "footer": "Findings are prioritized so your team knows **what needs attention first**.",
+            "mapItems": []
+          },
+          {
+            "step": "07",
+            "title": "Actionable Reporting",
+            "intro": "You receive more than a vulnerability list. Each confirmed finding can include:",
+            "items": [],
+            "footer": "This gives developers the information they need to understand, reproduce, and fix the issue.",
+            "mapItems": []
+          }
+        ],
+        "findingIntro": "Each confirmed finding can include:",
+        "finding": {
+          "vulnerabilityLabel": "Vulnerability",
+          "vulnerability": "Broken Object Level Authorization",
+          "severityLabel": "Severity",
+          "severity": "High",
+          "componentLabel": "Affected Component",
+          "component": "GET /api/users/{userId}",
+          "riskLabel": "Risk",
+          "risk": "Authenticated users may access information belonging to other users.",
+          "evidenceLabel": "Evidence",
+          "evidence": "Reproducible request and response demonstrating unauthorized access.",
+          "recommendationLabel": "Recommendation",
+          "recommendation": "Implement server-side ownership and authorization validation for every object request."
+        },
+        "findingToFixTitle": "From Finding to Fix",
+        "findingToFixIntro": "Our work does not have to end when the report is delivered. Retesting confirms whether vulnerabilities have been properly resolved and whether the remediation introduced additional security concerns.",
+        "findingToFixFlow": [
+          "Vulnerability Found",
+          "Technical Validation",
+          "Risk Prioritization",
+          "Developer Remediation",
+          "Security Retest",
+          "Verified Fix"
+        ],
+        "receiveTitle": "What You Receive",
+        "receiveIntro": "At the end of the assessment, you can receive:",
+        "receiveItems": [
+          "Executive security summary",
+          "Detailed technical penetration-testing report",
+          "Confirmed vulnerability findings",
+          "Severity and risk ratings",
+          "Reproduction steps",
+          "Supporting evidence",
+          "Remediation recommendations",
+          "Vulnerability prioritization",
+          "Retest results"
+        ],
+        "receiveCards": [],
+        "processOverview": [],
+        "comparisonTitle": "Beyond Automated Scanning",
+        "comparisonBlurb": "Attackers don't follow the rules. We test workflows, permissions, and business logic scanners never see. Built on our AI + Human Penetration Testing Platform.",
+        "comparisonCta": "Learn How We Think",
+        "scannerCode": "",
+        "testerCode": "",
+        "scannerResult": "",
+        "testerResult": "",
+        "whyManualTitle": "Why Manual Penetration Testing Matters",
+        "whyManualIntro": "Automated scanners are valuable, but they cannot fully understand how your business works.",
+        "scannerTitle": "AI / Scanners Alone",
+        "scannerFlow": [
+          "Scanner",
+          "Endpoint returned HTTP 200",
+          "No issue detected"
+        ],
+        "testerTitle": "AI + Human Testing",
+        "testerFlow": [
+          "Should this user be allowed to access this endpoint?",
+          "No",
+          "Authorization vulnerability discovered"
+        ],
+        "whyManualConclusion": "That difference is why our approach combines **Automation + Human Analysis + Business Context**.",
+        "contextTitle": "Security Testing With Real Business Context",
+        "contextQuote1": "Is the endpoint technically vulnerable?",
+        "contextQuote2": "What could an attacker actually achieve?",
+        "contextIntro": "This helps uncover risks involving:",
+        "contextItems": [
+          "Customer information",
+          "Financial transactions",
+          "Administrative privileges",
+          "Confidential documents",
+          "Internal workflows",
+          "Sensitive APIs",
+          "Business-critical operations"
+        ],
+        "questionsTitle": "Security Should Be Tested Before It Becomes an Incident",
+        "questionsIntro": "Your application may appear to work perfectly while still containing hidden security weaknesses. A penetration test helps answer important questions:",
+        "questions": [
+          "Can one customer access another customer's information?",
+          "Can normal users reach administrative functionality?",
+          "Can API parameters be manipulated?",
+          "Can application workflows be bypassed?",
+          "Can sensitive information be exposed?",
+          "Can an attacker turn a small vulnerability into a larger compromise?"
+        ],
+        "closeTitle": "Protect Your Web Application Before Attackers Test It for You",
+        "closeBody": "Whether you are preparing for a production release, reviewing an existing application, or strengthening your security program, penetration testing provides a realistic view of your application's security posture.",
+        "closeHighlights": [
+          "Discover vulnerabilities.",
+          "Understand the real risk.",
+          "Fix what matters.",
+          "Verify the remediation."
+        ],
+        "closeQuestion": "Ready to Assess Your Application? Start with a controlled, authorized security assessment and understand where your application is truly exposed.",
+        "platformBadge": "AI + Human Penetration Testing Platform",
+        "platformTitle": "AI + Human Penetration Testing Platform",
+        "platformIntro": "We combine AI-powered analysis with senior penetration testers — delivering faster coverage and the human judgment attackers still require.",
+        "platformItems": [
+          {
+            "title": "AI-Assisted Discovery",
+            "text": "Intelligent automation accelerates reconnaissance, pattern matching, and coverage across large attack surfaces."
+          },
+          {
+            "title": "Human Validation",
+            "text": "Expert testers confirm real impact, chain findings, and uncover business-logic flaws tools alone miss."
+          },
+          {
+            "title": "Smarter Prioritization",
+            "text": "Risk is ranked by exploitability and business harm — so your team fixes what matters first."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-08-17T07:17:45.972Z",
+    "updatedAt": "2026-08-17T09:34:02.994Z"
+  },
+  {
+    "id": "cmswwiz0d00028kkrxsnq8kh0",
+    "slug": "mobile-application-pentesting",
+    "title": "Mobile Application Pentesting",
+    "shortTitle": "Mobile App Pentesting",
+    "shortText": "Secure your mobile apps from the device layer to the backend API. We test iOS and Android applications for data leakage, insecure storage, API flaws, and reverse-engineering risks.",
+    "metaDescription": "iOS and Android penetration testing covering client-side security, API backends, data storage, and reverse engineering.",
+    "description": "Mobile penetration testing evaluates your iOS and Android applications for security weaknesses at every layer — from local data storage and certificate pinning to backend API authorization and business logic. We combine static analysis, dynamic testing, and manual exploitation to mirror how attackers target mobile apps.",
+    "icon": "cpu",
+    "imageUrl": null,
+    "visual": "mobile",
+    "features": [
+      "iOS & Android app analysis",
+      "Insecure data storage review",
+      "API & backend testing",
+      "Authentication & token handling"
+    ],
+    "order": 2,
+    "published": true,
+    "heroBadge": "AI + Human Penetration Testing Platform",
+    "heroSubtitle": "Secure your mobile apps from the device layer to the backend API. We test iOS and Android applications for data leakage, insecure storage, API flaws, and reverse-engineering risks.",
+    "heroPrimaryCta": "Get Free Consultation",
+    "heroSecondaryCta": "View Sample Report",
+    "whyTitle": "Why Choose Mobile Application Pentesting?",
+    "whyItems": [
+      {
+        "title": "Platform Coverage",
+        "text": "Dedicated testing for iOS, Android, and hybrid mobile apps."
+      },
+      {
+        "title": "Client & Server Side",
+        "text": "We test the app binary and its backend APIs together."
+      },
+      {
+        "title": "Data Protection",
+        "text": "Identify insecure storage, logging, and transmission of sensitive data."
+      },
+      {
+        "title": "Real Device Testing",
+        "text": "Testing on physical devices and emulators for accurate results."
+      }
+    ],
+    "overviewTitle": "What is Mobile Application Pentesting?",
+    "overviewText": "Mobile penetration testing evaluates your iOS and Android applications for security weaknesses at every layer — from local data storage and certificate pinning to backend API authorization and business logic. We combine static analysis, dynamic testing, and manual exploitation to mirror how attackers target mobile apps.",
+    "overviewList": [
+      "iOS & Android app analysis",
+      "Insecure data storage review",
+      "API & backend testing",
+      "Authentication & token handling",
+      "Certificate pinning bypass",
+      "Reverse engineering assessment"
+    ],
+    "assessTitle": "What We Assess",
+    "assessItems": [
+      "iOS Applications",
+      "Android Applications",
+      "Hybrid / React Native Apps",
+      "Mobile Backend APIs",
+      "Local Data Storage",
+      "Network Communication",
+      "Authentication & Biometrics",
+      "Push Notification Security"
+    ],
+    "standards": [
+      "OWASP MASVS",
+      "OWASP MSTG",
+      "OWASP Mobile Top 10",
+      "PTES",
+      "NIST",
+      "CWE",
+      "CVSS"
+    ],
+    "processTitle": "Testing Process",
+    "processSteps": [
+      {
+        "step": "01",
+        "title": "App Reconnaissance",
+        "text": "Review app stores, binaries, permissions, and backend endpoints."
+      },
+      {
+        "step": "02",
+        "title": "Static Analysis",
+        "text": "Inspect iOS and Android builds for insecure storage, secrets, and weak crypto."
+      },
+      {
+        "step": "03",
+        "title": "Dynamic Testing",
+        "text": "Instrument runtime behavior, traffic, and jailbreak or root scenarios."
+      },
+      {
+        "step": "04",
+        "title": "API & Backend Review",
+        "text": "Test mobile APIs for authz, session, and data-exposure flaws."
+      },
+      {
+        "step": "05",
+        "title": "Report & Retest",
+        "text": "Deliver platform-specific findings and verify fixes after remediation."
+      }
+    ],
+    "tools": [
+      "Frida",
+      "Objection",
+      "MobSF",
+      "Burp Suite",
+      "jadx",
+      "Hopper",
+      "Postman",
+      "ADB",
+      "Nuclei"
+    ],
+    "industries": [
+      "SaaS",
+      "FinTech",
+      "Healthcare",
+      "E-Commerce",
+      "Banking",
+      "Enterprise",
+      "Startups",
+      "Government"
+    ],
+    "deliverables": [
+      {
+        "title": "Executive Summary",
+        "items": [
+          "App overview",
+          "Risk summary",
+          "Compliance notes"
+        ]
+      },
+      {
+        "title": "Technical Report",
+        "items": [
+          "Platform-specific findings",
+          "PoC steps",
+          "Screenshots",
+          "CVSS scores",
+          "Risk ratings"
+        ]
+      },
+      {
+        "title": "Remediation Guide",
+        "items": [
+          "Platform fix guidance",
+          "Secure coding notes",
+          "Best practices"
+        ]
+      },
+      {
+        "title": "Retest Report",
+        "items": [
+          "Fix validation",
+          "Updated findings",
+          "Final sign-off"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do you need source code?",
+        "answer": "No. We test black-box by default. Source code access can deepen coverage if available."
+      },
+      {
+        "question": "Which platforms do you support?",
+        "answer": "iOS, Android, and cross-platform frameworks like React Native and Flutter."
+      },
+      {
+        "question": "How long does mobile testing take?",
+        "answer": "Usually 1–2 weeks depending on app complexity and number of platforms."
+      },
+      {
+        "question": "Do you test backend APIs too?",
+        "answer": "Yes. Mobile apps are tested together with their API backends for full coverage."
+      }
+    ],
+    "ctaHeadline": "Ready to secure your mobile app?",
+    "ctaSubtitle": "Protect your users' data with a thorough mobile penetration test.",
+    "ctaText": "Request Assessment",
+    "extras": {
+      "workflowEnabled": false,
+      "workflowTitle": "Agent Workflow",
+      "workflowSubtitle": "",
+      "workflowManager": "Pentest Manager Agent",
+      "workflowSpecialists": [],
+      "workflowPipeline": [],
+      "howItWorksTitle": "How it works",
+      "howItWorksItems": [],
+      "benefitsTitle": "Benefits",
+      "benefitsItems": [],
+      "whyNeededTitle": "Why your applications need this",
+      "whyNeededText": "",
+      "whyNeededItems": [],
+      "visualLabel": "",
+      "visualNodes": [],
+      "visualCommand": "",
+      "visualLines": [],
+      "standardsTitle": "Aligned with Industry Standards",
+      "standardsSubtitle": "Our assessments follow internationally recognized security frameworks for comprehensive and consistent testing.",
+      "processSubtitle": "",
+      "toolsTitle": "Tools & Technologies",
+      "longform": {
+        "introHeadline": "",
+        "introParagraphs": [
+          "We test iOS and Android applications from the device layer to the backend API — finding insecure storage, weak auth, API flaws, and real exploit paths before attackers do.",
+          "Powered by our AI + Human Penetration Testing Platform: machine-speed analysis guided by expert testers who prove real-world risk."
+        ],
+        "heroHighlights": [
+          {
+            "title": "AI + Human Platform",
+            "text": "AI-assisted coverage with expert validation."
+          },
+          {
+            "title": "iOS & Android Coverage",
+            "text": "Native and hybrid apps tested on real attack paths."
+          },
+          {
+            "title": "Static + Dynamic Testing",
+            "text": "Binaries, runtime behavior, traffic, and storage."
+          },
+          {
+            "title": "API & Backend Included",
+            "text": "Mobile clients and their services tested together."
+          }
+        ],
+        "heroTags": [
+          "AI + Human",
+          "Authentication",
+          "Local Storage",
+          "API Security",
+          "Session Management",
+          "Device Security"
+        ],
+        "heroCta": "Request a Security Assessment",
+        "secondaryCta": "View Our Process",
+        "bottomCta": "Get Started Now",
+        "whatWeTestTitle": "What We Test",
+        "whatWeTestIntro": "",
+        "testAreas": [],
+        "howTitle": "How Our Penetration Testing Works",
+        "howIntro": "",
+        "howFlow": [],
+        "howSteps": [],
+        "findingIntro": "",
+        "finding": {
+          "vulnerabilityLabel": "Vulnerability",
+          "vulnerability": "",
+          "severityLabel": "Severity",
+          "severity": "",
+          "componentLabel": "Affected Component",
+          "component": "",
+          "riskLabel": "Risk",
+          "risk": "",
+          "evidenceLabel": "Evidence",
+          "evidence": "",
+          "recommendationLabel": "Recommendation",
+          "recommendation": ""
+        },
+        "findingToFixTitle": "From Finding to Fix",
+        "findingToFixIntro": "",
+        "findingToFixFlow": [],
+        "receiveTitle": "What You Receive",
+        "receiveIntro": "",
+        "receiveItems": [],
+        "receiveCards": [],
+        "processOverview": [],
+        "comparisonTitle": "Beyond Automated Scanning",
+        "comparisonBlurb": "Scanners miss runtime abuse, insecure storage paths, and business-logic flaws. We combine static analysis, dynamic testing, and manual exploitation on real mobile attack paths. Built on our AI + Human Penetration Testing Platform.",
+        "comparisonCta": "Learn How We Think",
+        "scannerCode": "",
+        "testerCode": "",
+        "scannerResult": "",
+        "testerResult": "",
+        "whyManualTitle": "Why Manual Penetration Testing Matters",
+        "whyManualIntro": "",
+        "scannerTitle": "AI / Scanners Alone",
+        "scannerFlow": [],
+        "testerTitle": "AI + Human Testing",
+        "testerFlow": [],
+        "whyManualConclusion": "",
+        "contextTitle": "Security Testing With Real Business Context",
+        "contextQuote1": "",
+        "contextQuote2": "",
+        "contextIntro": "",
+        "contextItems": [],
+        "questionsTitle": "Security Should Be Tested Before It Becomes an Incident",
+        "questionsIntro": "",
+        "questions": [],
+        "closeTitle": "",
+        "closeBody": "",
+        "closeHighlights": [],
+        "closeQuestion": "",
+        "platformBadge": "AI + Human Penetration Testing Platform",
+        "platformTitle": "AI + Human Penetration Testing Platform",
+        "platformIntro": "We combine AI-powered analysis with senior penetration testers — delivering faster coverage and the human judgment attackers still require.",
+        "platformItems": [
+          {
+            "title": "AI-Assisted Discovery",
+            "text": "Intelligent automation accelerates reconnaissance, pattern matching, and coverage across large attack surfaces."
+          },
+          {
+            "title": "Human Validation",
+            "text": "Expert testers confirm real impact, chain findings, and uncover business-logic flaws tools alone miss."
+          },
+          {
+            "title": "Smarter Prioritization",
+            "text": "Risk is ranked by exploitability and business harm — so your team fixes what matters first."
+          }
+        ]
+      },
+      "longformEnabled": true
+    },
+    "createdAt": "2026-08-17T07:17:46.046Z",
+    "updatedAt": "2026-08-17T07:57:00.908Z"
+  },
+  {
+    "id": "cmswwiz2f00038kkrc706y141",
+    "slug": "cloud-penetration-testing",
+    "title": "Cloud Penetration Testing",
+    "shortTitle": "Cloud Pentesting",
+    "shortText": "Identify misconfigurations, privilege escalation paths, and exposed assets across your cloud environment before attackers find them.",
+    "metaDescription": "AWS, Azure, and GCP penetration testing for misconfigurations, IAM weaknesses, exposed secrets, and cloud attack paths.",
+    "description": "Cloud penetration testing evaluates your cloud infrastructure for security weaknesses unique to cloud environments — misconfigured IAM roles, exposed storage, overly permissive network policies, and secrets in code or environment variables. We simulate attacker techniques to validate your cloud security posture end to end.",
+    "icon": "cloud",
+    "imageUrl": "/images/cloud-penetration-testing.png",
+    "visual": "cloud",
+    "features": [
+      "IAM & role policy review",
+      "Storage & database exposure",
+      "Network & firewall analysis",
+      "Secrets & credential scanning"
+    ],
+    "order": 3,
+    "published": true,
+    "heroBadge": "AI + Human Penetration Testing Platform",
+    "heroSubtitle": "Identify misconfigurations, privilege escalation paths, and exposed assets across your cloud environment before attackers find them.",
+    "heroPrimaryCta": "Get Free Consultation",
+    "heroSecondaryCta": "Contact with Us",
+    "whyTitle": "Why Choose Cloud Penetration Testing?",
+    "whyItems": [
+      {
+        "title": "Misconfiguration Detection",
+        "text": "Find publicly exposed buckets, open security groups, and weak IAM policies."
+      },
+      {
+        "title": "Privilege Escalation",
+        "text": "Map attack paths from low-privilege access to admin control."
+      },
+      {
+        "title": "Multi-Cloud Support",
+        "text": "Testing across AWS, Azure, GCP, and hybrid environments."
+      },
+      {
+        "title": "Compliance Alignment",
+        "text": "Reports mapped to CIS benchmarks and cloud security frameworks."
+      }
+    ],
+    "overviewTitle": "What is Cloud Penetration Testing?",
+    "overviewText": "Cloud penetration testing evaluates your cloud infrastructure for security weaknesses unique to cloud environments — misconfigured IAM roles, exposed storage, overly permissive network policies, and secrets in code or environment variables. We simulate attacker techniques to validate your cloud security posture end to end.",
+    "overviewList": [
+      "IAM & role policy review",
+      "Storage & database exposure",
+      "Network & firewall analysis",
+      "Secrets & credential scanning",
+      "Container & Kubernetes review",
+      "Serverless function assessment"
+    ],
+    "assessTitle": "What We Assess",
+    "assessItems": [
+      "AWS Environments",
+      "Azure Subscriptions",
+      "Google Cloud Platform",
+      "IAM & Access Policies",
+      "S3 / Blob Storage",
+      "Kubernetes Clusters",
+      "Serverless Functions",
+      "Network Configuration"
+    ],
+    "standards": [
+      "CIS Benchmarks",
+      "NIST CSF",
+      "ISO 27001",
+      "SOC 2",
+      "MITRE ATT&CK",
+      "AWS Well-Architected",
+      "PTES",
+      "CVSS"
+    ],
+    "processTitle": "Assessment Process",
+    "processSteps": [
+      {
+        "step": "01",
+        "title": "Scope & Authorization",
+        "text": "Agree assets, accounts, permissions, and rules of engagement."
+      },
+      {
+        "step": "02",
+        "title": "Reconnaissance",
+        "text": "Discover cloud assets, identities, and public attack surface."
+      },
+      {
+        "step": "03",
+        "title": "Configuration Review",
+        "text": "Hunt IAM gaps, exposed storage, network holes, and secrets."
+      },
+      {
+        "step": "04",
+        "title": "Exploitation & Validation",
+        "text": "Prove privilege escalation and real impact without disruption."
+      },
+      {
+        "step": "05",
+        "title": "Reporting & Hardening",
+        "text": "Deliver findings, risk ratings, and cloud-specific fix guidance."
+      }
+    ],
+    "tools": [
+      "AWS",
+      "Microsoft Azure",
+      "Google Cloud",
+      "Kubernetes",
+      "Terraform",
+      "Docker",
+      "Burp Suite",
+      "Nmap",
+      "Nuclei",
+      "Prowler",
+      "ScoutSuite",
+      "kubectl",
+      "TruffleHog",
+      "Steampipe"
+    ],
+    "industries": [
+      "SaaS",
+      "FinTech",
+      "Healthcare",
+      "Enterprise",
+      "Government",
+      "E-Commerce",
+      "Startups",
+      "Media"
+    ],
+    "deliverables": [
+      {
+        "title": "Executive Summary",
+        "items": [
+          "Cloud posture overview",
+          "Critical risks",
+          "Compliance gaps"
+        ]
+      },
+      {
+        "title": "Technical Report",
+        "items": [
+          "Misconfiguration details",
+          "Attack paths",
+          "IAM findings",
+          "Evidence",
+          "CVSS scores"
+        ]
+      },
+      {
+        "title": "Hardening Guide",
+        "items": [
+          "Cloud-specific fixes",
+          "IAM recommendations",
+          "Architecture notes"
+        ]
+      },
+      {
+        "title": "Retest Report",
+        "items": [
+          "Fix validation",
+          "Updated posture",
+          "Final report"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Which cloud providers do you support?",
+        "answer": "AWS, Microsoft Azure, and Google Cloud Platform, including hybrid setups."
+      },
+      {
+        "question": "Do you need admin access?",
+        "answer": "Read-only or limited access is preferred. We scope access levels during kickoff."
+      },
+      {
+        "question": "Will this disrupt our cloud services?",
+        "answer": "No. Testing is non-destructive and coordinated with your team."
+      },
+      {
+        "question": "Can you test Kubernetes?",
+        "answer": "Yes. Container and Kubernetes security is included in cloud engagements."
+      }
+    ],
+    "ctaHeadline": "Ready to harden your cloud environment?",
+    "ctaSubtitle": "Gain visibility into cloud misconfigurations and attack paths before they're exploited.",
+    "ctaText": "Request Assessment",
+    "extras": {
+      "workflowEnabled": true,
+      "workflowTitle": "Cloud Pentest Agent Workflow",
+      "workflowSubtitle": "A manager agent coordinates specialist agents in parallel, then validates, evidences, and scores findings before a human reviews the report.",
+      "workflowManager": "Pentest Manager Agent",
+      "workflowSpecialists": [
+        {
+          "title": "Recon Agent",
+          "text": "Maps cloud assets, identities, public exposure, and attack surface."
+        },
+        {
+          "title": "Authentication Agent",
+          "text": "Tests IAM, federation, tokens, privilege boundaries, and access paths."
+        },
+        {
+          "title": "API Security Agent",
+          "text": "Assesses APIs, gateways, authz, data exposure, and cloud-connected services."
+        }
+      ],
+      "workflowPipeline": [
+        {
+          "title": "Validation Agent",
+          "text": "Confirms each finding is real, reproducible, and in scope."
+        },
+        {
+          "title": "Evidence Agent",
+          "text": "Collects proof, screenshots, logs, and reproduction notes."
+        },
+        {
+          "title": "Severity Agent",
+          "text": "Rates impact and likelihood using CVSS and business context."
+        },
+        {
+          "title": "Reporting Agent",
+          "text": "Turns findings into a developer-ready report with fix guidance."
+        },
+        {
+          "title": "Human Review",
+          "text": "A senior engineer reviews every finding before delivery."
+        }
+      ],
+      "howItWorksTitle": "How it works",
+      "howItWorksItems": [
+        {
+          "title": "1. Orchestrate",
+          "text": "The Pentest Manager Agent scopes the cloud environment and assigns specialist agents."
+        },
+        {
+          "title": "2. Investigate in parallel",
+          "text": "Recon, Authentication, and API Security agents run together to cover more of the attack surface."
+        },
+        {
+          "title": "3. Validate and prove",
+          "text": "Validation and Evidence agents confirm each issue and attach reproduction steps."
+        },
+        {
+          "title": "4. Score and report",
+          "text": "Severity and Reporting agents produce a ranked report, then a human reviews it before you receive it."
+        }
+      ],
+      "benefitsTitle": "Benefits",
+      "benefitsItems": [
+        {
+          "title": "AI + Human platform",
+          "text": "Cloud testing runs on our AI + Human Penetration Testing Platform — AI-assisted discovery with senior engineer validation."
+        },
+        {
+          "title": "Broader coverage, faster",
+          "text": "Specialist agents work in parallel so IAM, APIs, and exposed assets are tested together — not one after another."
+        },
+        {
+          "title": "Fewer false positives",
+          "text": "Every candidate finding is validated and evidenced before it reaches the report."
+        },
+        {
+          "title": "Actionable severity",
+          "text": "Issues are scored by real cloud impact: data exposure, privilege escalation, and blast radius."
+        },
+        {
+          "title": "Human quality control",
+          "text": "A senior engineer still reviews the output, so you get speed without losing judgment."
+        }
+      ],
+      "whyNeededTitle": "Why your applications need this",
+      "whyNeededText": "Cloud-hosted applications change constantly. New identities, APIs, buckets, and services appear with every deploy. A point-in-time checklist scan is not enough — you need a structured assessment that follows how attackers actually move through cloud environments. Built on our AI + Human Penetration Testing Platform.",
+      "whyNeededItems": [
+        {
+          "title": "Cloud identity is the new perimeter",
+          "text": "Most cloud breaches start with IAM mistakes, over-privileged roles, or leaked credentials — not a classic firewall gap."
+        },
+        {
+          "title": "APIs expose the business",
+          "text": "Your application logic now lives behind APIs and gateways. If authz is weak, attackers can reach data without touching the UI."
+        },
+        {
+          "title": "Misconfigurations spread quickly",
+          "text": "One public bucket, open security group, or wildcard policy can expose production data across accounts."
+        },
+        {
+          "title": "Compliance still requires proof",
+          "text": "Audits and customers expect evidence that cloud controls were tested, validated, and reported with severity."
+        }
+      ],
+      "visualLabel": "Cloud Infrastructure Scan",
+      "visualNodes": [
+        {
+          "text": "AWS",
+          "color": "cyan",
+          "x": "16%",
+          "y": "18%"
+        },
+        {
+          "text": "Azure",
+          "color": "violet",
+          "x": "84%",
+          "y": "18%"
+        },
+        {
+          "text": "GCP",
+          "color": "amber",
+          "x": "12%",
+          "y": "48%"
+        },
+        {
+          "text": "Kubernetes",
+          "color": "emerald",
+          "x": "86%",
+          "y": "52%"
+        },
+        {
+          "text": "Microsoft 365",
+          "color": "rose",
+          "x": "22%",
+          "y": "80%"
+        }
+      ],
+      "visualCommand": "$ strikedefend cloud-pentest --scope multi-cloud",
+      "visualLines": [
+        "[+] AWS / Azure / GCP......... in scope",
+        "[+] Kubernetes cluster review. running",
+        "[!] Microsoft 365 misconfig... high"
+      ],
+      "standardsTitle": "Aligned with Industry Standards",
+      "standardsSubtitle": "Our cloud assessments follow CIS, NIST, ISO 27001, SOC 2, and MITRE ATT&CK so findings map to frameworks your auditors and customers already use.",
+      "processSubtitle": "A structured engagement from written authorization through reconnaissance, configuration review, safe validation, and hardening guidance.",
+      "toolsTitle": "Tools & Technologies"
+    },
+    "createdAt": "2026-08-17T07:17:46.119Z",
+    "updatedAt": "2026-08-17T09:11:08.019Z"
+  },
+  {
+    "id": "cmswwiz4h00048kkr07e1yyjy",
+    "slug": "continuous-security-monitoring",
+    "title": "Continuous Security Monitoring",
+    "shortTitle": "Security Monitoring",
+    "shortText": "Move from one-time assessments to ongoing visibility. Our monitoring system detects new vulnerabilities, misconfigurations, and exposure changes as your environment evolves.",
+    "metaDescription": "Continuous security monitoring with automated scanning, alerting, and ongoing vulnerability management for your applications and infrastructure.",
+    "description": "Continuous Security Monitoring is an ongoing service that keeps watch over your applications, APIs, and cloud infrastructure. Instead of a single point-in-time test, we run scheduled assessments, monitor for new exposures, and alert your team when critical issues appear — so security keeps pace with your deployments.",
+    "icon": "activity",
+    "imageUrl": "/images/continuous-security-monitoring.png",
+    "visual": "monitoring",
+    "features": [
+      "Scheduled vulnerability scans",
+      "Asset & exposure monitoring",
+      "Cloud configuration checks",
+      "SSL & certificate monitoring"
+    ],
+    "order": 4,
+    "published": true,
+    "heroBadge": "AI + Human Penetration Testing Platform",
+    "heroSubtitle": "Move from one-time assessments to ongoing visibility. Our monitoring system detects new vulnerabilities, misconfigurations, and exposure changes as your environment evolves.",
+    "heroPrimaryCta": "Get Free Consultation",
+    "heroSecondaryCta": "See How It Works",
+    "whyTitle": "Why Choose Continuous Security Monitoring?",
+    "whyItems": [
+      {
+        "title": "Always-On Visibility",
+        "text": "Detect new risks as code, infrastructure, and assets change."
+      },
+      {
+        "title": "Automated Scanning",
+        "text": "Scheduled scans for web apps, APIs, and cloud resources."
+      },
+      {
+        "title": "Alert & Triage",
+        "text": "Prioritized alerts with severity scoring so your team focuses on what matters."
+      },
+      {
+        "title": "Trend Reporting",
+        "text": "Track security posture improvements over time with monthly reports."
+      }
+    ],
+    "overviewTitle": "What is Continuous Security Monitoring?",
+    "overviewText": "Continuous Security Monitoring is an ongoing service that keeps watch over your applications, APIs, and cloud infrastructure. Instead of a single point-in-time test, we run scheduled assessments, monitor for new exposures, and alert your team when critical issues appear — so security keeps pace with your deployments.",
+    "overviewList": [
+      "Scheduled vulnerability scans",
+      "Asset & exposure monitoring",
+      "Cloud configuration checks",
+      "SSL & certificate monitoring",
+      "Subdomain & attack surface tracking",
+      "Monthly security reports"
+    ],
+    "assessTitle": "What We Monitor",
+    "assessItems": [
+      "Web Applications",
+      "Public APIs",
+      "Cloud Assets",
+      "DNS & Subdomains",
+      "SSL Certificates",
+      "Open Ports & Services",
+      "Credential Exposure",
+      "Configuration Drift"
+    ],
+    "standards": [
+      "OWASP Top 10",
+      "CIS Benchmarks",
+      "CVSS",
+      "NIST CSF",
+      "MITRE ATT&CK",
+      "CWE",
+      "ISO 27001"
+    ],
+    "processTitle": "How It Works",
+    "processSteps": [
+      {
+        "step": "01",
+        "title": "Baseline Assessment",
+        "text": "Establish current posture across apps, APIs, and cloud assets."
+      },
+      {
+        "step": "02",
+        "title": "Asset Discovery",
+        "text": "Inventory domains, services, certificates, and exposed infrastructure."
+      },
+      {
+        "step": "03",
+        "title": "Continuous Scanning",
+        "text": "Run scheduled checks as your environment and deployments change."
+      },
+      {
+        "step": "04",
+        "title": "Alert & Triage",
+        "text": "Send prioritized alerts so your team can act on what matters first."
+      },
+      {
+        "step": "05",
+        "title": "Monthly Reporting",
+        "text": "Track new findings, fixes, and security posture over time."
+      }
+    ],
+    "tools": [
+      "Nuclei",
+      "Burp Suite",
+      "Nmap",
+      "ScoutSuite",
+      "Amass",
+      "Subfinder",
+      "SSL Labs",
+      "Custom Dashboards",
+      "Slack Alerts",
+      "GitHub Actions"
+    ],
+    "industries": [
+      "SaaS",
+      "FinTech",
+      "E-Commerce",
+      "Healthcare",
+      "Enterprise",
+      "Startups",
+      "Education",
+      "Government"
+    ],
+    "deliverables": [
+      {
+        "title": "Monitoring Dashboard",
+        "items": [
+          "Live asset inventory",
+          "Open findings",
+          "Severity breakdown"
+        ]
+      },
+      {
+        "title": "Alert Notifications",
+        "items": [
+          "Critical issue alerts",
+          "Slack / email integration",
+          "Triage guidance"
+        ]
+      },
+      {
+        "title": "Monthly Reports",
+        "items": [
+          "New findings",
+          "Resolved issues",
+          "Trend analysis"
+        ]
+      },
+      {
+        "title": "Quarterly Review",
+        "items": [
+          "Posture assessment",
+          "Scope updates",
+          "Strategic recommendations"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How is this different from a pentest?",
+        "answer": "Pentests are deep, manual engagements. Monitoring provides ongoing automated coverage between pentests."
+      },
+      {
+        "question": "How often do scans run?",
+        "answer": "Frequency is tailored to your environment — typically weekly or on each deployment."
+      },
+      {
+        "question": "Can we integrate with Slack?",
+        "answer": "Yes. Critical alerts can be delivered to Slack, email, or your ticketing system."
+      },
+      {
+        "question": "Does this replace annual pentesting?",
+        "answer": "No — it complements it. We recommend both for comprehensive coverage."
+      }
+    ],
+    "ctaHeadline": "Ready for always-on security?",
+    "ctaSubtitle": "Stop relying on annual tests alone. Get continuous visibility into your security posture.",
+    "ctaText": "Request Demo",
+    "extras": {
+      "workflowEnabled": false,
+      "workflowTitle": "Agent Workflow",
+      "workflowSubtitle": "",
+      "workflowManager": "Pentest Manager Agent",
+      "workflowSpecialists": [],
+      "workflowPipeline": [],
+      "howItWorksTitle": "How it works",
+      "howItWorksItems": [],
+      "benefitsTitle": "Benefits",
+      "benefitsItems": [],
+      "whyNeededTitle": "Why your applications need this",
+      "whyNeededText": "",
+      "whyNeededItems": [],
+      "visualLabel": "",
+      "visualNodes": [],
+      "visualCommand": "",
+      "visualLines": [],
+      "standardsTitle": "Aligned with Industry Standards",
+      "standardsSubtitle": "Our assessments follow internationally recognized security frameworks for comprehensive and consistent testing.",
+      "processSubtitle": "",
+      "toolsTitle": "Tools & Technologies",
+      "longform": {
+        "introHeadline": "",
+        "introParagraphs": [
+          "Move beyond point-in-time tests. Continuous Security Monitoring keeps watch over your assets, alerts on real risk, and helps your team respond before issues become incidents.",
+          "Powered by our AI + Human Penetration Testing Platform: machine-speed analysis guided by expert testers who prove real-world risk."
+        ],
+        "heroHighlights": [
+          {
+            "title": "AI + Human Platform",
+            "text": "AI-assisted coverage with expert validation."
+          },
+          {
+            "title": "24/7 Visibility",
+            "text": "Ongoing observation of logs, events, and changes."
+          },
+          {
+            "title": "Faster Detection",
+            "text": "Suspicious activity and anomalies flagged early."
+          },
+          {
+            "title": "Guided Response",
+            "text": "Triage, contain, and improve controls with clear next steps."
+          }
+        ],
+        "heroTags": [
+          "AI + Human",
+          "Asset Discovery",
+          "Cloud Monitoring",
+          "Identity & Access",
+          "API Monitoring",
+          "SIEM Visibility"
+        ],
+        "heroCta": "Request a Security Assessment",
+        "secondaryCta": "View Our Process",
+        "bottomCta": "Get Started Now",
+        "whatWeTestTitle": "What We Test",
+        "whatWeTestIntro": "",
+        "testAreas": [],
+        "howTitle": "How Our Penetration Testing Works",
+        "howIntro": "",
+        "howFlow": [],
+        "howSteps": [],
+        "findingIntro": "",
+        "finding": {
+          "vulnerabilityLabel": "Vulnerability",
+          "vulnerability": "",
+          "severityLabel": "Severity",
+          "severity": "",
+          "componentLabel": "Affected Component",
+          "component": "",
+          "riskLabel": "Risk",
+          "risk": "",
+          "evidenceLabel": "Evidence",
+          "evidence": "",
+          "recommendationLabel": "Recommendation",
+          "recommendation": ""
+        },
+        "findingToFixTitle": "From Finding to Fix",
+        "findingToFixIntro": "",
+        "findingToFixFlow": [],
+        "receiveTitle": "What You Receive",
+        "receiveIntro": "",
+        "receiveItems": [],
+        "receiveCards": [],
+        "processOverview": [],
+        "comparisonTitle": "Beyond Automated Scanning",
+        "comparisonBlurb": "Annual assessments leave gaps between engagements. Continuous monitoring closes that window with real-time visibility and faster response. Built on our AI + Human Penetration Testing Platform.",
+        "comparisonCta": "Learn How We Think",
+        "scannerCode": "",
+        "testerCode": "",
+        "scannerResult": "",
+        "testerResult": "",
+        "whyManualTitle": "Why Manual Penetration Testing Matters",
+        "whyManualIntro": "",
+        "scannerTitle": "AI / Scanners Alone",
+        "scannerFlow": [],
+        "testerTitle": "AI + Human Testing",
+        "testerFlow": [],
+        "whyManualConclusion": "",
+        "contextTitle": "Security Testing With Real Business Context",
+        "contextQuote1": "",
+        "contextQuote2": "",
+        "contextIntro": "",
+        "contextItems": [],
+        "questionsTitle": "Security Should Be Tested Before It Becomes an Incident",
+        "questionsIntro": "",
+        "questions": [],
+        "closeTitle": "",
+        "closeBody": "",
+        "closeHighlights": [],
+        "closeQuestion": "",
+        "platformBadge": "AI + Human Penetration Testing Platform",
+        "platformTitle": "AI + Human Penetration Testing Platform",
+        "platformIntro": "We combine AI-powered analysis with senior penetration testers — delivering faster coverage and the human judgment attackers still require.",
+        "platformItems": [
+          {
+            "title": "AI-Assisted Discovery",
+            "text": "Intelligent automation accelerates reconnaissance, pattern matching, and coverage across large attack surfaces."
+          },
+          {
+            "title": "Human Validation",
+            "text": "Expert testers confirm real impact, chain findings, and uncover business-logic flaws tools alone miss."
+          },
+          {
+            "title": "Smarter Prioritization",
+            "text": "Risk is ranked by exploitability and business harm — so your team fixes what matters first."
+          }
+        ]
+      },
+      "longformEnabled": true
+    },
+    "createdAt": "2026-08-17T07:17:46.193Z",
+    "updatedAt": "2026-08-17T07:57:01.085Z"
+  },
+  {
+    "id": "cmt39qnpz000053wfqtozvg57",
+    "slug": "api-security-testing",
+    "title": "API Security Testing",
+    "shortTitle": "API Security Testing",
+    "shortText": "Protect the services that power your product. We test authentication, authorization, tokens, object access, and API abuse paths attackers actually use.",
+    "metaDescription": "API security testing for REST and GraphQL — authentication, authorization, BOLA/IDOR, tokens, abuse, and business logic.",
+    "description": "API security testing evaluates how your APIs authenticate users, authorize object access, handle tokens, and resist abuse. We combine automated discovery with manual testing so authorization and business-logic flaws are validated — not just listed.",
+    "icon": "code",
+    "imageUrl": "/images/api-security-testing.png",
+    "visual": "web",
+    "features": [
+      "Authentication & MFA flows",
+      "Authorization / BOLA / IDOR",
+      "Token and session security",
+      "Excessive data exposure"
+    ],
+    "order": 5,
+    "published": true,
+    "heroBadge": "AI + Human Penetration Testing Platform",
+    "heroSubtitle": "Protect the services that power your product. We test authentication, authorization, tokens, object access, and API abuse paths attackers actually use.",
+    "heroPrimaryCta": "Get Free Consultation",
+    "heroSecondaryCta": "Contact with Us",
+    "whyTitle": "Why Choose API Security Testing?",
+    "whyItems": [
+      {
+        "title": "AuthZ Depth",
+        "text": "BOLA/IDOR and privilege issues scanners routinely miss."
+      },
+      {
+        "title": "Token & Session Focus",
+        "text": "JWT, OAuth, API keys, and session handling reviewed end to end."
+      },
+      {
+        "title": "Abuse Scenarios",
+        "text": "Rate limits, mass assignment, and business-logic abuse."
+      },
+      {
+        "title": "Developer-Ready Reports",
+        "text": "Evidence, reproduction steps, and practical fix guidance."
+      }
+    ],
+    "overviewTitle": "What is API Security Testing?",
+    "overviewText": "API security testing evaluates how your APIs authenticate users, authorize object access, handle tokens, and resist abuse. We combine automated discovery with manual testing so authorization and business-logic flaws are validated — not just listed.",
+    "overviewList": [
+      "Authentication & MFA flows",
+      "Authorization / BOLA / IDOR",
+      "Token and session security",
+      "Excessive data exposure",
+      "Rate limiting and abuse",
+      "Business logic flaws"
+    ],
+    "assessTitle": "What We Assess",
+    "assessItems": [
+      "REST APIs",
+      "GraphQL APIs",
+      "Authentication endpoints",
+      "Object-level authorization",
+      "API gateways",
+      "Webhook endpoints",
+      "Partner / public APIs",
+      "Mobile and web backends"
+    ],
+    "standards": [
+      "OWASP API Security Top 10",
+      "OWASP ASVS",
+      "PTES",
+      "CWE",
+      "CVSS",
+      "NIST"
+    ],
+    "processTitle": "Testing Process",
+    "processSteps": [
+      {
+        "step": "01",
+        "title": "Scope & Authorization",
+        "text": "Define APIs, environments, roles, and rules of engagement."
+      },
+      {
+        "step": "02",
+        "title": "Reconnaissance",
+        "text": "Map endpoints, schemas, auth flows, and attack surface."
+      },
+      {
+        "step": "03",
+        "title": "Security Testing",
+        "text": "Authn, authz, tokens, input validation, and abuse cases."
+      },
+      {
+        "step": "04",
+        "title": "Validation",
+        "text": "Prove impact safely with reproducible evidence."
+      },
+      {
+        "step": "05",
+        "title": "Report & Retest",
+        "text": "Deliver prioritized findings and verify fixes after remediation."
+      }
+    ],
+    "tools": [
+      "Burp Suite",
+      "Postman",
+      "Insomnia",
+      "Nuclei",
+      "OWASP ZAP",
+      "Custom scripts",
+      "GraphQL tooling"
+    ],
+    "industries": [
+      "SaaS",
+      "FinTech",
+      "E-Commerce",
+      "Healthcare",
+      "Enterprise",
+      "Startups",
+      "Mobile backends"
+    ],
+    "deliverables": [
+      {
+        "title": "Executive Summary",
+        "items": [
+          "API risk overview",
+          "Business impact",
+          "Priority actions"
+        ]
+      },
+      {
+        "title": "Technical Report",
+        "items": [
+          "Endpoint evidence",
+          "AuthZ findings",
+          "CVSS ratings",
+          "Fix guidance"
+        ]
+      },
+      {
+        "title": "Remediation Guide",
+        "items": [
+          "Server-side checks",
+          "Token hardening",
+          "Developer notes"
+        ]
+      },
+      {
+        "title": "Retest Report",
+        "items": [
+          "Fix validation",
+          "Updated status",
+          "Final sign-off"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do you test GraphQL?",
+        "answer": "Yes. Query depth, authorization, and object access are included when in scope."
+      },
+      {
+        "question": "Do you need API documentation?",
+        "answer": "Docs help, but we can also discover and map APIs during reconnaissance."
+      },
+      {
+        "question": "Is BOLA/IDOR included?",
+        "answer": "Yes. Object-level and function-level authorization are core to every API engagement."
+      },
+      {
+        "question": "Is a retest included?",
+        "answer": "Yes. One free retest is included after remediation."
+      }
+    ],
+    "ctaHeadline": "Ready to harden your APIs?",
+    "ctaSubtitle": "Find authorization and abuse paths before attackers do.",
+    "ctaText": "Request Assessment",
+    "extras": {
+      "workflowEnabled": false,
+      "workflowTitle": "Agent Workflow",
+      "workflowSubtitle": "",
+      "workflowManager": "Pentest Manager Agent",
+      "workflowSpecialists": [],
+      "workflowPipeline": [],
+      "howItWorksTitle": "How it works",
+      "howItWorksItems": [],
+      "benefitsTitle": "Benefits",
+      "benefitsItems": [],
+      "whyNeededTitle": "Why your applications need this",
+      "whyNeededText": "",
+      "whyNeededItems": [],
+      "visualLabel": "Web Application Scan",
+      "visualNodes": [
+        {
+          "text": "Auth",
+          "color": "cyan",
+          "x": "16%",
+          "y": "22%"
+        },
+        {
+          "text": "BOLA",
+          "color": "rose",
+          "x": "78%",
+          "y": "24%"
+        },
+        {
+          "text": "Tokens",
+          "color": "amber",
+          "x": "18%",
+          "y": "72%"
+        },
+        {
+          "text": "Logic",
+          "color": "violet",
+          "x": "76%",
+          "y": "70%"
+        }
+      ],
+      "visualCommand": "$ strikedefend api-test --target api.example.com",
+      "visualLines": [
+        "[+] Endpoint discovery.......... done",
+        "[!] BOLA on /orders/{id}...... high",
+        "[+] Token validation review..... passed"
+      ],
+      "standardsTitle": "Aligned with API Security Standards",
+      "standardsSubtitle": "Our API methodology maps to OWASP API Security Top 10 and related guidance:",
+      "processSubtitle": "",
+      "toolsTitle": "Tools & Technologies",
+      "longformEnabled": true,
+      "longform": {
+        "introHeadline": "Secure the APIs That Power Your Product.",
+        "introParagraphs": [
+          "We test REST and GraphQL APIs for authentication flaws, broken object authorization, token weaknesses, and abuse paths scanners miss — then help your team fix what matters.",
+          "Powered by our AI + Human Penetration Testing Platform: machine-speed analysis guided by expert testers who prove real-world risk."
+        ],
+        "heroHighlights": [
+          {
+            "title": "AI + Human Platform",
+            "text": "AI-assisted coverage with expert validation."
+          },
+          {
+            "title": "AuthZ Expertise",
+            "text": "BOLA/IDOR and privilege issues validated manually."
+          },
+          {
+            "title": "Token & Session Focus",
+            "text": "JWT, OAuth, API keys, and session handling reviewed."
+          },
+          {
+            "title": "Abuse Path Testing",
+            "text": "Rate limits, mass assignment, and logic abuse."
+          }
+        ],
+        "heroTags": [
+          "AI + Human",
+          "Authentication",
+          "BOLA / IDOR",
+          "Tokens",
+          "Rate Limiting",
+          "Business Logic"
+        ],
+        "heroCta": "Request an API Assessment",
+        "secondaryCta": "View Our Process",
+        "bottomCta": "Get Started Now",
+        "whatWeTestTitle": "What We Test",
+        "whatWeTestIntro": "Focused coverage across the API risks that lead to real compromise.",
+        "testAreas": [
+          {
+            "title": "Authentication Testing",
+            "intro": "We evaluate how clients prove identity to your APIs.",
+            "items": [
+              "Login flows",
+              "MFA",
+              "API keys",
+              "OAuth / OIDC",
+              "Credential stuffing defenses"
+            ],
+            "goal": "Login, MFA, identity."
+          },
+          {
+            "title": "Authorization & BOLA",
+            "intro": "We test whether users can access objects or actions outside their permissions.",
+            "items": [
+              "IDOR / BOLA",
+              "Function-level authz",
+              "Role escalation",
+              "Tenant isolation"
+            ],
+            "goal": "Object and role access control."
+          },
+          {
+            "title": "Tokens & Sessions",
+            "intro": "We review how tokens are issued, stored, validated, and revoked.",
+            "items": [
+              "JWT handling",
+              "Refresh tokens",
+              "Expiration",
+              "Invalidation",
+              "Scope abuse"
+            ],
+            "goal": "Token security and lifecycle."
+          },
+          {
+            "title": "Input Validation",
+            "intro": "We probe parameters, payloads, and parsers for injection and manipulation.",
+            "items": [
+              "Injection",
+              "Mass assignment",
+              "Parameter tampering",
+              "Schema abuse"
+            ],
+            "goal": "Safe handling of untrusted input."
+          },
+          {
+            "title": "Rate Limiting & Abuse",
+            "intro": "We check whether APIs resist scraping, flooding, and automation abuse.",
+            "items": [
+              "Rate limits",
+              "Brute force",
+              "Enumeration",
+              "Resource exhaustion"
+            ],
+            "goal": "Abuse resistance."
+          },
+          {
+            "title": "Business Logic",
+            "intro": "We analyze workflows unique to your API for bypass and manipulation.",
+            "items": [
+              "Workflow bypass",
+              "Payment logic",
+              "State abuse",
+              "Privilege shortcuts"
+            ],
+            "goal": "Protect business processes behind APIs."
+          }
+        ],
+        "howTitle": "Our Testing Process",
+        "howIntro": "A structured API assessment from authorization through retest.",
+        "howFlow": [
+          "Scope & Authorization",
+          "Reconnaissance",
+          "Authentication Testing",
+          "Authorization Testing",
+          "Abuse Testing",
+          "Reporting & Remediation",
+          "Retest & Verification"
+        ],
+        "howSteps": [],
+        "findingIntro": "",
+        "finding": {
+          "vulnerabilityLabel": "Vulnerability",
+          "vulnerability": "",
+          "severityLabel": "Severity",
+          "severity": "",
+          "componentLabel": "Affected Component",
+          "component": "",
+          "riskLabel": "Risk",
+          "risk": "",
+          "evidenceLabel": "Evidence",
+          "evidence": "",
+          "recommendationLabel": "Recommendation",
+          "recommendation": ""
+        },
+        "findingToFixTitle": "From Finding to Fix",
+        "findingToFixIntro": "",
+        "findingToFixFlow": [],
+        "receiveTitle": "What You Receive",
+        "receiveIntro": "Clear API findings your developers can reproduce and fix.",
+        "receiveItems": [
+          "Executive summary",
+          "Validated API findings",
+          "AuthZ evidence",
+          "Risk ratings",
+          "Remediation guidance",
+          "Retest results"
+        ],
+        "receiveCards": [
+          {
+            "title": "Executive Summary",
+            "text": "API risk for leadership without the noise."
+          },
+          {
+            "title": "Validated Findings",
+            "text": "Confirmed issues with reproducible requests."
+          },
+          {
+            "title": "AuthZ Evidence",
+            "text": "Object and role access failures clearly demonstrated."
+          },
+          {
+            "title": "Risk Prioritization",
+            "text": "Know which endpoints to fix first."
+          },
+          {
+            "title": "Remediation Guidance",
+            "text": "Server-side checks and token hardening notes."
+          },
+          {
+            "title": "Retest Results",
+            "text": "We verify patches after remediation."
+          }
+        ],
+        "processOverview": [
+          {
+            "step": "1",
+            "title": "Scope",
+            "text": "APIs, environments, roles, and rules."
+          },
+          {
+            "step": "2",
+            "title": "Discover",
+            "text": "Map endpoints, schemas, and auth flows."
+          },
+          {
+            "step": "3",
+            "title": "AuthN",
+            "text": "Test identity and credential handling."
+          },
+          {
+            "step": "4",
+            "title": "AuthZ",
+            "text": "Probe BOLA/IDOR and privilege boundaries."
+          },
+          {
+            "step": "5",
+            "title": "Abuse",
+            "text": "Rate limits, mass assignment, logic flaws."
+          },
+          {
+            "step": "6",
+            "title": "Report",
+            "text": "Prioritized findings with evidence."
+          },
+          {
+            "step": "7",
+            "title": "Retest",
+            "text": "Confirm vulnerabilities are resolved."
+          }
+        ],
+        "comparisonTitle": "Beyond Automated API Scans",
+        "comparisonBlurb": "Scanners often stop at HTTP 200. We ask whether this user should be allowed to perform that action — and prove the impact. Built on our AI + Human Penetration Testing Platform.",
+        "comparisonCta": "Talk to a Security Expert",
+        "scannerCode": "GET /api/orders/4821\nAuthorization: Bearer <user-token>\n\nHTTP/1.1 200 OK",
+        "testerCode": "GET /api/orders/4822\nAuthorization: Bearer <same-user-token>\n\nAnother customer's order returned.",
+        "scannerResult": "Looks fine — 200 OK",
+        "testerResult": "Broken object authorization",
+        "whyManualTitle": "",
+        "whyManualIntro": "",
+        "scannerTitle": "AI / Scanners Alone",
+        "scannerFlow": [],
+        "testerTitle": "AI + Human Testing",
+        "testerFlow": [],
+        "whyManualConclusion": "",
+        "contextTitle": "",
+        "contextQuote1": "",
+        "contextQuote2": "",
+        "contextIntro": "",
+        "contextItems": [],
+        "questionsTitle": "",
+        "questionsIntro": "",
+        "questions": [],
+        "closeTitle": "Protect Every Endpoint.",
+        "closeBody": "Authorized API security testing — authentication, authorization, tokens, abuse, and business logic — with remediation and retest.",
+        "closeHighlights": [
+          "Find API vulnerabilities.",
+          "Validate real impact.",
+          "Fix what matters.",
+          "Verify the remediation."
+        ],
+        "closeQuestion": "Ready to secure your APIs?",
+        "platformBadge": "AI + Human Penetration Testing Platform",
+        "platformTitle": "AI + Human Penetration Testing Platform",
+        "platformIntro": "We combine AI-powered analysis with senior penetration testers — delivering faster coverage and the human judgment attackers still require.",
+        "platformItems": [
+          {
+            "title": "AI-Assisted Discovery",
+            "text": "Intelligent automation accelerates reconnaissance, pattern matching, and coverage across large attack surfaces."
+          },
+          {
+            "title": "Human Validation",
+            "text": "Expert testers confirm real impact, chain findings, and uncover business-logic flaws tools alone miss."
+          },
+          {
+            "title": "Smarter Prioritization",
+            "text": "Risk is ranked by exploitability and business harm — so your team fixes what matters first."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-08-21T18:14:16.727Z",
+    "updatedAt": "2026-08-21T18:14:16.727Z"
+  },
+  {
+    "id": "cmt39qnup000453wf9c7eqcdx",
+    "slug": "network-security-testing",
+    "title": "Network Security Testing",
+    "shortTitle": "Network Security Testing",
+    "shortText": "Identify exposed services, weak configurations, and attack paths across your network perimeter and internal segments before adversaries do.",
+    "metaDescription": "Network security testing for external and internal exposure — ports, services, segmentation, firewall rules, and attack paths.",
+    "description": "Network security testing evaluates your external perimeter and internal network for exposed services, weak configurations, insecure protocols, and paths that could lead to deeper compromise. We combine discovery, safe validation, and prioritized reporting.",
+    "icon": "network",
+    "imageUrl": "/images/network-security-testing.png",
+    "visual": "cloud",
+    "features": [
+      "External attack surface mapping",
+      "Port and service review",
+      "Firewall and filtering checks",
+      "Protocol and configuration weaknesses"
+    ],
+    "order": 6,
+    "published": true,
+    "heroBadge": "AI + Human Penetration Testing Platform",
+    "heroSubtitle": "Identify exposed services, weak configurations, and attack paths across your network perimeter and internal segments before adversaries do.",
+    "heroPrimaryCta": "Get Free Consultation",
+    "heroSecondaryCta": "Contact with Us",
+    "whyTitle": "Why Choose Network Security Testing?",
+    "whyItems": [
+      {
+        "title": "Exposure Mapping",
+        "text": "Discover open ports, services, and unexpected public assets."
+      },
+      {
+        "title": "Segmentation Checks",
+        "text": "Validate whether internal trust boundaries actually hold."
+      },
+      {
+        "title": "Attack Path Focus",
+        "text": "Connect findings into realistic paths an attacker could use."
+      },
+      {
+        "title": "Actionable Hardening",
+        "text": "Clear remediation prioritized by real risk."
+      }
+    ],
+    "overviewTitle": "What is Network Security Testing?",
+    "overviewText": "Network security testing evaluates your external perimeter and internal network for exposed services, weak configurations, insecure protocols, and paths that could lead to deeper compromise. We combine discovery, safe validation, and prioritized reporting.",
+    "overviewList": [
+      "External attack surface mapping",
+      "Port and service review",
+      "Firewall and filtering checks",
+      "Protocol and configuration weaknesses",
+      "Internal segmentation testing",
+      "Attack path analysis"
+    ],
+    "assessTitle": "What We Assess",
+    "assessItems": [
+      "Public IP ranges",
+      "VPN and remote access",
+      "Firewalls and ACLs",
+      "Internal VLANs / segments",
+      "Exposed admin services",
+      "Legacy protocols",
+      "Jump hosts",
+      "Critical network services"
+    ],
+    "standards": [
+      "PTES",
+      "NIST",
+      "CIS Benchmarks",
+      "MITRE ATT&CK",
+      "CVSS",
+      "CWE"
+    ],
+    "processTitle": "Testing Process",
+    "processSteps": [
+      {
+        "step": "01",
+        "title": "Scope & Authorization",
+        "text": "Agree ranges, segments, windows, and safe testing rules."
+      },
+      {
+        "step": "02",
+        "title": "Discovery",
+        "text": "Inventory hosts, ports, services, and exposure."
+      },
+      {
+        "step": "03",
+        "title": "Security Testing",
+        "text": "Probe weaknesses and validate realistic attack paths."
+      },
+      {
+        "step": "04",
+        "title": "Impact Analysis",
+        "text": "Prioritize by exploitability and business impact."
+      },
+      {
+        "step": "05",
+        "title": "Report & Retest",
+        "text": "Deliver hardening guidance and verify remediation."
+      }
+    ],
+    "tools": [
+      "Nmap",
+      "Masscan",
+      "Nuclei",
+      "Burp Suite",
+      "Wireshark",
+      "Custom scripts",
+      "Vulnerability scanners"
+    ],
+    "industries": [
+      "Enterprise",
+      "SaaS",
+      "FinTech",
+      "Healthcare",
+      "Manufacturing",
+      "Government",
+      "Education"
+    ],
+    "deliverables": [
+      {
+        "title": "Executive Summary",
+        "items": [
+          "Exposure overview",
+          "Critical paths",
+          "Priority actions"
+        ]
+      },
+      {
+        "title": "Technical Report",
+        "items": [
+          "Host/service findings",
+          "Evidence",
+          "Risk ratings",
+          "Hardening steps"
+        ]
+      },
+      {
+        "title": "Attack Path Notes",
+        "items": [
+          "Chained risks",
+          "Trust boundary issues",
+          "Remediation order"
+        ]
+      },
+      {
+        "title": "Retest Report",
+        "items": [
+          "Fix validation",
+          "Updated exposure",
+          "Final status"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do you test internal networks?",
+        "answer": "Yes. Internal segmentation testing can be included with authorized access."
+      },
+      {
+        "question": "Will testing disrupt production?",
+        "answer": "We use controlled techniques and agreed windows to minimize risk."
+      },
+      {
+        "question": "Do you need VPN access?",
+        "answer": "For internal testing, yes — scoped access is defined during kickoff."
+      },
+      {
+        "question": "Is a retest included?",
+        "answer": "Yes. One free retest is included after remediation."
+      }
+    ],
+    "ctaHeadline": "Ready to reduce network exposure?",
+    "ctaSubtitle": "Map your attack surface and close the paths that matter most.",
+    "ctaText": "Request Assessment",
+    "extras": {
+      "workflowEnabled": false,
+      "workflowTitle": "Agent Workflow",
+      "workflowSubtitle": "",
+      "workflowManager": "Pentest Manager Agent",
+      "workflowSpecialists": [],
+      "workflowPipeline": [],
+      "howItWorksTitle": "How it works",
+      "howItWorksItems": [],
+      "benefitsTitle": "Benefits",
+      "benefitsItems": [],
+      "whyNeededTitle": "Why your applications need this",
+      "whyNeededText": "",
+      "whyNeededItems": [],
+      "visualLabel": "Cloud Infrastructure Scan",
+      "visualNodes": [
+        {
+          "text": "Perimeter",
+          "color": "cyan",
+          "x": "16%",
+          "y": "20%"
+        },
+        {
+          "text": "Services",
+          "color": "violet",
+          "x": "80%",
+          "y": "24%"
+        },
+        {
+          "text": "Firewall",
+          "color": "amber",
+          "x": "18%",
+          "y": "70%"
+        },
+        {
+          "text": "Paths",
+          "color": "rose",
+          "x": "78%",
+          "y": "72%"
+        }
+      ],
+      "visualCommand": "$ strikedefend network-test --scope perimeter+internal",
+      "visualLines": [
+        "[+] Host discovery.............. done",
+        "[!] Exposed admin service..... high",
+        "[+] Segmentation review......... running"
+      ],
+      "standardsTitle": "Aligned with Network Security Practices",
+      "standardsSubtitle": "Our network assessments align with PTES, NIST, CIS, and MITRE ATT&CK guidance:",
+      "processSubtitle": "",
+      "toolsTitle": "Tools & Technologies",
+      "longformEnabled": true,
+      "longform": {
+        "introHeadline": "Reduce Network Exposure Before Attackers Map It.",
+        "introParagraphs": [
+          "We assess external and internal networks for open services, weak configurations, trust-boundary gaps, and realistic attack paths — then prioritize hardening that reduces risk.",
+          "Powered by our AI + Human Penetration Testing Platform: machine-speed analysis guided by expert testers who prove real-world risk."
+        ],
+        "heroHighlights": [
+          {
+            "title": "AI + Human Platform",
+            "text": "AI-assisted coverage with expert validation."
+          },
+          {
+            "title": "Perimeter Mapping",
+            "text": "Discover exposed hosts, ports, and services."
+          },
+          {
+            "title": "Segmentation Checks",
+            "text": "Validate whether internal boundaries hold."
+          },
+          {
+            "title": "Attack Path Focus",
+            "text": "Connect findings into realistic compromise paths."
+          }
+        ],
+        "heroTags": [
+          "AI + Human",
+          "External Exposure",
+          "Ports & Services",
+          "Firewall Rules",
+          "Segmentation",
+          "Attack Paths"
+        ],
+        "heroCta": "Request a Network Assessment",
+        "secondaryCta": "View Our Process",
+        "bottomCta": "Get Started Now",
+        "whatWeTestTitle": "What We Test",
+        "whatWeTestIntro": "Coverage across the network risks that create real entry points.",
+        "testAreas": [
+          {
+            "title": "External Exposure",
+            "intro": "We identify what is reachable from the internet.",
+            "items": [
+              "Public IPs",
+              "Unexpected services",
+              "Admin interfaces",
+              "Legacy exposure"
+            ],
+            "goal": "Know what the internet can reach."
+          },
+          {
+            "title": "Ports & Services",
+            "intro": "We review listening services and insecure configurations.",
+            "items": [
+              "Open ports",
+              "Service versions",
+              "Default configs",
+              "Unsafe protocols"
+            ],
+            "goal": "Reduce unnecessary service exposure."
+          },
+          {
+            "title": "Firewall & Filtering",
+            "intro": "We evaluate whether filtering rules match intended policy.",
+            "items": [
+              "ACL gaps",
+              "Overly permissive rules",
+              "Management access",
+              "Egress risks"
+            ],
+            "goal": "Tighten trust boundaries."
+          },
+          {
+            "title": "Internal Segmentation",
+            "intro": "We test whether compromise in one segment can reach critical systems.",
+            "items": [
+              "VLAN hopping risks",
+              "Flat networks",
+              "Jump host gaps",
+              "Lateral movement paths"
+            ],
+            "goal": "Contain breaches."
+          },
+          {
+            "title": "Protocol Weaknesses",
+            "intro": "We look for insecure or outdated protocol usage.",
+            "items": [
+              "Cleartext protocols",
+              "Weak crypto",
+              "Legacy services",
+              "Auth weaknesses"
+            ],
+            "goal": "Eliminate outdated protocol risk."
+          },
+          {
+            "title": "Attack Path Analysis",
+            "intro": "We connect findings into realistic attacker journeys.",
+            "items": [
+              "Chained exposures",
+              "Privilege paths",
+              "Critical asset reachability"
+            ],
+            "goal": "Prioritize by real compromise potential."
+          }
+        ],
+        "howTitle": "Our Testing Process",
+        "howIntro": "A structured network assessment from authorization through retest.",
+        "howFlow": [
+          "Scope & Authorization",
+          "Discovery",
+          "Port & Service Mapping",
+          "Vulnerability Testing",
+          "Exploitation Validation",
+          "Reporting",
+          "Retest"
+        ],
+        "howSteps": [],
+        "findingIntro": "",
+        "finding": {
+          "vulnerabilityLabel": "Vulnerability",
+          "vulnerability": "",
+          "severityLabel": "Severity",
+          "severity": "",
+          "componentLabel": "Affected Component",
+          "component": "",
+          "riskLabel": "Risk",
+          "risk": "",
+          "evidenceLabel": "Evidence",
+          "evidence": "",
+          "recommendationLabel": "Recommendation",
+          "recommendation": ""
+        },
+        "findingToFixTitle": "From Finding to Fix",
+        "findingToFixIntro": "",
+        "findingToFixFlow": [],
+        "receiveTitle": "What You Receive",
+        "receiveIntro": "Clear network findings your ops and security teams can act on.",
+        "receiveItems": [
+          "Executive summary",
+          "Exposure inventory",
+          "Validated findings",
+          "Attack path notes",
+          "Hardening guidance",
+          "Retest results"
+        ],
+        "receiveCards": [
+          {
+            "title": "Executive Summary",
+            "text": "Network risk and priority actions for leadership."
+          },
+          {
+            "title": "Exposure Inventory",
+            "text": "Hosts, ports, and services that matter."
+          },
+          {
+            "title": "Validated Findings",
+            "text": "Confirmed issues with evidence and context."
+          },
+          {
+            "title": "Attack Path Notes",
+            "text": "How findings could chain toward critical assets."
+          },
+          {
+            "title": "Hardening Guidance",
+            "text": "Practical remediation ordered by impact."
+          },
+          {
+            "title": "Retest Results",
+            "text": "Verify critical fixes after remediation."
+          }
+        ],
+        "processOverview": [
+          {
+            "step": "1",
+            "title": "Scope",
+            "text": "Ranges, segments, and safe windows."
+          },
+          {
+            "step": "2",
+            "title": "Discover",
+            "text": "Inventory hosts and exposure."
+          },
+          {
+            "step": "3",
+            "title": "Map",
+            "text": "Ports, services, and trust edges."
+          },
+          {
+            "step": "4",
+            "title": "Test",
+            "text": "Probe weaknesses safely."
+          },
+          {
+            "step": "5",
+            "title": "Validate",
+            "text": "Confirm realistic impact."
+          },
+          {
+            "step": "6",
+            "title": "Report",
+            "text": "Prioritized hardening plan."
+          },
+          {
+            "step": "7",
+            "title": "Retest",
+            "text": "Confirm critical fixes held."
+          }
+        ],
+        "comparisonTitle": "Beyond Port Scans Alone",
+        "comparisonBlurb": "A port list is not a risk picture. We validate whether exposures create real attack paths — and what an adversary could reach next. Built on our AI + Human Penetration Testing Platform.",
+        "comparisonCta": "Talk to a Security Expert",
+        "scannerCode": "Host: 203.0.113.10\nOpen: 22, 443, 8080\n\nResult: Ports listed",
+        "testerCode": "8080 admin panel exposed\nDefault creds accepted\nPivot to internal segment possible",
+        "scannerResult": "Inventory only",
+        "testerResult": "Exploit path confirmed",
+        "whyManualTitle": "",
+        "whyManualIntro": "",
+        "scannerTitle": "Basic Network Scan",
+        "scannerFlow": [],
+        "testerTitle": "Manual Network Testing",
+        "testerFlow": [],
+        "whyManualConclusion": "",
+        "contextTitle": "",
+        "contextQuote1": "",
+        "contextQuote2": "",
+        "contextIntro": "",
+        "contextItems": [],
+        "questionsTitle": "",
+        "questionsIntro": "",
+        "questions": [],
+        "closeTitle": "Close the Paths That Matter.",
+        "closeBody": "Authorized network security testing — external exposure, internal segmentation, and attack-path analysis with clear hardening guidance.",
+        "closeHighlights": [
+          "Map exposure.",
+          "Validate attack paths.",
+          "Harden what matters.",
+          "Verify the fixes."
+        ],
+        "closeQuestion": "Ready to reduce your network attack surface?",
+        "platformBadge": "AI + Human Penetration Testing Platform",
+        "platformTitle": "AI + Human Penetration Testing Platform",
+        "platformIntro": "We combine AI-powered analysis with senior penetration testers — delivering faster coverage and the human judgment attackers still require.",
+        "platformItems": [
+          {
+            "title": "AI-Assisted Discovery",
+            "text": "Intelligent automation accelerates reconnaissance, pattern matching, and coverage across large attack surfaces."
+          },
+          {
+            "title": "Human Validation",
+            "text": "Expert testers confirm real impact, chain findings, and uncover business-logic flaws tools alone miss."
+          },
+          {
+            "title": "Smarter Prioritization",
+            "text": "Risk is ranked by exploitability and business harm — so your team fixes what matters first."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-08-21T18:14:16.898Z",
+    "updatedAt": "2026-08-21T18:14:16.898Z"
+  },
+  {
+    "id": "cmt39qnz3000553wf3b5nh730",
+    "slug": "vulnerability-assessment",
+    "title": "Vulnerability Assessment",
+    "shortTitle": "Vulnerability Assessment",
+    "shortText": "Get a clear, prioritized view of known weaknesses across your environment — with manual validation so you fix what matters, not scanner noise.",
+    "metaDescription": "Vulnerability assessment across apps, networks, and cloud assets — discovery, scanning, manual validation, risk scoring, and prioritized remediation.",
+    "description": "A vulnerability assessment identifies known weaknesses and misconfigurations across your assets, validates important findings, and ranks them by risk. It complements deeper penetration testing by giving you a structured, prioritized remediation roadmap.",
+    "icon": "activity",
+    "imageUrl": "/images/vulnerability-assessment.png",
+    "visual": "monitoring",
+    "features": [
+      "Asset inventory and discovery",
+      "Authenticated and unauthenticated scanning",
+      "Manual validation of key findings",
+      "Misconfiguration review"
+    ],
+    "order": 7,
+    "published": true,
+    "heroBadge": "AI + Human Penetration Testing Platform",
+    "heroSubtitle": "Get a clear, prioritized view of known weaknesses across your environment — with manual validation so you fix what matters, not scanner noise.",
+    "heroPrimaryCta": "Get Free Consultation",
+    "heroSecondaryCta": "Contact with Us",
+    "whyTitle": "Why Choose Vulnerability Assessment?",
+    "whyItems": [
+      {
+        "title": "Broad Coverage",
+        "text": "Apps, network assets, and cloud resources in one assessment."
+      },
+      {
+        "title": "Manual Validation",
+        "text": "Reduce false positives before they waste engineering time."
+      },
+      {
+        "title": "Risk Prioritization",
+        "text": "CVSS plus business context so teams know what to fix first."
+      },
+      {
+        "title": "Actionable Output",
+        "text": "Clear remediation guidance and optional retest."
+      }
+    ],
+    "overviewTitle": "What is a Vulnerability Assessment?",
+    "overviewText": "A vulnerability assessment identifies known weaknesses and misconfigurations across your assets, validates important findings, and ranks them by risk. It complements deeper penetration testing by giving you a structured, prioritized remediation roadmap.",
+    "overviewList": [
+      "Asset inventory and discovery",
+      "Authenticated and unauthenticated scanning",
+      "Manual validation of key findings",
+      "Misconfiguration review",
+      "CVE and patch-gap analysis",
+      "Prioritized remediation plan"
+    ],
+    "assessTitle": "What We Assess",
+    "assessItems": [
+      "Web applications",
+      "Servers and endpoints",
+      "Network services",
+      "Cloud resources",
+      "Container images",
+      "Known CVE exposure",
+      "Security misconfigurations",
+      "Missing patches"
+    ],
+    "standards": [
+      "CVSS",
+      "CVE/NVD",
+      "CIS Benchmarks",
+      "NIST CSF",
+      "OWASP",
+      "CWE"
+    ],
+    "processTitle": "Assessment Process",
+    "processSteps": [
+      {
+        "step": "01",
+        "title": "Scope & Inventory",
+        "text": "Define assets, credentials, and assessment windows."
+      },
+      {
+        "step": "02",
+        "title": "Discovery & Scanning",
+        "text": "Identify hosts, services, and potential weaknesses."
+      },
+      {
+        "step": "03",
+        "title": "Manual Validation",
+        "text": "Confirm important findings and reduce false positives."
+      },
+      {
+        "step": "04",
+        "title": "Risk Scoring",
+        "text": "Prioritize by severity, exposure, and business impact."
+      },
+      {
+        "step": "05",
+        "title": "Report & Retest",
+        "text": "Deliver a remediation roadmap and verify critical fixes."
+      }
+    ],
+    "tools": [
+      "Nuclei",
+      "Nessus / OpenVAS-class scanners",
+      "Nmap",
+      "ScoutSuite",
+      "Custom scripts",
+      "CVE feeds"
+    ],
+    "industries": [
+      "SaaS",
+      "Enterprise",
+      "FinTech",
+      "Healthcare",
+      "E-Commerce",
+      "Education",
+      "Government"
+    ],
+    "deliverables": [
+      {
+        "title": "Executive Summary",
+        "items": [
+          "Risk overview",
+          "Top priorities",
+          "Trend context"
+        ]
+      },
+      {
+        "title": "Validated Findings",
+        "items": [
+          "Confirmed issues",
+          "Evidence",
+          "Severity ratings"
+        ]
+      },
+      {
+        "title": "Remediation Roadmap",
+        "items": [
+          "Fix order",
+          "Owner guidance",
+          "Quick wins"
+        ]
+      },
+      {
+        "title": "Retest Report",
+        "items": [
+          "Critical fix checks",
+          "Updated status",
+          "Residual risk"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How is this different from a pentest?",
+        "answer": "Assessments emphasize discovery and prioritization of known weaknesses. Pentests go deeper into manual exploitation and business logic."
+      },
+      {
+        "question": "Do you validate scanner findings?",
+        "answer": "Yes. Important findings are manually reviewed to reduce false positives."
+      },
+      {
+        "question": "Can this cover cloud assets?",
+        "answer": "Yes. Cloud resources and misconfigurations can be included in scope."
+      },
+      {
+        "question": "Is a retest included?",
+        "answer": "Critical remediation can be retested as part of the engagement."
+      }
+    ],
+    "ctaHeadline": "Ready for a clear risk picture?",
+    "ctaSubtitle": "Identify, validate, and prioritize vulnerabilities across your environment.",
+    "ctaText": "Request Assessment",
+    "extras": {
+      "workflowEnabled": false,
+      "workflowTitle": "Agent Workflow",
+      "workflowSubtitle": "",
+      "workflowManager": "Pentest Manager Agent",
+      "workflowSpecialists": [],
+      "workflowPipeline": [],
+      "howItWorksTitle": "How it works",
+      "howItWorksItems": [],
+      "benefitsTitle": "Benefits",
+      "benefitsItems": [],
+      "whyNeededTitle": "Why your applications need this",
+      "whyNeededText": "",
+      "whyNeededItems": [],
+      "visualLabel": "Continuous Monitoring",
+      "visualNodes": [
+        {
+          "text": "Scan",
+          "color": "cyan",
+          "x": "18%",
+          "y": "22%"
+        },
+        {
+          "text": "Validate",
+          "color": "emerald",
+          "x": "78%",
+          "y": "24%"
+        },
+        {
+          "text": "Score",
+          "color": "amber",
+          "x": "20%",
+          "y": "72%"
+        },
+        {
+          "text": "Fix",
+          "color": "violet",
+          "x": "76%",
+          "y": "70%"
+        }
+      ],
+      "visualCommand": "$ strikedefend vuln-assess --scope enterprise",
+      "visualLines": [
+        "[+] Asset inventory............. done",
+        "[+] Manual validation........... running",
+        "[!] Critical CVE prioritized.. high"
+      ],
+      "standardsTitle": "Aligned with Vulnerability Management Practices",
+      "standardsSubtitle": "Our assessments use CVSS, CVE intelligence, CIS, and NIST-aligned prioritization:",
+      "processSubtitle": "",
+      "toolsTitle": "Tools & Technologies",
+      "longformEnabled": true,
+      "longform": {
+        "introHeadline": "Find. Validate. Prioritize. Fix.",
+        "introParagraphs": [
+          "Our vulnerability assessments combine scanning with manual validation so your team gets a prioritized remediation roadmap — not a raw list of false positives.",
+          "Powered by our AI + Human Penetration Testing Platform: machine-speed analysis guided by expert testers who prove real-world risk."
+        ],
+        "heroHighlights": [
+          {
+            "title": "AI + Human Platform",
+            "text": "AI-assisted coverage with expert validation."
+          },
+          {
+            "title": "Broad Asset Coverage",
+            "text": "Apps, network, and cloud resources in scope."
+          },
+          {
+            "title": "Manual Validation",
+            "text": "Important findings confirmed before you invest fix time."
+          },
+          {
+            "title": "Risk Prioritization",
+            "text": "CVSS plus business context for clear order of work."
+          }
+        ],
+        "heroTags": [
+          "AI + Human",
+          "Asset Inventory",
+          "CVE Exposure",
+          "Misconfigurations",
+          "Risk Scoring",
+          "Remediation"
+        ],
+        "heroCta": "Request a Vulnerability Assessment",
+        "secondaryCta": "View Our Process",
+        "bottomCta": "Get Started Now",
+        "whatWeTestTitle": "What We Assess",
+        "whatWeTestIntro": "A structured view of known weaknesses across your environment.",
+        "testAreas": [
+          {
+            "title": "Web & Applications",
+            "intro": "Identify common weaknesses across web apps and related services.",
+            "items": [
+              "Known app CVEs",
+              "Misconfigurations",
+              "Outdated components"
+            ],
+            "goal": "Application vulnerability visibility."
+          },
+          {
+            "title": "Network Assets",
+            "intro": "Scan and review hosts and services for known issues.",
+            "items": [
+              "Open services",
+              "Missing patches",
+              "Insecure configs"
+            ],
+            "goal": "Network vulnerability visibility."
+          },
+          {
+            "title": "Cloud Resources",
+            "intro": "Review cloud assets for exposure and weak posture.",
+            "items": [
+              "Public resources",
+              "IAM gaps",
+              "Storage exposure"
+            ],
+            "goal": "Cloud vulnerability visibility."
+          },
+          {
+            "title": "Misconfigurations",
+            "intro": "Find settings that create avoidable risk.",
+            "items": [
+              "Default credentials",
+              "Open admin paths",
+              "Weak hardening"
+            ],
+            "goal": "Reduce config-driven risk."
+          },
+          {
+            "title": "Known CVEs",
+            "intro": "Map patch gaps against current vulnerability intelligence.",
+            "items": [
+              "Critical CVEs",
+              "Exploitable versions",
+              "Priority patching"
+            ],
+            "goal": "Close known exploit windows."
+          },
+          {
+            "title": "Prioritization",
+            "intro": "Rank findings so teams fix the highest business risk first.",
+            "items": [
+              "Severity",
+              "Exposure",
+              "Business impact",
+              "Quick wins"
+            ],
+            "goal": "A remediation order that works."
+          }
+        ],
+        "howTitle": "Our Assessment Process",
+        "howIntro": "From inventory through prioritized remediation and retest.",
+        "howFlow": [
+          "Scope",
+          "Asset Inventory",
+          "Scanning",
+          "Manual Validation",
+          "Risk Scoring",
+          "Reporting",
+          "Retest"
+        ],
+        "howSteps": [],
+        "findingIntro": "",
+        "finding": {
+          "vulnerabilityLabel": "Vulnerability",
+          "vulnerability": "",
+          "severityLabel": "Severity",
+          "severity": "",
+          "componentLabel": "Affected Component",
+          "component": "",
+          "riskLabel": "Risk",
+          "risk": "",
+          "evidenceLabel": "Evidence",
+          "evidence": "",
+          "recommendationLabel": "Recommendation",
+          "recommendation": ""
+        },
+        "findingToFixTitle": "From Finding to Fix",
+        "findingToFixIntro": "",
+        "findingToFixFlow": [],
+        "receiveTitle": "What You Receive",
+        "receiveIntro": "A clear roadmap your security and engineering teams can execute.",
+        "receiveItems": [
+          "Executive summary",
+          "Validated findings",
+          "Risk-ranked backlog",
+          "Remediation roadmap",
+          "Evidence package",
+          "Critical retest results"
+        ],
+        "receiveCards": [
+          {
+            "title": "Executive Summary",
+            "text": "Overall risk and top priorities for leadership."
+          },
+          {
+            "title": "Validated Findings",
+            "text": "Confirmed issues with less scanner noise."
+          },
+          {
+            "title": "Risk Scoring",
+            "text": "Severity and business context for each item."
+          },
+          {
+            "title": "Remediation Roadmap",
+            "text": "A practical order of work for your teams."
+          },
+          {
+            "title": "Evidence Package",
+            "text": "Details your engineers need to reproduce and fix."
+          },
+          {
+            "title": "Critical Retest",
+            "text": "Verify the highest-risk fixes after remediation."
+          }
+        ],
+        "processOverview": [
+          {
+            "step": "1",
+            "title": "Scope",
+            "text": "Assets, access, and windows."
+          },
+          {
+            "step": "2",
+            "title": "Inventory",
+            "text": "Discover systems and services."
+          },
+          {
+            "step": "3",
+            "title": "Scan",
+            "text": "Identify potential weaknesses."
+          },
+          {
+            "step": "4",
+            "title": "Validate",
+            "text": "Confirm important findings."
+          },
+          {
+            "step": "5",
+            "title": "Score",
+            "text": "Prioritize by real risk."
+          },
+          {
+            "step": "6",
+            "title": "Report",
+            "text": "Deliver an actionable roadmap."
+          },
+          {
+            "step": "7",
+            "title": "Retest",
+            "text": "Verify critical remediation."
+          }
+        ],
+        "comparisonTitle": "Beyond Raw Scanner Output",
+        "comparisonBlurb": "Unvalidated scan dumps waste engineering time. We confirm what matters, reduce false positives, and give you a prioritized path to lower risk. Built on our AI + Human Penetration Testing Platform.",
+        "comparisonCta": "Talk to a Security Expert",
+        "scannerCode": "1200 findings exported\nSeverity mixed\nMany unverified\n\nResult: Noisy backlog",
+        "testerCode": "Findings validated\nFalse positives removed\nTop 25 prioritized by exposure + impact",
+        "scannerResult": "Unfiltered noise",
+        "testerResult": "Actionable risk list",
+        "whyManualTitle": "",
+        "whyManualIntro": "",
+        "scannerTitle": "Raw Scan Dump",
+        "scannerFlow": [],
+        "testerTitle": "Validated Assessment",
+        "testerFlow": [],
+        "whyManualConclusion": "",
+        "contextTitle": "",
+        "contextQuote1": "",
+        "contextQuote2": "",
+        "contextIntro": "",
+        "contextItems": [],
+        "questionsTitle": "",
+        "questionsIntro": "",
+        "questions": [],
+        "closeTitle": "Turn Findings Into Fixes.",
+        "closeBody": "Authorized vulnerability assessment with discovery, validation, prioritization, and critical retest — so your teams know what to fix first.",
+        "closeHighlights": [
+          "Discover weaknesses.",
+          "Validate real risk.",
+          "Prioritize remediation.",
+          "Verify critical fixes."
+        ],
+        "closeQuestion": "Ready for a clear vulnerability roadmap?",
+        "platformBadge": "AI + Human Penetration Testing Platform",
+        "platformTitle": "AI + Human Penetration Testing Platform",
+        "platformIntro": "We combine AI-powered analysis with senior penetration testers — delivering faster coverage and the human judgment attackers still require.",
+        "platformItems": [
+          {
+            "title": "AI-Assisted Discovery",
+            "text": "Intelligent automation accelerates reconnaissance, pattern matching, and coverage across large attack surfaces."
+          },
+          {
+            "title": "Human Validation",
+            "text": "Expert testers confirm real impact, chain findings, and uncover business-logic flaws tools alone miss."
+          },
+          {
+            "title": "Smarter Prioritization",
+            "text": "Risk is ranked by exploitability and business harm — so your team fixes what matters first."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-08-21T18:14:17.055Z",
+    "updatedAt": "2026-08-21T18:14:17.055Z"
+  }
+]

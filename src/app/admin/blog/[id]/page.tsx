@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
-import { prisma } from "@/lib/prisma";
+import { getBlogPostById } from "@/lib/data";
 import { Toolbar } from "@/components/admin/Toolbar";
 import { BlogForm } from "@/components/admin/BlogForm";
 
 export const dynamic = "force-dynamic";
 
 export default async function EditBlogPage({ params }: { params: { id: string } }) {
-  const post = await prisma.blogPost.findUnique({ where: { id: params.id } });
+  const post = await getBlogPostById(params.id);
   if (!post) return notFound();
   return (
     <div>

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "cmshozlv5000998mhz9mxckdd",
+    "question": "How long does a penetration test take?",
+    "answer": "A typical web application engagement runs 1–2 weeks of testing plus a few days for reporting. We scope precisely after a 30-minute kickoff call.",
+    "order": 1,
+    "published": true,
+    "createdAt": "2026-08-06T15:50:12.594Z",
+    "updatedAt": "2026-08-17T07:57:01.426Z"
+  },
+  {
+    "id": "cmshozlxi000a98mhnm66hu6f",
+    "question": "Do you sign NDAs before scoping?",
+    "answer": "Yes. We're happy to sign your NDA before any technical or commercial discussion.",
+    "order": 2,
+    "published": true,
+    "createdAt": "2026-08-06T15:50:12.678Z",
+    "updatedAt": "2026-08-17T07:57:01.510Z"
+  },
+  {
+    "id": "cmshozlzt000b98mhs5lq80p8",
+    "question": "What deliverables do we receive?",
+    "answer": "An executive summary, a detailed technical report with reproduction steps and severity ratings, and a free retest after remediation.",
+    "order": 3,
+    "published": true,
+    "createdAt": "2026-08-06T15:50:12.762Z",
+    "updatedAt": "2026-08-17T07:57:01.595Z"
+  },
+  {
+    "id": "cmswuke0f0002zygz90htictq",
+    "question": "Do you test APIs and cloud infrastructure?",
+    "answer": "Yes. Web apps, APIs (REST and GraphQL), and cloud environments are in scope when we agree them during kickoff.",
+    "order": 4,
+    "published": true,
+    "createdAt": "2026-08-17T06:22:52.911Z",
+    "updatedAt": "2026-08-17T07:57:01.680Z"
+  }
+]

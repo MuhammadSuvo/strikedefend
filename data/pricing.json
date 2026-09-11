@@ -1,0 +1,243 @@
+{
+  "eyebrow": "Pricing Plans",
+  "title": "Choose the Right Security Assessment",
+  "subtitle": "Flexible penetration testing packages designed for startups, growing businesses, and organizations that need deeper security coverage.",
+  "imageUrl": "",
+  "plans": [
+    {
+      "title": "Basic",
+      "tagline": "Essential Security Check",
+      "text": "Best for small websites, landing pages, MVPs, and applications with limited functionality.",
+      "includesFrom": "",
+      "items": [
+        "1 Web Application / Domain",
+        "Basic Reconnaissance",
+        "Authentication Testing",
+        "Common OWASP Top 10 Checks",
+        "Input Validation Testing",
+        "Security Header Review",
+        "Basic API Testing",
+        "Automated Vulnerability Scanning",
+        "Manual Validation of Findings",
+        "Vulnerability Severity Classification",
+        "Technical Security Report",
+        "Remediation Recommendations",
+        "1 Retest After Fixes"
+      ],
+      "price": "$499",
+      "priceNote": "One-time Assessment",
+      "ctaText": "Get Basic Assessment",
+      "ctaLink": "/contact",
+      "theme": "blue",
+      "featured": false,
+      "badge": ""
+    },
+    {
+      "title": "Golden",
+      "tagline": "Advanced Security Assessment",
+      "text": "Best for production applications that include APIs, multiple user roles, sensitive information, or business-critical workflows.",
+      "includesFrom": "Everything in Basic, plus:",
+      "items": [
+        "Extended Web Application Testing",
+        "Advanced API Security Testing",
+        "Authorization & IDOR / BOLA Testing",
+        "Role & Privilege Escalation Testing",
+        "Session & Token Security",
+        "File Upload Security Testing",
+        "Business Logic Testing",
+        "Rate Limiting & Abuse Testing",
+        "Sensitive Data Exposure Review",
+        "Security Misconfiguration Testing",
+        "Manual Exploitation & Impact Validation",
+        "Developer-Friendly Evidence",
+        "Executive Summary",
+        "Risk Prioritization",
+        "Up to 2 Retest Cycles"
+      ],
+      "price": "$1,299",
+      "priceNote": "One-time Assessment",
+      "ctaText": "Choose Golden",
+      "ctaLink": "/contact",
+      "theme": "gold",
+      "featured": true,
+      "badge": "Popular Choice"
+    },
+    {
+      "title": "Platinum",
+      "tagline": "Complete Security Assessment",
+      "text": "Designed for organizations requiring comprehensive application, API, infrastructure, and cloud security coverage.",
+      "includesFrom": "Everything in Golden, plus:",
+      "items": [
+        "Multiple Web Applications / Domains",
+        "Comprehensive API Assessment",
+        "Advanced Business Logic Testing",
+        "Complex Authorization Testing",
+        "Cloud Security Assessment",
+        "Cloud Configuration Review",
+        "IAM & Privilege Review",
+        "Public Exposure Assessment",
+        "Storage & Database Security Review",
+        "Network & Service Exposure Review",
+        "Vulnerability Chaining Analysis",
+        "Attack Path Analysis",
+        "Advanced Manual Penetration Testing",
+        "High-Risk Finding Prioritization",
+        "Detailed Evidence & Proof of Impact",
+        "Security Improvement Recommendations",
+        "Management / Executive Report",
+        "Developer Remediation Session",
+        "Priority Support",
+        "Up to 3 Retest Cycles"
+      ],
+      "price": "$2,499",
+      "priceNote": "One-time Assessment",
+      "ctaText": "Request Platinum Assessment",
+      "ctaLink": "/contact",
+      "theme": "purple",
+      "featured": false,
+      "badge": ""
+    }
+  ],
+  "comparisonTitle": "Quick Comparison",
+  "comparison": [
+    {
+      "feature": "Web Application Testing",
+      "icon": "globe",
+      "values": [
+        "check",
+        "check",
+        "check"
+      ]
+    },
+    {
+      "feature": "OWASP Top 10",
+      "icon": "shield",
+      "values": [
+        "check",
+        "check",
+        "check"
+      ]
+    },
+    {
+      "feature": "Automated Scanning",
+      "icon": "scan",
+      "values": [
+        "check",
+        "check",
+        "check"
+      ]
+    },
+    {
+      "feature": "Manual Validation",
+      "icon": "check",
+      "values": [
+        "check",
+        "check",
+        "check"
+      ]
+    },
+    {
+      "feature": "API Security",
+      "icon": "api",
+      "values": [
+        "Basic",
+        "Advanced",
+        "Comprehensive"
+      ]
+    },
+    {
+      "feature": "Authentication Testing",
+      "icon": "lock",
+      "values": [
+        "check",
+        "check",
+        "check"
+      ]
+    },
+    {
+      "feature": "Authorization / IDOR",
+      "icon": "key",
+      "values": [
+        "Basic",
+        "check",
+        "Advanced"
+      ]
+    },
+    {
+      "feature": "Business Logic Testing",
+      "icon": "workflow",
+      "values": [
+        "dash",
+        "check",
+        "Advanced"
+      ]
+    },
+    {
+      "feature": "Session / Token Testing",
+      "icon": "key",
+      "values": [
+        "Basic",
+        "check",
+        "check"
+      ]
+    },
+    {
+      "feature": "Cloud Security",
+      "icon": "cloud",
+      "values": [
+        "dash",
+        "dash",
+        "check"
+      ]
+    },
+    {
+      "feature": "IAM Review",
+      "icon": "users",
+      "values": [
+        "dash",
+        "dash",
+        "check"
+      ]
+    },
+    {
+      "feature": "Attack Path Analysis",
+      "icon": "path",
+      "values": [
+        "dash",
+        "dash",
+        "check"
+      ]
+    },
+    {
+      "feature": "Executive Report",
+      "icon": "file",
+      "values": [
+        "dash",
+        "check",
+        "check"
+      ]
+    },
+    {
+      "feature": "Retesting",
+      "icon": "refresh",
+      "values": [
+        "1 Cycle",
+        "2 Cycles",
+        "3 Cycles"
+      ]
+    },
+    {
+      "feature": "Priority Support",
+      "icon": "headset",
+      "values": [
+        "dash",
+        "dash",
+        "check"
+      ]
+    }
+  ],
+  "ctaHeadline": "Not Sure Which Plan You Need?",
+  "ctaSubtitle": "Every application has a different attack surface. Tell us about your application, APIs, cloud environment, user roles, and security requirements, and we'll recommend the right level of assessment.",
+  "ctaText": "Talk to a Security Expert",
+  "ctaLink": "/contact"
+}

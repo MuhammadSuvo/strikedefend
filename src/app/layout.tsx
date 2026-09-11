@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { getSiteSettings } from "@/lib/settings";
+import { getPublishedServiceLinks } from "@/lib/service-content";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AuthProvider } from "@/components/AuthProvider";
@@ -26,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const s = await getSiteSettings();
+  const [s, serviceLinks] = await Promise.all([getSiteSettings(), getPublishedServiceLinks()]);
   const brand = hexToChannels(s.primaryColor, "6 182 212");
   const brandAccent = hexToChannels(s.accentColor, "14 165 233");
   return (
@@ -38,11 +39,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           }}
         />
       </head>
-      <body className="min-h-screen bg-ink-900 text-white antialiased">
+      <body className="flex min-h-screen flex-col bg-ink-900 text-white antialiased">
         <AuthProvider>
-          <Header settings={s} />
-          <main>{children}</main>
-          <Footer settings={s} />
+          <Header settings={s} serviceLinks={serviceLinks} />
+          <main className="flex flex-1 flex-col">{children}</main>
+          <Footer settings={s} serviceLinks={serviceLinks} />
         </AuthProvider>
       </body>
     </html>

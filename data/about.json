@@ -1,0 +1,257 @@
+{
+  "eyebrow": "About StrikeDefend",
+  "title": "Security That Goes Beyond Scanning",
+  "subtitle": "StrikeDefend is a cybersecurity company focused on helping businesses identify, understand, and reduce real security risks.",
+  "paragraphs": [
+    "We provide practical security assessments across web applications, mobile applications, APIs, cloud environments, and infrastructure. Our approach combines automated security tools with manual analysis to identify vulnerabilities that scanners alone may miss.",
+    "Our goal is simple: find what matters, explain the real impact, and help your team fix it."
+  ],
+  "heroImageUrl": "/images/strikedefend_cybersecurity_hero.png",
+  "primaryCta": "Talk to an Expert",
+  "primaryCtaLink": "/contact",
+  "secondaryCta": "Our Services",
+  "secondaryCtaLink": "/services",
+  "whyEyebrow": "Why We Exist",
+  "whyTitle": "We Go Beyond the Noise",
+  "whyIntro": "Cybersecurity reports are often filled with technical findings, false positives, and complicated terminology. We believe security testing should provide clear answers:",
+  "whyItems": [
+    {
+      "title": "What is vulnerable?",
+      "text": "Identify the specific weakness in your application, API, or environment."
+    },
+    {
+      "title": "Can it actually be exploited?",
+      "text": "Validate whether the issue is theoretical or a real attack path."
+    },
+    {
+      "title": "What could an attacker achieve?",
+      "text": "Explain the practical impact on data, accounts, and business operations."
+    },
+    {
+      "title": "How serious is the risk?",
+      "text": "Prioritize findings by exploitability and business harm — not scanner noise."
+    },
+    {
+      "title": "What should be fixed first?",
+      "text": "Give your team a clear order of remediation that reduces risk fastest."
+    }
+  ],
+  "whyClosing": "StrikeDefend focuses on validated vulnerabilities and real-world business impact rather than simply delivering scanner results.",
+  "missionTitle": "Our Mission",
+  "missionBody": "Our mission is to make professional cybersecurity testing practical, understandable, and actionable for businesses of every size. We help organizations discover weaknesses before attackers do and provide the information their technical teams need to strengthen security with confidence.",
+  "differentEyebrow": "What Makes StrikeDefend Different",
+  "differentTitle": "Practical testing. Clear answers.",
+  "differentItems": [
+    {
+      "title": "Human Expertise + Security Automation",
+      "text": "Automated tools help identify potential weaknesses. Our approach goes further by manually validating important findings and analyzing how they could affect your application or business."
+    },
+    {
+      "title": "Real-World Attack Thinking",
+      "text": "We don't only ask whether something is technically vulnerable. We ask: “What could an attacker actually achieve with this vulnerability?” — uncovering risks in authorization, APIs, accounts, workflows, and logic."
+    },
+    {
+      "title": "Actionable Findings",
+      "text": "Clear vulnerability descriptions, severity and business impact, reproduction steps, technical evidence, and practical remediation guidance — so developers can fix issues without more confusion."
+    },
+    {
+      "title": "Fix. Retest. Verify.",
+      "text": "Finding vulnerabilities is only part of the process. After remediation, we can retest reported issues to verify that the security weaknesses have been properly resolved."
+    }
+  ],
+  "protectEyebrow": "What We Protect",
+  "protectTitle": "Coverage across your real attack surface",
+  "protectItems": [
+    {
+      "title": "Web Applications",
+      "text": "Authentication, authorization, sessions, inputs, business logic, and application security."
+    },
+    {
+      "title": "Mobile Applications",
+      "text": "Android and iOS application security, local storage, APIs, authentication, and platform risks."
+    },
+    {
+      "title": "APIs",
+      "text": "Authentication, authorization, token security, object access, data exposure, and business logic."
+    },
+    {
+      "title": "Cloud Environments",
+      "text": "Cloud configuration, identity and access management, storage, public exposure, and security posture."
+    },
+    {
+      "title": "Infrastructure",
+      "text": "Network exposure, services, configurations, and potential attack paths."
+    },
+    {
+      "title": "Business Workflows",
+      "text": "Payments, approvals, account actions, transactions, and other business-critical processes."
+    }
+  ],
+  "approachEyebrow": "Our Security Approach",
+  "approachTitle": "A structured path from scope to retest",
+  "approachIntro": "We follow a structured security assessment process designed to provide meaningful and reproducible results.",
+  "approachSteps": [
+    {
+      "title": "Understand",
+      "text": "Application, environment, user roles, workflows, and authorized scope."
+    },
+    {
+      "title": "Discover",
+      "text": "Map apps, APIs, services, parameters, auth flows, and attack surfaces."
+    },
+    {
+      "title": "Test",
+      "text": "Security testing across relevant technical and business-risk areas."
+    },
+    {
+      "title": "Validate",
+      "text": "Manually review findings to confirm real security risk."
+    },
+    {
+      "title": "Prioritize",
+      "text": "Rank by exploitability, technical impact, and business impact."
+    },
+    {
+      "title": "Remediate",
+      "text": "Practical recommendations for your development or infrastructure team."
+    },
+    {
+      "title": "Retest",
+      "text": "Confirm remediation succeeded for reported vulnerabilities."
+    }
+  ],
+  "principlesEyebrow": "Our Principles",
+  "principlesTitle": "How we work with every engagement",
+  "principles": [
+    {
+      "title": "Integrity",
+      "text": "We report what we can demonstrate and clearly distinguish confirmed vulnerabilities from potential concerns."
+    },
+    {
+      "title": "Clarity",
+      "text": "Security findings should be understandable by both technical teams and business stakeholders."
+    },
+    {
+      "title": "Responsibility",
+      "text": "Security testing is performed only against systems and environments that are explicitly authorized for assessment."
+    },
+    {
+      "title": "Confidentiality",
+      "text": "Application information, credentials, findings, and technical evidence are treated as sensitive information."
+    },
+    {
+      "title": "Continuous Improvement",
+      "text": "Cybersecurity is not a one-time activity. Applications, infrastructure, technologies, and threats continue to change."
+    }
+  ],
+  "servicesTitle": "Our Services",
+  "services": [
+    "Web Application Penetration Testing",
+    "Mobile Application Penetration Testing",
+    "API Security Testing",
+    "Cloud Penetration Testing",
+    "Network Security Testing",
+    "Security Configuration Review",
+    "Vulnerability Assessment",
+    "Continuous Security Monitoring",
+    "Security Retesting & Verification"
+  ],
+  "beyondTitle": "More Than Automated Scanning",
+  "beyondScannerLabel": "A scanner might see",
+  "beyondScannerText": "Request successful — HTTP 200",
+  "beyondTesterLabel": "Our security testers ask",
+  "beyondTesterText": "Should this user have been allowed to perform this action?",
+  "beyondIntro": "That difference can reveal vulnerabilities such as:",
+  "beyondItems": [
+    "Broken Access Control",
+    "IDOR / BOLA",
+    "Privilege Escalation",
+    "Sensitive Data Exposure",
+    "Authentication Weaknesses",
+    "API Abuse",
+    "Payment Manipulation",
+    "Workflow Bypass",
+    "Business Logic Vulnerabilities"
+  ],
+  "beyondClose": "Technology helps us test faster. Human analysis helps us understand what actually matters.",
+  "trustTitle": "Built Around Trust",
+  "trustIntro": "When you work with a cybersecurity company, you are trusting them with sensitive information about your systems. We take that responsibility seriously.",
+  "trustItems": [
+    {
+      "title": "Controlled Testing",
+      "text": "Testing is performed within an agreed and authorized scope."
+    },
+    {
+      "title": "Confidential Handling",
+      "text": "Security information and vulnerability evidence are handled carefully."
+    },
+    {
+      "title": "Evidence-Based Reporting",
+      "text": "Important findings are supported by reproducible technical evidence."
+    },
+    {
+      "title": "Practical Communication",
+      "text": "We explain security risks clearly so your team can make informed decisions."
+    }
+  ],
+  "clientsTitle": "Who We Work With",
+  "clients": [
+    {
+      "title": "Startups",
+      "text": "Preparing to launch their first product."
+    },
+    {
+      "title": "SaaS companies",
+      "text": "Protecting applications, APIs, and customer information."
+    },
+    {
+      "title": "E-commerce businesses",
+      "text": "Securing payments, customer accounts, and transactions."
+    },
+    {
+      "title": "Growing organizations",
+      "text": "Strengthening cloud and infrastructure security."
+    },
+    {
+      "title": "Enterprise teams",
+      "text": "Requiring deeper assessments and continuous risk reduction."
+    }
+  ],
+  "expectTitle": "What You Can Expect",
+  "expectItems": [
+    {
+      "title": "Clear Scope",
+      "text": "Everyone understands what will be tested before the assessment begins."
+    },
+    {
+      "title": "Transparent Communication",
+      "text": "You remain informed throughout the security assessment."
+    },
+    {
+      "title": "Validated Findings",
+      "text": "Important vulnerabilities are manually reviewed before being reported."
+    },
+    {
+      "title": "Actionable Recommendations",
+      "text": "Your technical team receives practical guidance for resolving identified weaknesses."
+    },
+    {
+      "title": "Retesting & Verification",
+      "text": "Security fixes can be validated after remediation."
+    }
+  ],
+  "closingTitle": "Security Is Not Just About Finding Vulnerabilities",
+  "closingBody": "It is about understanding which vulnerabilities matter most and what they mean for your business. At StrikeDefend, we combine security tools, technical expertise, manual validation, and business context to help organizations make better security decisions.",
+  "ctaTitle": "Know Your Risk Before Attackers Do",
+  "ctaSubtitle": "Whether you're preparing for a new release, reviewing an existing application, moving services to the cloud, or strengthening your overall security posture, StrikeDefend can help you understand where you're exposed.",
+  "ctaHighlights": [
+    "Discover vulnerabilities.",
+    "Understand the impact.",
+    "Fix what matters.",
+    "Verify the protection."
+  ],
+  "ctaPrimary": "Talk to a Security Expert",
+  "ctaPrimaryLink": "/contact",
+  "ctaSecondary": "Request a Security Assessment",
+  "ctaSecondaryLink": "/contact"
+}

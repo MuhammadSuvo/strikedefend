@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Github, Linkedin, Twitter } from "lucide-react";
+import type { ServiceNavLink } from "@/lib/service-content";
 
 type Settings = {
   siteName: string;
@@ -13,9 +14,16 @@ type Settings = {
   twitterUrl: string | null;
   linkedinUrl: string | null;
   githubUrl: string | null;
+  blogPublished?: boolean;
 };
 
-export function Footer({ settings }: { settings: Settings }) {
+export function Footer({
+  settings,
+  serviceLinks
+}: {
+  settings: Settings;
+  serviceLinks: ServiceNavLink[];
+}) {
   const pathname = usePathname();
   if (pathname?.startsWith("/admin")) return null;
 
@@ -48,16 +56,23 @@ export function Footer({ settings }: { settings: Settings }) {
         <div>
           <div className="text-sm font-semibold text-white">Services</div>
           <ul className="mt-3 space-y-2 text-sm text-white/60">
-            <li><Link href="/services#penetration-testing" className="hover:text-white">Penetration Testing</Link></li>
-            <li><Link href="/services#load-testing" className="hover:text-white">Load Testing</Link></li>
-            <li><Link href="/services#web-automation" className="hover:text-white">Web Automation</Link></li>
+            {serviceLinks.map((s) => (
+              <li key={s.slug}>
+                <Link href={`/services/${s.slug}`} className="hover:text-white">
+                  {s.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div>
           <div className="text-sm font-semibold text-white">Company</div>
           <ul className="mt-3 space-y-2 text-sm text-white/60">
-            <li><Link href="/about" className="hover:text-white">About</Link></li>
-            <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+            <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+            <li><Link href="/pricing" className="hover:text-white">Pricing</Link></li>
+            {settings.blogPublished && (
+              <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+            )}
             <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
           </ul>
         </div>
@@ -65,7 +80,7 @@ export function Footer({ settings }: { settings: Settings }) {
           <div className="text-sm font-semibold text-white">Contact</div>
           <ul className="mt-3 space-y-2 text-sm text-white/60">
             <li><a href={`mailto:${settings.email}`} className="hover:text-white">{settings.email}</a></li>
-            <li><a href={`tel:${settings.phone}`} className="hover:text-white">{settings.phone}</a></li>
+            <li><a href={`tel:${settings.phone.replace(/[^\d+]/g, "")}`} className="hover:text-white">{settings.phone}</a></li>
             <li>{settings.address}</li>
           </ul>
         </div>

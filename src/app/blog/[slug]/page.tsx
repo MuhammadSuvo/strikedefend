@@ -1,13 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { prisma } from "@/lib/prisma";
+import { getBlogPostBySlug } from "@/lib/data";
+import { isBlogPublished } from "@/lib/settings";
 import { ArrowLeft } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = await prisma.blogPost.findUnique({ where: { slug: params.slug } });
+  if (!(await isBlogPublished())) return {};
+  const post = await getBlogPostBySlug(params.slug);
   if (!post) return {};
   return {
     title: post.title,
@@ -17,7 +19,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await prisma.blogPost.findUnique({ where: { slug: params.slug } });
+  if (!(await isBlogPublished())) return notFound();
+  const post = await getBlogPostBySlug(params.slug);
   if (!post || !post.published) return notFound();
 
   return (

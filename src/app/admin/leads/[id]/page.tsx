@@ -1,22 +1,21 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { prisma } from "@/lib/prisma";
+import { getLeadById, getServices } from "@/lib/data";
 import { Toolbar, FormCard, SaveBar } from "@/components/admin/Toolbar";
-import { updateLead } from "@/app/admin/actions";
+import { updateLeadAction } from "@/app/admin/actions";
 
 export const dynamic = "force-dynamic";
 
-const services = ["Penetration Testing", "Load Testing", "Web Automation", "Other"];
-
 export default async function EditLeadPage({ params }: { params: { id: string } }) {
-  const lead = await prisma.lead.findUnique({ where: { id: params.id } });
+  const [lead, serviceRows] = await Promise.all([getLeadById(params.id), getServices()]);
   if (!lead) notFound();
+  const services = [...serviceRows.map((s) => s.title), "Other"];
 
   return (
     <div className="max-w-3xl">
       <Toolbar title="Edit Lead" description={`Submitted ${new Date(lead.createdAt).toLocaleString()}`} />
       <Link href="/admin/leads" className="mb-4 inline-block text-sm text-white/60 hover:text-white">← Back to leads</Link>
-      <form action={updateLead} className="space-y-6">
+      <form action={updateLeadAction} className="space-y-6">
         <input type="hidden" name="id" value={lead.id} />
         <FormCard>
           <div className="grid gap-4 sm:grid-cols-2">
