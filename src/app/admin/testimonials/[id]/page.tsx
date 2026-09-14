@@ -5,8 +5,9 @@ import { TestimonialForm } from "@/components/admin/TestimonialForm";
 
 export const dynamic = "force-dynamic";
 
-export default async function EditTestimonialPage({ params }: { params: { id: string } }) {
-  const item = await getTestimonialById(params.id);
+export default async function EditTestimonialPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const item = await getTestimonialById(id);
   if (!item) return notFound();
   return (
     <div>

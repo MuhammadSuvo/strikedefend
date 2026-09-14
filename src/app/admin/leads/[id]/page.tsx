@@ -6,8 +6,9 @@ import { updateLeadAction } from "@/app/admin/actions";
 
 export const dynamic = "force-dynamic";
 
-export default async function EditLeadPage({ params }: { params: { id: string } }) {
-  const [lead, serviceRows] = await Promise.all([getLeadById(params.id), getServices()]);
+export default async function EditLeadPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const [lead, serviceRows] = await Promise.all([getLeadById(id), getServices()]);
   if (!lead) notFound();
   const services = [...serviceRows.map((s) => s.title), "Other"];
 

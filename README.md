@@ -14,11 +14,12 @@ Public pages are fully editable from a built-in **admin panel**. Content is stor
 
 ## Stack
 
-- **Next.js 14** (App Router) + TypeScript
+- **Next.js 16** (App Router) + React 19 + TypeScript
 - **Tailwind CSS**
 - **JSON file storage** (`data/*.json`) — easy to migrate to a DB later
 - **NextAuth** (credentials / JWT)
 - Optional **Cloudinary** (or local) image uploads
+- Optional **Prisma** (legacy export helper only — app runtime uses JSON)
 - Vercel-ready
 
 ---

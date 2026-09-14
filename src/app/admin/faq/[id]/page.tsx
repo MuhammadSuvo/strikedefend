@@ -5,8 +5,9 @@ import { FaqForm } from "@/components/admin/FaqForm";
 
 export const dynamic = "force-dynamic";
 
-export default async function EditFaqPage({ params }: { params: { id: string } }) {
-  const item = await getFaqById(params.id);
+export default async function EditFaqPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const item = await getFaqById(id);
   if (!item) return notFound();
   return (
     <div>

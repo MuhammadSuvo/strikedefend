@@ -18,7 +18,7 @@ export default async function ContactPage() {
       <section className="border-b border-white/5">
         <div className="section py-14 sm:py-20">
           <span className="tag">Contact</span>
-          <h1 className="mt-3 text-3xl font-bold sm:text-4xl md:text-5xl">Let's talk about your project</h1>
+          <h1 className="mt-3 text-3xl font-bold sm:text-4xl md:text-5xl">Let&apos;s talk about your project</h1>
           <p className="mt-4 max-w-2xl text-sm text-white/70 sm:text-base">
             Reply within one business day. NDAs available on request.
           </p>
@@ -29,7 +29,7 @@ export default async function ContactPage() {
         <div>
           <h2 className="text-2xl font-bold">Send us a message</h2>
           <p className="mt-2 text-sm text-white/60">
-            We'll review your message and get back to you with next steps.
+            We&apos;ll review your message and get back to you with next steps.
           </p>
           <div className="mt-6">
             <ContactForm services={serviceOptions} />

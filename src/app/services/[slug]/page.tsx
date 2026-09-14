@@ -5,10 +5,11 @@ import { getServicePageBySlug } from "@/lib/service-content";
 
 export const dynamic = "force-dynamic";
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const service = await getServicePageBySlug(params.slug);
+  const { slug } = await params;
+  const service = await getServicePageBySlug(slug);
   if (!service) return { title: "Service Not Found" };
   return {
     title: service.title,
@@ -17,7 +18,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ServiceSlugPage({ params }: Props) {
-  const service = await getServicePageBySlug(params.slug);
+  const { slug } = await params;
+  const service = await getServicePageBySlug(slug);
   if (!service) notFound();
   return <ServiceDetailPage service={service} />;
 }
