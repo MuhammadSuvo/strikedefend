@@ -16,11 +16,11 @@ Public pages are fully editable from a built-in **admin panel**. Content is stor
 
 - **Next.js 16** (App Router) + React 19 + TypeScript
 - **Tailwind CSS**
-- **JSON file storage** (`data/*.json`) — easy to migrate to a DB later
+- **Content store**: local `data/*.json` in Node; **Cloudflare Workers KV** (`CONTENT_KV`) in production
 - **NextAuth** (credentials / JWT)
-- Optional **Cloudinary** (or local) image uploads
-- Optional **Prisma** (legacy export helper only — app runtime uses JSON)
-- Vercel-ready
+- Optional **Cloudinary** image uploads (required on Cloudflare; local disk uploads only work in Node)
+- Optional **Prisma** (legacy export helper only)
+- Cloudflare Workers via `@opennextjs/cloudflare` (also works on Vercel/Node)
 
 ---
 
@@ -111,6 +111,31 @@ Site content lives in `data/`. Edit via **Admin** (recommended) or edit the JSON
 | `leads.json` | Contact form submissions |
 
 See `data/README.md` for more detail.
+
+---
+
+## Cloudflare Workers (KV content store)
+
+Workers have **no filesystem**, so production content uses **Workers KV** instead of writing `data/*.json` on disk.
+
+1. Create a KV namespace:
+   ```bash
+   npx wrangler kv namespace create CONTENT_KV
+   npx wrangler kv namespace create CONTENT_KV --preview
+   ```
+2. Paste the returned ids into `wrangler.jsonc` → `kv_namespaces[0].id` / `preview_id`.
+3. Seed remote KV from your local JSON (optional; first request also auto-seeds from bundled `data/*.json`):
+   ```bash
+   npm run data:kv-seed -- --remote
+   ```
+4. Deploy:
+   ```bash
+   npm run deploy
+   ```
+
+On Cloudflare, configure **Cloudinary** for admin image uploads (local `/public/uploads` is not available).
+
+Local Node development still uses `data/*.json` by default. Set `ENABLE_CF_DEV=1` if you want Wrangler KV bindings during `next dev`.
 
 ---
 

@@ -24,12 +24,18 @@ export async function POST(req: Request) {
   const buffer = Buffer.from(await file.arrayBuffer());
   const folder = (formData.get("folder") as string) || "strikedefend";
   try {
-    const result = cloudinaryConfigured
-      ? await uploadBufferToCloudinary(buffer, folder)
-      : await saveImageLocally(buffer, folder, file.type);
+    if (cloudinaryConfigured) {
+      const result = await uploadBufferToCloudinary(buffer, folder);
+      return NextResponse.json(result);
+    }
+    const result = await saveImageLocally(buffer, folder, file.type);
     return NextResponse.json(result);
   } catch (err) {
     console.error("upload error", err);
-    return NextResponse.json({ error: "Upload failed" }, { status: 500 });
+    const message =
+      err instanceof Error && err.message.includes("Cloudinary")
+        ? err.message
+        : "Upload failed";
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

@@ -22,3 +22,6 @@ prisma/*.db-journal
 
 .cursor/
 .claude/
+.open-next/
+.wrangler/
+.dev.vars

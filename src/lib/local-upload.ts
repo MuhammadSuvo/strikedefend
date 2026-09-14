@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "fs/promises";
 import path from "path";
 import { randomBytes } from "crypto";
+import { isCloudflareRuntime } from "@/lib/runtime";
 
 const MIME_EXT: Record<string, string> = {
   "image/jpeg": "jpg",
@@ -27,6 +28,12 @@ export async function saveImageLocally(
   folder: string,
   mimeType: string
 ): Promise<{ url: string; publicId: string }> {
+  if (isCloudflareRuntime()) {
+    throw new Error(
+      "Local disk uploads are not available on Cloudflare Workers. Configure Cloudinary (CLOUDINARY_* env vars)."
+    );
+  }
+
   const ext = MIME_EXT[mimeType] || "jpg";
   const parts = sanitizeFolder(folder);
   const dir = path.join(process.cwd(), "public", "uploads", ...parts);
