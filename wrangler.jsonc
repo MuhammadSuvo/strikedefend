@@ -31,8 +31,8 @@
       // REQUIRED: replace both ids after creating namespaces in the dashboard
       // or via: npx wrangler kv namespace create CONTENT_KV
       //         npx wrangler kv namespace create CONTENT_KV --preview
-      "id": "PASTE_PRODUCTION_KV_ID_HERE",
-      "preview_id": "PASTE_PREVIEW_KV_ID_HERE"
+      "id": "9d00671fffb148b589a195ed4b15ff30",
+      "preview_id": "303a689058e04ac4a42a460696be00e6"
     }
   ],
   "observability": {
