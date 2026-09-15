@@ -135,18 +135,21 @@ Workers have **no filesystem**, so production content uses **Workers KV** instea
 
 ### Cloudflare Workers Builds (dashboard)
 
-If the Worker is connected to GitHub, set **Build Settings** to:
+Per [OpenNext Workers Builds docs](https://opennext.js.org/cloudflare/howtos/dev-deploy), set **Build Settings** to:
 
-| Field | Value |
-|-------|--------|
-| **Build command** | `npm run build && npx opennextjs-cloudflare build` |
-| **Deploy command** | `npx wrangler deploy` |
+| Field | Exact value |
+|-------|-------------|
+| **Build command** | `npx @opennextjs/cloudflare build` |
+| **Deploy command** | `npx @opennextjs/cloudflare deploy` |
 
-- `npm run build` → `next build`
-- `npx opennextjs-cloudflare build` → creates `.open-next/` for Workers
-- `npx wrangler deploy` → deploys that output
+Do **not** use `npm run build` alone, or `npx wrangler deploy` without the OpenNext build — that skips `.open-next/` and fails with “Could not find compiled Open Next config”.
 
-Local one-shot CF build: `npm run build:cf`
+Notes:
+
+- `npx @opennextjs/cloudflare build` already runs `npm run build` (`next build`), then adapts output into `.open-next/`
+- `npx @opennextjs/cloudflare deploy` initializes cache and deploys (preferred over raw `wrangler deploy`)
+- Local: `npm run deploy`
+- Details: see `CLOUDFLARE.md`
 
 On Cloudflare, configure **Cloudinary** for admin image uploads (local `/public/uploads` is not available).
 

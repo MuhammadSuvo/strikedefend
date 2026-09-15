@@ -1,0 +1,3 @@
+# Loaded by Wrangler / OpenNext local tools (not committed secrets).
+# Copy to `.dev.vars` for local Workers preview.
+NEXTJS_ENV=development
