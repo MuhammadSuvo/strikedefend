@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && opennextjs-cloudflare build --skipNextBuild",
+    "build": "next build",
+    "build:cf": "next build && opennextjs-cloudflare build --skipNextBuild",
     "start": "next start",
     "lint": "eslint .",
     "data:export": "tsx scripts/export-db-to-json.ts",

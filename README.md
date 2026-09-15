@@ -133,6 +133,21 @@ Workers have **no filesystem**, so production content uses **Workers KV** instea
    npm run deploy
    ```
 
+### Cloudflare Workers Builds (dashboard)
+
+If the Worker is connected to GitHub, set **Build Settings** to:
+
+| Field | Value |
+|-------|--------|
+| **Build command** | `npm run build && npx opennextjs-cloudflare build` |
+| **Deploy command** | `npx wrangler deploy` |
+
+- `npm run build` → `next build`
+- `npx opennextjs-cloudflare build` → creates `.open-next/` for Workers
+- `npx wrangler deploy` → deploys that output
+
+Local one-shot CF build: `npm run build:cf`
+
 On Cloudflare, configure **Cloudinary** for admin image uploads (local `/public/uploads` is not available).
 
 Local Node development still uses `data/*.json` by default. Set `ENABLE_CF_DEV=1` if you want Wrangler KV bindings during `next dev`.
