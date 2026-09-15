@@ -135,22 +135,16 @@ Workers have **no filesystem**, so production content uses **Workers KV** instea
 
 ### Cloudflare Workers Builds (dashboard)
 
-Your Workers Builds log showed `npm run build` → only `next build`, then `npx wrangler deploy` failed because `.open-next/` was missing.
-
-**Repo fix:** `npm run build` now runs:
-
-`next build && opennextjs-cloudflare build --skipNextBuild`
-
-So your **existing** Cloudflare settings (`npm run build` + `npx wrangler deploy`) should work after you push this commit.
-
-**Optional (OpenNext docs ideal):**
+**Use this Build command** (avoids double OpenNext / `next-env.mjs` duplicate exports):
 
 | Field | Exact value |
 |-------|-------------|
-| **Build command** | `npx @opennextjs/cloudflare build` |
-| **Deploy command** | `npx @opennextjs/cloudflare deploy` |
+| **Build command** | `rm -rf .open-next && npx next build && npx opennextjs-cloudflare build --skipNextBuild` |
+| **Deploy command** | `npx wrangler deploy` |
 
-Details: `CLOUDFLARE.md`
+Do **not** use `npx @opennextjs/cloudflare build` while `npm run build` also runs OpenNext — that nests two OpenNext builds and breaks deploy.
+
+`package.json` must stay `"build": "next build"` only. Details: `CLOUDFLARE.md`.
 
 On Cloudflare, configure **Cloudinary** for admin image uploads (local `/public/uploads` is not available).
 
