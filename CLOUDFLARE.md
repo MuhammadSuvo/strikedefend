@@ -1,44 +1,64 @@
-# Cloudflare Workers Builds
+# Cloudflare deploy — current status
 
-## Why deploy failed
+## Progress
 
-Your log shows:
+| Step | Status |
+|------|--------|
+| OpenNext build (`.open-next/`) | Working |
+| Deploy | Failing on invalid KV id |
+
+Latest error:
 
 ```text
-Executing user build command: npm run build   → only next build
-Executing user deploy command: npx wrangler deploy
-ERROR Could not find compiled Open Next config, did you run the build command?
+KV namespace 'REPLACE_WITH_KV_NAMESPACE_ID' is not valid. [code: 10042]
 ```
 
-`wrangler deploy` detects OpenNext and calls `opennextjs-cloudflare deploy`, which needs `.open-next/` from **`opennextjs-cloudflare build`**. Plain `next build` does not create that folder.
+## Fix KV (required)
 
-## Repo fix (already applied)
+### Option A — Dashboard (easiest)
 
-`package.json` now has:
+1. Cloudflare Dashboard → **Workers & Pages** → **KV**
+2. **Create a namespace** named `strikedefend-content` (any name is fine)
+3. Copy the **Namespace ID** (long hex string)
+4. Create a second namespace for preview (optional but recommended), e.g. `strikedefend-content-preview`, copy its ID
+5. Edit `wrangler.jsonc`:
+   - `"id": "<production namespace id>"`
+   - `"preview_id": "<preview namespace id>"` (or reuse production id temporarily)
+6. Commit + push to `main`
+7. Cloudflare → **Retry build**
 
-```json
-"build": "next build && opennextjs-cloudflare build --skipNextBuild"
+### Option B — CLI (if logged in)
+
+```bash
+npx wrangler login
+npx wrangler kv namespace create CONTENT_KV --binding CONTENT_KV --update-config
+npx wrangler kv namespace create CONTENT_KV --preview --binding CONTENT_KV --update-config
+git add wrangler.jsonc
+git commit -m "chore: set real CONTENT_KV namespace ids"
+git push
 ```
 
-So with your **current** Cloudflare settings (`npm run build` + `npx wrangler deploy`), the build step produces `.open-next/` and deploy can succeed.
+## Cloudflare Build settings (keep these)
 
-`--skipNextBuild` avoids running Next twice / recursion.
-
-## Recommended Cloudflare dashboard settings (optional but ideal)
-
-Worker → **Settings** → **Build**:
-
-| Field | Set to |
+| Field | Value |
 |-------|--------|
 | **Build command** | `npx @opennextjs/cloudflare build` |
 | **Deploy command** | `npx @opennextjs/cloudflare deploy` |
 
-Source: https://opennext.js.org/cloudflare/howtos/dev-deploy
+(Your last log still used `npx wrangler deploy` for deploy — either works once OpenNext build succeeded; prefer the OpenNext deploy command.)
 
-If you keep `npm run build` + `npx wrangler deploy`, that is fine after this package.json fix.
+## After deploy succeeds
 
-## Also check
+Seed content into KV (optional; app also auto-seeds from bundled `data/*.json` on first read):
 
-1. Push this commit to GitHub (MuhammadSuvo), then Retry build.
-2. In `wrangler.jsonc`, replace `REPLACE_WITH_KV_NAMESPACE_ID` with a real KV id, or create the namespace and bind `CONTENT_KV`.
-3. Set build secrets: `NEXTAUTH_SECRET`, `NEXTAUTH_URL`, Cloudinary vars if needed.
+```bash
+npm run data:kv-seed -- --remote
+```
+
+Ensure dashboard **Variables / Secrets** still have:
+
+- `NEXTAUTH_SECRET`
+- `NEXTAUTH_URL` (e.g. `https://strikedefend.net`)
+- Cloudinary vars if you use uploads
+
+`keep_vars: true` is set so dashboard vars are not wiped by Wrangler deploys.
