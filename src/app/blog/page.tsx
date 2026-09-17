@@ -1,15 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPublishedBlogPosts, getBlogPostBySlug } from "@/lib/data";
 import { isBlogPublished } from "@/lib/settings";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 
-export const metadata = {
-  title: "Blog",
-  description: "Practical posts on penetration testing and offensive security."
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return buildPageMetadata({
+    title: "Blog",
+    description: "Practical posts on penetration testing and offensive security from the StrikeDefend team.",
+    path: "/blog"
+  });
+}
 
 export default async function BlogPage() {
   if (!(await isBlogPublished())) return notFound();

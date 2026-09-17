@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getPublishedTestimonials, getPublishedFaqs } from "@/lib/data";
 import { getHomeContent } from "@/lib/settings";
 import { Hero } from "@/components/Hero";
@@ -10,8 +11,21 @@ import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { FaqSection } from "@/components/FaqSection";
 import { ContactCta } from "@/components/ContactCta";
 import { VideoSection } from "@/components/VideoSection";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const home = await getHomeContent();
+  return buildPageMetadata({
+    title: undefined,
+    description:
+      home.heroSubtitle ||
+      "Web, mobile, cloud penetration testing and continuous security monitoring from StrikeDefend.",
+    path: "/",
+    image: home.heroImageUrl
+  });
+}
 
 export default async function HomePage() {
   const home = await getHomeContent();

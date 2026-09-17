@@ -1,14 +1,19 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { getSiteSettings } from "@/lib/settings";
 import { getPublishedServices } from "@/lib/service-content";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 
-export const metadata = {
-  title: "Contact",
-  description: "Get in touch with the StrikeDefend team."
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return buildPageMetadata({
+    title: "Contact",
+    description: "Contact StrikeDefend for a free consultation on penetration testing and security assessments.",
+    path: "/contact"
+  });
+}
 
 export default async function ContactPage() {
   const [s, serviceRows] = await Promise.all([getSiteSettings(), getPublishedServices()]);

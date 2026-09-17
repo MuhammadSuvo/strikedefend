@@ -1,24 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getBlogPostBySlug } from "@/lib/data";
 import { isBlogPublished } from "@/lib/settings";
 import { ArrowLeft } from "lucide-react";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 
 type Props = { params: Promise<{ slug: string }> };
 
-export async function generateMetadata({ params }: Props) {
-  if (!(await isBlogPublished())) return {};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  if (!(await isBlogPublished())) return { robots: { index: false, follow: false } };
   const { slug } = await params;
   const post = await getBlogPostBySlug(slug);
-  if (!post) return {};
-  return {
+  if (!post) return { title: "Post Not Found" };
+  return buildPageMetadata({
     title: post.title,
-    description: post.excerpt,
-    openGraph: { title: post.title, description: post.excerpt, images: post.coverImage ? [post.coverImage] : undefined }
-  };
+    description: post.excerpt || post.title,
+    path: `/blog/${slug}`,
+    image: post.coverImage
+  });
 }
 
 export default async function BlogPostPage({ params }: Props) {

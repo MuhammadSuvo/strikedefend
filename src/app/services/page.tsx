@@ -1,15 +1,21 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import { getPublishedServices, serviceCardSummary } from "@/lib/service-content";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { ContactCta } from "@/components/ContactCta";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 
-export const metadata = {
-  title: "Services",
-  description: "Penetration testing and continuous security services for web, mobile, and cloud."
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return buildPageMetadata({
+    title: "Services",
+    description:
+      "Penetration testing and continuous security services for web, mobile, API, cloud, and network — delivered by StrikeDefend.",
+    path: "/services"
+  });
+}
 
 export default async function ServicesPage() {
   const services = await getPublishedServices();
