@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "data:export": "tsx scripts/export-db-to-json.ts",
     "data:kv-seed": "node scripts/seed-kv.mjs",
+    "data:kv-users": "node scripts/seed-kv-users.mjs",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
