@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createLead } from "@/lib/data";
+import { notifyLeadEmail } from "@/lib/notify-lead";
 
 export async function POST(req: Request) {
   try {
@@ -28,7 +29,16 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Input too long." }, { status: 400 });
     }
 
-    await createLead({ name, email, phone, company, service, message, read: false });
+    const lead = { name, email, phone, company, service, message, read: false };
+    await createLead(lead);
+
+    try {
+      await notifyLeadEmail(lead);
+    } catch (err) {
+      // Lead is already saved — don't fail the visitor's form submit.
+      console.error("[notify-lead] email alert failed", err);
+    }
+
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("/api/leads error", err);

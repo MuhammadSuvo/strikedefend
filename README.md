@@ -7,7 +7,7 @@ Public pages are fully editable from a built-in **admin panel**. Content is stor
 - Service pages (Web, Mobile, API, Cloud, Network, Vulnerability Assessment, Continuous Monitoring)
 - About, Pricing, Contact, Blog (draft/publish toggle)
 - Admin CMS for all site content
-- Contact form → leads inbox
+- Contact form → leads inbox (+ optional email alert via Resend)
 - AI + Human penetration testing messaging across service pages
 
 ---
@@ -109,6 +109,8 @@ Site content lives in `data/`. Edit via **Admin** (recommended) or edit the JSON
 | `faqs.json` | FAQs |
 | `blog-posts.json` | Blog posts |
 | `leads.json` | Contact form submissions |
+
+Optional email alerts: set `RESEND_API_KEY` (and optionally `LEAD_NOTIFY_TO` / `LEAD_NOTIFY_FROM`). Leads still save in Admin even without Resend.
 
 See `data/README.md` for more detail.
 
